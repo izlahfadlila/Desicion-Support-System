@@ -1,0 +1,64 @@
+{
+    "project": "Inventory Replenishment Decision Support System",
+    "saved_at": "2026-11-17T21:33:17.151374",
+    "data_period": {
+        "start_date": "2024-01-01",
+        "end_date": "2026-09-30"
+    },
+    "products": [
+        "Nike Men's Dri-FIT Victory Golf Polo",
+        "O'Brien Men's Neoprene Life Vest",
+        "Nike Men's Free 5.0+ Running Shoe"
+    ],
+    "operational_models": {
+        "Nike Men's Dri-FIT Victory Golf Polo": {
+            "model_name": "Random Forest",
+            "model_type": "ML",
+            "horizon": 1,
+            "lead_time": 5,
+            "lead_time_unit": "calendar days",
+            "model_file": "forecast_outputs\\saved_models\\nike_mens_dri-fit_victory_golf_polo_random_forest.joblib",
+            "validation_metrics": {
+                "Validation MAE": 7.2389480433035045,
+                "Validation RMSE": 9.368413521300496,
+                "Validation WAPE": 67.18384477804727,
+                "Validation Bias": 5.388511319312025
+            }
+        },
+        "O'Brien Men's Neoprene Life Vest": {
+            "model_name": "XGBoost",
+            "model_type": "ML",
+            "horizon": 1,
+            "lead_time": 7,
+            "lead_time_unit": "calendar days",
+            "model_file": "forecast_outputs\\saved_models\\obrien_mens_neoprene_life_vest_xgboost.joblib",
+            "validation_metrics": {
+                "Validation MAE": 7.3996860586254805,
+                "Validation RMSE": 9.208354890367623,
+                "Validation WAPE": 71.99436822502884,
+                "Validation Bias": 5.949264242477024
+            }
+        },
+        "Nike Men's Free 5.0+ Running Shoe": {
+            "model_name": "ARIMA",
+            "model_type": "ARIMA",
+            "horizon": 1,
+            "lead_time": 5,
+            "lead_time_unit": "calendar days",
+            "model_file": "forecast_outputs\\saved_models\\nike_mens_free_5.0_running_shoe_arima.pkl",
+            "validation_metrics": {
+                "Validation MAE": 4.099862044922622,
+                "Validation RMSE": 5.766358909265528,
+                "Validation WAPE": 68.18052519640044,
+                "Validation Bias": 3.265805602121207
+            }
+        }
+    },
+    "feature_config_file": "forecast_outputs\\feature_config.json",
+    "demand_history_file": "forecast_outputs\\demand_history.csv",
+    "software_versions": {
+        "python": "3.11.4",
+        "scikit_learn": "1.9.1",
+        "statsmodels": "0.15.0"
+    }
+}
