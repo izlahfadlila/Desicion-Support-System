@@ -14,8 +14,8 @@ df["Order Date"] = pd.to_datetime({
     "day": df["Order Day"]
 })
 
-# 4. Membatasi data sampai 17 November 2017
-df = df[df["Order Date"] <= "2017-11-17"].copy()
+# 4. Membatasi data sumber sampai 30 September 2017
+df = df[df["Order Date"] <= "2017-09-30"].copy()
 
 # 5. Menghapus data tanggal 29 Februari 2016
 df = df[
@@ -66,7 +66,7 @@ daily_sales_pivot = daily_sales.pivot(
 # 10. Membuat rentang tanggal lengkap
 all_dates = pd.date_range(
     start="2024-01-01",
-    end="2026-11-17",
+    end="2026-09-30",
     freq="D"
 )
 
@@ -83,7 +83,7 @@ daily_sales_pivot = daily_sales_pivot[
     ["Order Date"] + selected_products
 ]
 
-# 14. Menyimpan hasil
+# 14. Menyimpan hasil (nama file tetap sama)
 daily_sales_pivot.to_csv(
     "daily_sales_selected3_2024_2026.csv",
     index=False
@@ -94,7 +94,9 @@ print("Data berhasil diproses!")
 print("Jumlah baris:", len(daily_sales_pivot))
 print("Tanggal awal:", daily_sales_pivot["Order Date"].min())
 print("Tanggal akhir:", daily_sales_pivot["Order Date"].max())
+
 print("\nTotal penjualan setiap produk:")
 print(daily_sales_pivot[selected_products].sum())
+
 print("\nPreview data:")
 print(daily_sales_pivot.head())
