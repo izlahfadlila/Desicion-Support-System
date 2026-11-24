@@ -74,7 +74,6 @@ export default function ForecastingManagementPage() {
     model: r.model === "Symbolic Regression" ? "Sym. Reg." : r.model,
     MAE: r.mae,
     RMSE: r.rmse,
-    WAPE: r.wape,
   }));
 
   // SS across lead times
@@ -183,8 +182,6 @@ export default function ForecastingManagementPage() {
                       <th className="text-left pb-2 font-medium text-gray-500">Model</th>
                       <th className="text-right pb-2 font-medium text-gray-500">MAE ↓</th>
                       <th className="text-right pb-2 font-medium text-gray-500">RMSE ↓</th>
-                      <th className="text-right pb-2 font-medium text-gray-500">WAPE (%) ↓</th>
-                      <th className="text-right pb-2 font-medium text-gray-500">Bias (%)</th>
                       <th className="text-left pb-2 font-medium text-gray-500 pl-4">Rank</th>
                     </tr>
                   </thead>
@@ -210,10 +207,6 @@ export default function ForecastingManagementPage() {
                           </td>
                           <td className="py-3 text-right font-mono">{row.mae.toFixed(3)}</td>
                           <td className="py-3 text-right font-mono">{row.rmse.toFixed(3)}</td>
-                          <td className="py-3 text-right font-mono">{row.wape.toFixed(2)}</td>
-                          <td className={`py-3 text-right font-mono ${row.bias > 0 ? "text-amber-600" : "text-blue-600"}`}>
-                            {row.bias > 0 ? "+" : ""}{row.bias.toFixed(2)}
-                          </td>
                           <td className="py-3 pl-4">
                             {idx === 0 ? (
                               <span className="inline-flex items-center gap-1 text-xs text-green-700">
@@ -230,7 +223,7 @@ export default function ForecastingManagementPage() {
                 </table>
               </div>
               <div className="text-xs text-gray-400 mt-2">
-                ↓ = lower is better · Bias: positive = overforecast, negative = underforecast
+                ↓ = lower is better
               </div>
             </div>
 
