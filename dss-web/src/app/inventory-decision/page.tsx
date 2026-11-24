@@ -16,7 +16,7 @@ import {
 } from "recharts";
 import type { SystemState, ProductKey, ServiceLevel, OUTLResult, SensitivityRow } from "@/lib/types";
 import { loadState, getOnOrderQty, saveState, addPurchaseOrder, formatDate, formatDateLong } from "@/lib/store";
-import { calculateOUTL, calculateSensitivity, getDefaultLeadTime } from "@/lib/calculations";
+import { calculateOUTL, calculateSensitivity, getDefaultLeadTime, getLeadTimeDemand } from "@/lib/calculations";
 import { PRODUCTS, PRODUCT_MAP, PRODUCT_COLORS, MAX_LEAD_TIME } from "@/lib/constants";
 import { MONTHLY_DEMAND, FINAL_FORECASTS } from "@/data/forecastData";
 import { DAILY_HISTORY, getDailyForecastSeries } from "@/data/dailyData";
@@ -316,7 +316,7 @@ function InventoryDecisionContent() {
               <div className="mt-3 grid grid-cols-3 gap-3">
                 <ForecastCard label="H+1 Forecast" value={h1Forecast?.forecastDemandRounded ?? "—"} unit="units/day" />
                 <ForecastCard label="H+7 Forecast" value={h7Forecast?.forecastDemandRounded ?? "—"} unit="units" />
-                <ForecastCard label="LTD Estimate" value={h1Forecast ? Math.round(h1Forecast.forecastDemand * leadTime) : "—"} unit={`over ${leadTime} days`} />
+                <ForecastCard label="LTD Estimate" value={Math.round(getLeadTimeDemand(selectedProduct, leadTime, state.currentDate))} unit={`over ${leadTime} days`} />
               </div>
             </div>
 
@@ -363,7 +363,7 @@ function InventoryDecisionContent() {
                       label="Lead Time Demand"
                       value={result.ltdForecast.toFixed(1)}
                       unit="units"
-                      formula={`${result.dailyForecast.toFixed(2)} × ${result.leadTime} days`}
+                      formula={`Sum of ${result.leadTime}-day daily forecast`}
                     />
                     <ResultCard
                       label="Dynamic Safety Stock"

@@ -3,7 +3,8 @@
 // ============================================================
 
 import type { ProductKey, ServiceLevel, OUTLResult, SensitivityRow } from "./types";
-import { LEAD_TIME_UNCERTAINTY, FINAL_FORECASTS, MEAN_DAILY_DEMAND } from "../data/forecastData";
+import { LEAD_TIME_UNCERTAINTY, MEAN_DAILY_DEMAND } from "../data/forecastData";
+import { getDailyForecastSeries } from "../data/dailyData";
 import { PRODUCT_MAP } from "./constants";
 
 /**
@@ -54,36 +55,46 @@ export function getDynamicSafetyStock(
   return Math.max(0, quantileValue);
 }
 
+function addDaysISO(dateStr: string, days: number): string {
+  const d = new Date(dateStr + "T00:00:00Z");
+  d.setUTCDate(d.getUTCDate() + days);
+  return d.toISOString().split("T")[0];
+}
+
 /**
- * Get daily forecast for a product (H+1 from model, or rolling mean after simulation).
- * Falls back to September mean if no specific forecast available.
+ * Get daily forecast for a specific date from the H+1..H+7 series,
+ * falling back to September mean for dates outside 2026-10-01..2026-10-07.
  */
 export function getDailyForecast(
   productKey: ProductKey,
-  currentDate?: string
+  currentDate: string = "2026-10-01"
 ): number {
-  // If we're at or near the system start, use the model's H+1 forecast
-  if (!currentDate || currentDate <= "2026-10-07") {
-    const forecast = FINAL_FORECASTS.find(
-      (f) => f.product === productKey && f.horizon === "H+1"
-    );
-    if (forecast) return forecast.forecastDemand;
-  }
-  // For later dates, use the September mean as a stable base rate
+  const series = getDailyForecastSeries(productKey);
+  const match = series.find((p) => p.date === currentDate);
+  if (match) return match.forecast;
   return MEAN_DAILY_DEMAND[productKey] ?? 8;
 }
 
 /**
- * Compute Lead Time Demand: LTD = daily_forecast × lead_time
- * Uses H+1 forecast as the representative daily demand estimate.
+ * Compute Lead Time Demand by summing the daily forecast for each day
+ * over the lead time window [currentDate, currentDate + leadTime - 1].
+ * Uses interpolated H+1..H+7 forecasts where available and MEAN_DAILY_DEMAND beyond Oct 7.
  */
 export function getLeadTimeDemand(
   productKey: ProductKey,
   leadTime: number,
-  currentDate?: string
+  currentDate: string = "2026-10-01"
 ): number {
-  const daily = getDailyForecast(productKey, currentDate);
-  return daily * leadTime;
+  const series = getDailyForecastSeries(productKey);
+  const forecastByDate = new Map(series.map((p) => [p.date, p.forecast]));
+  const fallback = MEAN_DAILY_DEMAND[productKey] ?? 8;
+
+  let total = 0;
+  for (let i = 0; i < leadTime; i++) {
+    const date = addDaysISO(currentDate, i);
+    total += forecastByDate.get(date) ?? fallback;
+  }
+  return total;
 }
 
 /**
@@ -100,7 +111,7 @@ export function calculateOUTL(
   currentDate?: string
 ): OUTLResult {
   const dailyForecast = getDailyForecast(productKey, currentDate);
-  const ltdForecast = dailyForecast * leadTime;
+  const ltdForecast = getLeadTimeDemand(productKey, leadTime, currentDate);
   const safetyStock = getDynamicSafetyStock(productKey, leadTime, serviceLevel);
   const targetStock = ltdForecast + safetyStock;
   const inventoryPosition = currentStock + onOrder - backorders;
