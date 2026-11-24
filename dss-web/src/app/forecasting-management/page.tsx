@@ -3,15 +3,6 @@
 import { useState } from "react";
 import AppLayout from "@/components/AppLayout";
 import {
-  Brain,
-  CheckCircle,
-  TrendingUp,
-  BarChart3,
-  Info,
-  ChevronDown,
-  ChevronUp,
-} from "lucide-react";
-import {
   LineChart,
   Line,
   BarChart,
@@ -36,10 +27,10 @@ import {
 
 const ALL_MODELS = ["ARIMA", "Random Forest", "XGBoost", "Symbolic Regression"];
 const MODEL_COLORS: Record<string, string> = {
-  ARIMA: "#6366f1",
-  "Random Forest": "#16a34a",
-  XGBoost: "#d97706",
-  "Symbolic Regression": "#dc2626",
+  ARIMA: "#3b5998",
+  "Random Forest": "#8b9dc3",
+  XGBoost: "#2f4779",
+  "Symbolic Regression": "#c4cce0",
 };
 
 export default function ForecastingManagementPage() {
@@ -100,7 +91,6 @@ export default function ForecastingManagementPage() {
             </p>
           </div>
           <div className="flex items-center gap-2 text-xs bg-amber-50 border border-amber-200 text-amber-700 rounded-lg px-3 py-2">
-            <Info size={14} />
             <span>Admin Access Only</span>
           </div>
         </div>
@@ -118,7 +108,6 @@ export default function ForecastingManagementPage() {
                 }`}
               >
                 <div className="flex items-center gap-2 mb-2">
-                  <Brain size={16} className="text-blue-500" />
                   <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Best Model</span>
                 </div>
                 <div className="text-sm font-bold text-gray-900 mb-0.5">{p.shortName}</div>
@@ -162,7 +151,6 @@ export default function ForecastingManagementPage() {
             {/* Historical Demand Chart */}
             <div>
               <div className="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
-                <TrendingUp size={16} className="text-blue-500" />
                 Historical Monthly Demand — {product.name}
               </div>
               <ResponsiveContainer width="100%" height={220}>
@@ -186,7 +174,6 @@ export default function ForecastingManagementPage() {
             {/* Model Performance Table */}
             <div>
               <div className="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
-                <BarChart3 size={16} className="text-indigo-500" />
                 Model Performance Comparison (H+1, Test Set)
               </div>
               <div className="overflow-x-auto">
@@ -230,7 +217,7 @@ export default function ForecastingManagementPage() {
                           <td className="py-3 pl-4">
                             {idx === 0 ? (
                               <span className="inline-flex items-center gap-1 text-xs text-green-700">
-                                <CheckCircle size={12} /> Best
+                                Best
                               </span>
                             ) : (
                               <span className="text-xs text-gray-400">#{idx + 1}</span>
@@ -289,10 +276,9 @@ export default function ForecastingManagementPage() {
                 onClick={() => setShowErrorDetail(!showErrorDetail)}
               >
                 <span className="flex items-center gap-2">
-                  <Info size={15} className="text-blue-500" />
                   Dynamic Safety Stock — Cumulative Lead-Time Error Distribution
                 </span>
-                {showErrorDetail ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                <span className="text-xs font-medium">{showErrorDetail ? "Hide" : "Show"}</span>
               </button>
               {showErrorDetail && (
                 <div className="mt-3 space-y-4">
@@ -312,9 +298,9 @@ export default function ForecastingManagementPage() {
                       <YAxis tick={{ fontSize: 11 }} />
                       <Tooltip contentStyle={{ fontSize: 12, borderRadius: 8 }} />
                       <Legend wrapperStyle={{ fontSize: 12 }} />
-                      <Line type="monotone" dataKey="SS 90%" stroke="#6366f1" strokeWidth={2} dot={{ r: 3 }} />
-                      <Line type="monotone" dataKey="SS 95%" stroke="#f59e0b" strokeWidth={2} dot={{ r: 3 }} />
-                      <Line type="monotone" dataKey="SS 99%" stroke="#ef4444" strokeWidth={2} dot={{ r: 3 }} />
+                      <Line type="monotone" dataKey="SS 90%" stroke="#2f4779" strokeWidth={2} dot={{ r: 3 }} />
+                      <Line type="monotone" dataKey="SS 95%" stroke="#3b5998" strokeWidth={2} dot={{ r: 3 }} />
+                      <Line type="monotone" dataKey="SS 99%" stroke="#8b9dc3" strokeWidth={2} dot={{ r: 3 }} />
                     </LineChart>
                   </ResponsiveContainer>
                   <div className="overflow-x-auto">

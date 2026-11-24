@@ -4,20 +4,6 @@ import { useState, useEffect, useCallback, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import AppLayout from "@/components/AppLayout";
 import {
-  ChevronDown,
-  Zap,
-  TrendingUp,
-  Shield,
-  Target,
-  ShoppingCart,
-  Info,
-  ChevronRight,
-  CheckCircle,
-  AlertTriangle,
-  BarChart2,
-  X,
-} from "lucide-react";
-import {
   LineChart,
   Line,
   XAxis,
@@ -31,8 +17,9 @@ import {
 import type { SystemState, ProductKey, ServiceLevel, OUTLResult, SensitivityRow } from "@/lib/types";
 import { loadState, getOnOrderQty, saveState, addPurchaseOrder, formatDate, formatDateLong } from "@/lib/store";
 import { calculateOUTL, calculateSensitivity, getDefaultLeadTime } from "@/lib/calculations";
-import { PRODUCTS, PRODUCT_MAP, PRODUCT_COLORS } from "@/lib/constants";
+import { PRODUCTS, PRODUCT_MAP, PRODUCT_COLORS, MAX_LEAD_TIME } from "@/lib/constants";
 import { MONTHLY_DEMAND, FINAL_FORECASTS } from "@/data/forecastData";
+import { DAILY_HISTORY, getDailyForecastSeries } from "@/data/dailyData";
 
 type ProductKeyType = ProductKey;
 
@@ -47,6 +34,7 @@ function InventoryDecisionContent() {
   const [showSensitivity, setShowSensitivity] = useState(false);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
   const [orderPlaced, setOrderPlaced] = useState(false);
+  const [chartView, setChartView] = useState<"daily" | "monthly">("daily");
 
   const refresh = useCallback(() => {
     setState(loadState());
@@ -115,6 +103,21 @@ function InventoryDecisionContent() {
     name: m.yearMonth.slice(5),
     demand: m[selectedProduct === "golf_polo" ? "golfPolo" : selectedProduct === "running_shoe" ? "runningShoe" : "lifeVest"],
   }));
+  const fmtDay = (d: string) =>
+    new Date(d + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" });
+  const dailyHistory = DAILY_HISTORY[selectedProduct];
+  const dailyForecast = getDailyForecastSeries(selectedProduct);
+  const lastActual = dailyHistory[dailyHistory.length - 1];
+  const dailyChartData = [
+    ...dailyHistory.map((d, i) => ({
+      name: fmtDay(d.date),
+      actual: d.demand,
+      // connect the forecast line to the last actual point
+      forecast: i === dailyHistory.length - 1 ? d.demand : undefined,
+    })),
+    ...dailyForecast.map((f) => ({ name: fmtDay(f.date), actual: undefined, forecast: f.forecast })),
+  ];
+  const hasInterpolated = dailyForecast.some((f) => f.interpolated);
   const h1Forecast = FINAL_FORECASTS.find((f) => f.product === selectedProduct && f.horizon === "H+1");
   const h7Forecast = FINAL_FORECASTS.find((f) => f.product === selectedProduct && f.horizon === "H+7");
 
@@ -184,12 +187,17 @@ function InventoryDecisionContent() {
                   <input
                     type="number"
                     min={1}
-                    max={14}
+                    max={MAX_LEAD_TIME}
                     value={leadTime}
-                    onChange={(e) => setLeadTime(Math.max(1, Math.min(14, Number(e.target.value))))}
+                    onChange={(e) => setLeadTime(Math.max(1, Math.min(MAX_LEAD_TIME, Number(e.target.value))))}
                     className="input-field"
                   />
-                  <div className="text-xs text-gray-400 mt-1">Default: {getDefaultLeadTime(selectedProduct)} days for {product?.shortName}</div>
+                  <div className="text-xs text-gray-400 mt-1">Default: {getDefaultLeadTime(selectedProduct)} days for {product?.shortName} · Max: {MAX_LEAD_TIME} days</div>
+                  {leadTime > 7 && (
+                    <div className="text-xs text-blue-700 mt-1">
+                      Forecast error data covers up to 7 days; safety stock for {leadTime} days is extrapolated.
+                    </div>
+                  )}
                 </div>
                 <div>
                   <label className="label">Target Service Level</label>
@@ -215,7 +223,6 @@ function InventoryDecisionContent() {
                 onClick={handleGenerate}
                 className="w-full mt-4 btn-primary flex items-center justify-center gap-2"
               >
-                <Zap size={16} />
                 Generate Recommendation
               </button>
             </div>
@@ -225,30 +232,87 @@ function InventoryDecisionContent() {
           <div className="xl:col-span-2 space-y-5">
             {/* Forecast Overview */}
             <div className="card p-5">
-              <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
                 <h2 className="font-semibold text-gray-900">Demand Forecast Overview</h2>
-                <div className="flex gap-3 text-xs text-gray-500">
-                  <span className="flex items-center gap-1">
-                    <span className="w-3 h-0.5 bg-blue-500 inline-block" /> Historical
-                  </span>
+                <div className="flex items-center gap-3">
+                  <div className="flex gap-1 bg-gray-100 p-1 rounded-lg">
+                    {(["daily", "monthly"] as const).map((v) => (
+                      <button
+                        key={v}
+                        onClick={() => setChartView(v)}
+                        className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${
+                          chartView === v ? "bg-white text-blue-600 shadow-sm" : "text-gray-500 hover:text-gray-700"
+                        }`}
+                      >
+                        {v === "daily" ? "Daily" : "Monthly"}
+                      </button>
+                    ))}
+                  </div>
+                  <div className="flex gap-3 text-xs text-gray-500">
+                    <span className="flex items-center gap-1">
+                      <span className="w-3 h-0.5 inline-block" style={{ backgroundColor: PRODUCT_COLORS[selectedProduct] }} /> Historical
+                    </span>
+                    {chartView === "daily" && (
+                      <span className="flex items-center gap-1">
+                        <span className="w-3 h-0.5 bg-blue-300 inline-block" /> Forecast
+                      </span>
+                    )}
+                  </div>
                 </div>
               </div>
-              <ResponsiveContainer width="100%" height={200}>
-                <LineChart data={chartData}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                  <XAxis dataKey="name" tick={{ fontSize: 11 }} />
-                  <YAxis tick={{ fontSize: 11 }} />
-                  <Tooltip contentStyle={{ fontSize: 12, borderRadius: 8 }} />
-                  <Line
-                    type="monotone"
-                    dataKey="demand"
-                    name="Monthly Demand"
-                    stroke={PRODUCT_COLORS[selectedProduct]}
-                    strokeWidth={2}
-                    dot={{ r: 3 }}
-                  />
-                </LineChart>
-              </ResponsiveContainer>
+              {chartView === "monthly" ? (
+                <ResponsiveContainer width="100%" height={200}>
+                  <LineChart data={chartData}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+                    <XAxis dataKey="name" tick={{ fontSize: 11 }} />
+                    <YAxis tick={{ fontSize: 11 }} />
+                    <Tooltip contentStyle={{ fontSize: 12, borderRadius: 8 }} />
+                    <Line
+                      type="monotone"
+                      dataKey="demand"
+                      name="Monthly Demand"
+                      stroke={PRODUCT_COLORS[selectedProduct]}
+                      strokeWidth={2}
+                      dot={{ r: 3 }}
+                    />
+                  </LineChart>
+                </ResponsiveContainer>
+              ) : (
+                <>
+                  <ResponsiveContainer width="100%" height={200}>
+                    <LineChart data={dailyChartData}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+                      <XAxis dataKey="name" tick={{ fontSize: 11 }} />
+                      <YAxis tick={{ fontSize: 11 }} />
+                      <Tooltip contentStyle={{ fontSize: 12, borderRadius: 8 }} />
+                      <ReferenceLine x={fmtDay(lastActual.date)} stroke="#8b9dc3" strokeDasharray="4 4" />
+                      <Line
+                        type="monotone"
+                        dataKey="actual"
+                        name="Actual Demand"
+                        stroke={PRODUCT_COLORS[selectedProduct]}
+                        strokeWidth={2}
+                        dot={{ r: 3 }}
+                        connectNulls={false}
+                      />
+                      <Line
+                        type="monotone"
+                        dataKey="forecast"
+                        name="Forecast"
+                        stroke="#8b9dc3"
+                        strokeWidth={2}
+                        strokeDasharray="5 4"
+                        dot={{ r: 3 }}
+                        connectNulls={false}
+                      />
+                    </LineChart>
+                  </ResponsiveContainer>
+                  <div className="text-xs text-gray-400 mt-1">
+                    Last 7 days (actual) and next 7 days (forecast per day)
+                    {hasInterpolated && " · H+2 and H+4–H+6 are interpolated between model outputs (H+1, H+3, H+7)"}
+                  </div>
+                </>
+              )}
               <div className="mt-3 grid grid-cols-3 gap-3">
                 <ForecastCard label="H+1 Forecast" value={h1Forecast?.forecastDemandRounded ?? "—"} unit="units/day" />
                 <ForecastCard label="H+7 Forecast" value={h7Forecast?.forecastDemandRounded ?? "—"} unit="units" />
@@ -260,7 +324,6 @@ function InventoryDecisionContent() {
             {orderPlaced && (
               <div className="card p-5 border-green-300 bg-green-50">
                 <div className="flex items-center gap-3">
-                  <CheckCircle size={22} className="text-green-600" />
                   <div>
                     <div className="font-semibold text-green-800">Purchase Order Placed Successfully</div>
                     <div className="text-sm text-green-600">
@@ -273,7 +336,6 @@ function InventoryDecisionContent() {
 
             {!result && !orderPlaced && (
               <div className="card p-10 text-center border-dashed">
-                <Zap size={40} className="mx-auto text-gray-300 mb-3" />
                 <div className="text-gray-500 font-medium">Configure parameters and click</div>
                 <div className="text-blue-600 font-semibold">"Generate Recommendation"</div>
                 <div className="text-sm text-gray-400 mt-1">to calculate your replenishment order</div>
@@ -298,28 +360,24 @@ function InventoryDecisionContent() {
                   {/* Main Result Grid */}
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-4">
                     <ResultCard
-                      icon={<TrendingUp size={16} className="text-blue-500" />}
                       label="Lead Time Demand"
                       value={result.ltdForecast.toFixed(1)}
                       unit="units"
                       formula={`${result.dailyForecast.toFixed(2)} × ${result.leadTime} days`}
                     />
                     <ResultCard
-                      icon={<Shield size={16} className="text-indigo-500" />}
                       label="Dynamic Safety Stock"
                       value={result.safetyStock.toFixed(1)}
                       unit="units"
                       formula={`Q${serviceLevel}% of cumulative error`}
                     />
                     <ResultCard
-                      icon={<Target size={16} className="text-purple-500" />}
                       label="Target Stock (S)"
                       value={result.targetStock.toFixed(1)}
                       unit="units"
                       formula={`LTD + Safety Stock`}
                     />
                     <ResultCard
-                      icon={<BarChart2 size={16} className="text-gray-500" />}
                       label="Inventory Position"
                       value={String(result.inventoryPosition)}
                       unit="units"
@@ -329,7 +387,6 @@ function InventoryDecisionContent() {
                       <div className="flex items-center justify-between">
                         <div>
                           <div className="text-xs font-medium text-blue-600 flex items-center gap-1 mb-1">
-                            <ShoppingCart size={12} />
                             Recommended Order Quantity
                           </div>
                           <div className="text-4xl font-bold text-blue-700">
@@ -344,7 +401,6 @@ function InventoryDecisionContent() {
                             onClick={() => setShowConfirmModal(true)}
                             className="btn-primary flex items-center gap-2 text-sm"
                           >
-                            <ShoppingCart size={15} />
                             Place Order
                           </button>
                         )}
@@ -355,7 +411,6 @@ function InventoryDecisionContent() {
                   {/* Explanation */}
                   <div className="bg-gray-50 rounded-lg p-4 text-sm text-gray-700">
                     <div className="flex items-start gap-2">
-                      <Info size={16} className="text-blue-500 flex-shrink-0 mt-0.5" />
                       <div>
                         {result.orderQuantity === 0 ? (
                           <>
@@ -385,10 +440,7 @@ function InventoryDecisionContent() {
                     onClick={() => setShowSensitivity(!showSensitivity)}
                   >
                     <span className="font-semibold text-gray-900">Sensitivity Analysis — Service Level Impact</span>
-                    <ChevronRight
-                      size={18}
-                      className={`text-gray-400 transition-transform ${showSensitivity ? "rotate-90" : ""}`}
-                    />
+                    <span className="text-xs font-medium text-gray-500">{showSensitivity ? "Hide" : "Show"}</span>
                   </button>
                   {showSensitivity && sensitivity && (
                     <div className="px-5 pb-5">
@@ -444,7 +496,7 @@ function InventoryDecisionContent() {
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-bold text-gray-900">Confirm Purchase Order</h3>
               <button onClick={() => setShowConfirmModal(false)} className="text-gray-400 hover:text-gray-600">
-                <X size={20} />
+                <span className="text-sm">Close</span>
               </button>
             </div>
             <div className="bg-blue-50 rounded-xl p-4 mb-4">
@@ -502,13 +554,12 @@ function ForecastCard({ label, value, unit }: { label: string; value: number | s
   );
 }
 
-function ResultCard({ icon, label, value, unit, formula }: {
-  icon: React.ReactNode; label: string; value: string; unit: string; formula: string;
+function ResultCard({ label, value, unit, formula }: {
+  label: string; value: string; unit: string; formula: string;
 }) {
   return (
     <div className="bg-gray-50 rounded-xl p-4">
-      <div className="flex items-center gap-1.5 mb-2">
-        {icon}
+      <div className="mb-2">
         <span className="text-xs font-medium text-gray-500">{label}</span>
       </div>
       <div className="text-2xl font-bold text-gray-900">{value}</div>

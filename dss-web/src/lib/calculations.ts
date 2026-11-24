@@ -7,6 +7,32 @@ import { LEAD_TIME_UNCERTAINTY, FINAL_FORECASTS, MEAN_DAILY_DEMAND } from "../da
 import { PRODUCT_MAP } from "./constants";
 
 /**
+ * The cumulative lead-time error table only covers lead times 1–7 days
+ * (the maximum forecast horizon). For longer lead times (8–10 days) there is
+ * no empirical error, so the quantile is extrapolated with a linear
+ * least-squares fit of the 1–7 day values (never lower than the 7-day value).
+ */
+function extrapolateSafetyStock(
+  productKey: ProductKey,
+  leadTime: number,
+  serviceLevel: ServiceLevel
+): number {
+  const rows = LEAD_TIME_UNCERTAINTY.filter((r) => r.product === productKey);
+  if (rows.length < 2) return 0;
+  const pick = (r: (typeof rows)[number]) =>
+    serviceLevel === 90 ? r.p90 : serviceLevel === 95 ? r.p95 : r.p99;
+  const n = rows.length;
+  const sx = rows.reduce((s, r) => s + r.leadTime, 0);
+  const sy = rows.reduce((s, r) => s + pick(r), 0);
+  const sxy = rows.reduce((s, r) => s + r.leadTime * pick(r), 0);
+  const sxx = rows.reduce((s, r) => s + r.leadTime * r.leadTime, 0);
+  const slope = (n * sxy - sx * sy) / (n * sxx - sx * sx);
+  const intercept = (sy - slope * sx) / n;
+  const maxRow = rows.reduce((a, b) => (b.leadTime > a.leadTime ? b : a));
+  return Math.max(0, pick(maxRow), intercept + slope * leadTime);
+}
+
+/**
  * Get the Dynamic Safety Stock value from lead-time uncertainty table.
  * SS = max(0, Qα(E_LT))
  */
@@ -18,7 +44,7 @@ export function getDynamicSafetyStock(
   const row = LEAD_TIME_UNCERTAINTY.find(
     (r) => r.product === productKey && r.leadTime === leadTime
   );
-  if (!row) return 0;
+  if (!row) return extrapolateSafetyStock(productKey, leadTime, serviceLevel);
 
   let quantileValue: number;
   if (serviceLevel === 90) quantileValue = row.p90;

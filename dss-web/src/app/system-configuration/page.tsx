@@ -2,22 +2,6 @@
 
 import { useState, useEffect, useCallback } from "react";
 import AppLayout from "@/components/AppLayout";
-import {
-  Settings,
-  RefreshCw,
-  Play,
-  RotateCcw,
-  Plus,
-  Trash2,
-  Save,
-  AlertTriangle,
-  CheckCircle,
-  Info,
-  Calendar,
-  Package,
-  ArrowRight,
-  X,
-} from "lucide-react";
 import type { SystemState, ProductKey, PurchaseOrder, Transaction, ProductInventory } from "@/lib/types";
 import {
   loadState,
@@ -174,14 +158,12 @@ export default function SystemConfigurationPage() {
           </div>
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-2 text-sm bg-blue-50 border border-blue-200 text-blue-700 rounded-lg px-3 py-2">
-              <Calendar size={15} />
               <span>System Date: <strong>{formatDateLong(state.currentDate)}</strong></span>
             </div>
             <button
               onClick={() => setShowResetConfirm(true)}
               className="flex items-center gap-2 btn-danger text-sm"
             >
-              <RotateCcw size={15} />
               Reset System
             </button>
           </div>
@@ -190,10 +172,9 @@ export default function SystemConfigurationPage() {
         {/* Result Banner */}
         {showSimResult && (
           <div className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 rounded-xl">
-            <CheckCircle size={18} className="text-green-600 flex-shrink-0" />
             <span className="text-sm text-green-800">{showSimResult}</span>
             <button onClick={() => setShowSimResult(null)} className="ml-auto text-green-400 hover:text-green-600">
-              <X size={16} />
+              Dismiss
             </button>
           </div>
         )}
@@ -224,7 +205,6 @@ export default function SystemConfigurationPage() {
             {/* Input Form */}
             <div className="card p-5">
               <div className="flex items-center gap-2 mb-4">
-                <Play size={18} className="text-blue-500" />
                 <h2 className="font-semibold text-gray-900">Simulate Next Day</h2>
               </div>
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4 text-xs text-blue-700">
@@ -258,7 +238,6 @@ export default function SystemConfigurationPage() {
                 onClick={handleSimulate}
                 className="w-full btn-primary flex items-center justify-center gap-2"
               >
-                <Play size={16} />
                 Advance to Next Day ({state.currentDate} → next)
               </button>
             </div>
@@ -266,7 +245,6 @@ export default function SystemConfigurationPage() {
             {/* Current Status */}
             <div className="card p-5">
               <div className="flex items-center gap-2 mb-4">
-                <Package size={18} className="text-green-500" />
                 <h2 className="font-semibold text-gray-900">Current Inventory Status</h2>
               </div>
               <div className="space-y-3">
@@ -301,7 +279,6 @@ export default function SystemConfigurationPage() {
                               isToday ? "bg-green-50 border border-green-200" : "bg-gray-50"
                             }`}
                           >
-                            <ArrowRight size={12} className="text-gray-400 flex-shrink-0" />
                             <span className="font-mono text-gray-500">{po.orderId}</span>
                             <span className="font-medium">{PRODUCT_MAP[po.productKey]?.shortName}</span>
                             <span className="font-bold">{po.quantity}u</span>
@@ -347,9 +324,9 @@ export default function SystemConfigurationPage() {
               {/* On-Order Setup */}
               <div className="border-t border-gray-100 pt-4 mb-4">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-sm font-semibold text-gray-700">Purchase Orders In-Transit</h3>
+                  <h3 className="text-sm font-semibold text-gray-700">Purchase Orders Shipped</h3>
                   <button onClick={handleAddOrder} className="btn-secondary text-xs flex items-center gap-1 py-1">
-                    <Plus size={12} /> Add PO
+                    Add PO
                   </button>
                 </div>
                 <div className="space-y-3">
@@ -358,7 +335,7 @@ export default function SystemConfigurationPage() {
                       <div className="flex items-center justify-between mb-2">
                         <span className="font-mono text-xs text-gray-500">{po.orderId}</span>
                         <button onClick={() => handleRemoveOrder(po.orderId)} className="text-red-400 hover:text-red-600">
-                          <Trash2 size={14} />
+                          <span className="text-xs">Remove</span>
                         </button>
                       </div>
                       <div className="grid grid-cols-2 gap-2">
@@ -415,7 +392,7 @@ export default function SystemConfigurationPage() {
                 onClick={handleSaveSetup}
                 className="w-full btn-success flex items-center justify-center gap-2"
               >
-                {setupSaved ? <><CheckCircle size={16} /> Saved!</> : <><Save size={16} /> Save Initial Inventory</>}
+                {setupSaved ? "Saved!" : "Save Initial Inventory"}
               </button>
             </div>
 
@@ -450,7 +427,6 @@ export default function SystemConfigurationPage() {
               </div>
 
               <div className="mt-4 bg-blue-50 border border-blue-200 rounded-lg p-3 text-xs text-blue-700">
-                <Info size={13} className="inline mr-1" />
                 After saving, the Dashboard and Inventory Decision pages will reflect these values immediately.
               </div>
             </div>
@@ -466,7 +442,6 @@ export default function SystemConfigurationPage() {
             </div>
             {transactions.length === 0 ? (
               <div className="text-center py-12 text-gray-400">
-                <Settings size={40} className="mx-auto mb-3 opacity-30" />
                 <p>No transactions yet. Run the daily simulation to generate transactions.</p>
               </div>
             ) : (
@@ -552,9 +527,6 @@ export default function SystemConfigurationPage() {
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl shadow-xl max-w-sm w-full p-6">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
-                <AlertTriangle size={20} className="text-red-600" />
-              </div>
               <div>
                 <div className="font-bold text-gray-900">Reset System?</div>
                 <div className="text-sm text-gray-500">This cannot be undone</div>
@@ -584,7 +556,7 @@ function StatusRow({ label, value, ok }: { label: string; value: string; ok?: bo
     <div className="flex justify-between items-center py-2 border-b border-gray-50">
       <span className="text-gray-500">{label}</span>
       <span className={`font-semibold flex items-center gap-1 ${ok ? "text-green-600" : "text-gray-900"}`}>
-        {ok && <CheckCircle size={14} />} {value}
+        {value}
       </span>
     </div>
   );

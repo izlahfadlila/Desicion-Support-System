@@ -42,9 +42,10 @@ export const STATUS_CONFIG = {
 };
 
 export const PRODUCT_COLORS: Record<ProductKey, string> = {
-  golf_polo: "#2563eb",
-  running_shoe: "#16a34a",
-  life_vest: "#d97706",
+  golf_polo: "#3b5998",
+  running_shoe: "#8b9dc3",
+  life_vest: "#2f4779",
 };
 
+export const MAX_LEAD_TIME = 10;
 export const LOCAL_STORAGE_KEY = "dss_inventory_state_v2";

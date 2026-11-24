@@ -2,18 +2,6 @@
 
 import { useState, useEffect, useCallback } from "react";
 import AppLayout from "@/components/AppLayout";
-import {
-  Package,
-  AlertTriangle,
-  Clock,
-  Boxes,
-  TrendingUp,
-  ArrowRight,
-  RefreshCw,
-  CheckCircle,
-  AlertCircle,
-  Info,
-} from "lucide-react";
 import { useRouter } from "next/navigation";
 import {
   BarChart,
@@ -75,12 +63,6 @@ export default function DashboardPage() {
     target: Math.round(results[i].targetStock),
   }));
 
-  const statusIcon = (status: string) => {
-    if (status === "normal") return <CheckCircle size={16} className="text-green-500" />;
-    if (status === "critical") return <AlertCircle size={16} className="text-red-500" />;
-    return <AlertTriangle size={16} className="text-amber-500" />;
-  };
-
   const statusBadge = (status: string) => {
     if (status === "normal") return <span className="badge-normal">Normal</span>;
     if (status === "critical") return <span className="badge-critical">Critical</span>;
@@ -99,7 +81,6 @@ export default function DashboardPage() {
             </p>
           </div>
           <div className="flex items-center gap-2 text-xs text-gray-500 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2">
-            <Info size={14} className="text-blue-500" />
             <span>Service Level: 95% · Operational since Oct 1, 2026</span>
           </div>
         </div>
@@ -107,14 +88,12 @@ export default function DashboardPage() {
         {/* Summary Cards */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           <SummaryCard
-            icon={<Package size={22} className="text-blue-500" />}
             label="Total Products"
             value="3"
             sub="Managed products"
             color="blue"
           />
           <SummaryCard
-            icon={<AlertTriangle size={22} className="text-amber-500" />}
             label="Need Replenishment"
             value={String(needsReplenishment)}
             sub={`out of 3 products`}
@@ -122,14 +101,12 @@ export default function DashboardPage() {
             highlight={needsReplenishment > 0}
           />
           <SummaryCard
-            icon={<Clock size={22} className="text-indigo-500" />}
             label="Pending Orders"
             value={String(pendingOrders.length)}
-            sub="In transit"
+            sub="Shipped"
             color="indigo"
           />
           <SummaryCard
-            icon={<Boxes size={22} className="text-green-500" />}
             label="Total Inventory"
             value={String(totalStock)}
             sub={`+${totalOnOrder} on order`}
@@ -162,11 +139,8 @@ export default function DashboardPage() {
                   return (
                     <tr key={p.key} className="border-b border-gray-50 hover:bg-gray-50 transition-colors">
                       <td className="py-3">
-                        <div className="flex items-center gap-2">
-                          {statusIcon(r.status)}
-                          <span className="font-medium text-gray-900">{p.shortName}</span>
-                        </div>
-                        <div className="text-xs text-gray-400 ml-6">{p.name}</div>
+                        <span className="font-medium text-gray-900">{p.shortName}</span>
+                        <div className="text-xs text-gray-400">{p.name}</div>
                       </td>
                       <td className="text-right py-3 font-mono font-semibold">{r.currentStock}</td>
                       <td className="text-right py-3 font-mono text-indigo-600">{r.onOrder}</td>
@@ -196,7 +170,6 @@ export default function DashboardPage() {
                 if (r.orderQuantity === 0) {
                   return (
                     <div key={p.key} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-                      <CheckCircle size={18} className="text-green-500 flex-shrink-0" />
                       <div className="flex-1 min-w-0">
                         <div className="text-sm font-medium text-gray-700">{p.shortName}</div>
                         <div className="text-xs text-gray-500">Stock sufficient — No action needed</div>
@@ -206,7 +179,6 @@ export default function DashboardPage() {
                 }
                 return (
                   <div key={p.key} className="flex items-center gap-3 p-3 bg-amber-50 border border-amber-200 rounded-lg">
-                    <AlertTriangle size={18} className="text-amber-500 flex-shrink-0" />
                     <div className="flex-1 min-w-0">
                       <div className="text-sm font-medium text-gray-900">{p.shortName}</div>
                       <div className="text-xs text-gray-600">
@@ -217,7 +189,7 @@ export default function DashboardPage() {
                       onClick={() => router.push(`/inventory-decision?product=${p.key}`)}
                       className="flex-shrink-0 text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1"
                     >
-                      View <ArrowRight size={12} />
+                      View
                     </button>
                   </div>
                 );
@@ -230,7 +202,6 @@ export default function DashboardPage() {
             <h2 className="font-semibold text-gray-900 mb-4">Upcoming Incoming Orders</h2>
             {pendingOrders.length === 0 ? (
               <div className="text-center py-8 text-gray-400">
-                <Clock size={32} className="mx-auto mb-2 opacity-30" />
                 <p className="text-sm">No pending orders</p>
               </div>
             ) : (
@@ -263,7 +234,7 @@ export default function DashboardPage() {
                               {isToday && <span className="ml-1 text-green-600">(Today!)</span>}
                             </td>
                             <td className="py-2.5">
-                              <span className="badge-pending">In Transit</span>
+                              <span className="badge-pending">Shipped</span>
                             </td>
                           </tr>
                         );
@@ -288,9 +259,9 @@ export default function DashboardPage() {
                 contentStyle={{ fontSize: 12, borderRadius: 8, border: "1px solid #e5e7eb" }}
               />
               <Legend wrapperStyle={{ fontSize: 12 }} />
-              <Bar dataKey="stock" name="Current Stock" fill="#2563eb" radius={[4, 4, 0, 0]} />
-              <Bar dataKey="onOrder" name="On-Order" fill="#818cf8" radius={[4, 4, 0, 0]} />
-              <Bar dataKey="target" name="Target Stock" fill="#e5e7eb" radius={[4, 4, 0, 0]} />
+              <Bar dataKey="stock" name="Current Stock" fill="#3b5998" radius={[4, 4, 0, 0]} />
+              <Bar dataKey="onOrder" name="On-Order" fill="#8b9dc3" radius={[4, 4, 0, 0]} />
+              <Bar dataKey="target" name="Target Stock" fill="#dfe3ee" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -300,14 +271,12 @@ export default function DashboardPage() {
 }
 
 function SummaryCard({
-  icon,
   label,
   value,
   sub,
   color,
   highlight = false,
 }: {
-  icon: React.ReactNode;
   label: string;
   value: string;
   sub: string;
@@ -316,10 +285,7 @@ function SummaryCard({
 }) {
   return (
     <div className={`card p-4 ${highlight ? "border-amber-300 bg-amber-50" : ""}`}>
-      <div className="flex items-start justify-between">
-        <div className={`p-2 rounded-lg bg-${color}-50`}>{icon}</div>
-      </div>
-      <div className="mt-3">
+      <div>
         <div className="text-2xl font-bold text-gray-900">{value}</div>
         <div className="text-sm font-medium text-gray-700 mt-0.5">{label}</div>
         <div className="text-xs text-gray-500 mt-0.5">{sub}</div>
