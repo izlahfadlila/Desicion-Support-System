@@ -29,14 +29,7 @@ const DEFAULT_PURCHASE_ORDERS: PurchaseOrder[] = [
     expectedArrival: "2026-10-02",
     status: "pending",
   },
-  {
-    orderId: "PO-2026-003",
-    productKey: "running_shoe",
-    quantity: 20,
-    orderDate: "2026-09-29",
-    expectedArrival: "2026-10-04",
-    status: "pending",
-  },
+  // Running Shoe sengaja tanpa PO in-transit (on-order = 0) agar langsung direkomendasikan order hari ini
 ];
 
 function buildInitialState(): SystemState {

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import type { Role } from "@/lib/types";
-import { login, getSession, homeForRole, CREDENTIALS } from "@/lib/auth";
+import { login, getSession, homeForRole } from "@/lib/auth";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -91,10 +91,6 @@ export default function LoginPage() {
             Login
           </button>
 
-          <div className="text-xs text-gray-500 bg-gray-50 rounded-lg p-3">
-            Demo accounts — User: <span className="font-mono">{CREDENTIALS.user.username} / {CREDENTIALS.user.password}</span>
-            {" · "}Admin: <span className="font-mono">{CREDENTIALS.admin.username} / {CREDENTIALS.admin.password}</span>
-          </div>
         </form>
       </div>
     </div>

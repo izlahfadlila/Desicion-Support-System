@@ -8,8 +8,6 @@ import {
   BarChart3,
   Settings,
   Menu,
-  X,
-  Box,
 } from "lucide-react";
 import type { Role } from "@/lib/types";
 import { getSession, logout, homeForRole, isAdminPath } from "@/lib/auth";
@@ -101,9 +99,6 @@ export default function AppLayout({ children }: AppLayoutProps) {
         <div className="w-64 h-full flex flex-col">
           {/* Logo */}
           <div className="flex items-center gap-3 px-6 py-5 border-b border-navy-800">
-            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-              <Box size={18} className="text-white" />
-            </div>
             <div>
               <div className="text-sm font-bold leading-tight">DSS Inventory</div>
               <div className="text-xs text-blue-100 leading-tight">Replenishment System</div>
@@ -113,7 +108,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
               onClick={() => setSidebarOpen(false)}
               aria-label="Close sidebar"
             >
-              <X size={18} />
+              <Menu size={22} />
             </button>
           </div>
 
@@ -180,13 +175,15 @@ export default function AppLayout({ children }: AppLayoutProps) {
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
         {/* Top Navbar */}
         <header className="bg-white border-b border-gray-200 px-6 py-3 flex items-center gap-4 flex-shrink-0">
-          <button
-            className="text-gray-500 hover:text-gray-900"
-            onClick={() => setSidebarOpen(!sidebarOpen)}
-            aria-label="Toggle sidebar"
-          >
-            <Menu size={22} />
-          </button>
+          {!sidebarOpen && (
+            <button
+              className="text-gray-500 hover:text-gray-900"
+              onClick={() => setSidebarOpen(true)}
+              aria-label="Open sidebar"
+            >
+              <Menu size={22} />
+            </button>
+          )}
 
           <div className="ml-auto flex items-center gap-4">
             <div className="hidden sm:flex items-center text-xs text-gray-500 bg-gray-100 px-3 py-1.5 rounded-full">
