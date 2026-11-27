@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AppLayout from "@/components/AppLayout";
 import {
   LineChart,
@@ -16,7 +16,13 @@ import {
   ReferenceLine,
 } from "recharts";
 import type { ProductKey } from "@/lib/types";
-import { PRODUCTS, PRODUCT_MAP, PRODUCT_COLORS } from "@/lib/constants";
+import {
+  PRODUCTS,
+  PRODUCT_MAP,
+  PRODUCT_COLORS,
+  SYSTEM_START_DATE,
+  LOCAL_STORAGE_KEY,
+} from "@/lib/constants";
 import {
   MODEL_EVALUATION,
   BEST_MODELS,
@@ -32,9 +38,41 @@ const MODEL_COLORS: Record<string, string> = {
   "Symbolic Regression": "#c4cce0",
 };
 
+function formatOperationalDate(isoDate: string): string {
+  const [y, m, d] = isoDate.split("-").map(Number);
+  if (!y || !m || !d) return isoDate;
+  const date = new Date(Date.UTC(y, m - 1, d));
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+}
+
 export default function ForecastingManagementPage() {
   const [selectedProduct, setSelectedProduct] = useState<ProductKey>("golf_polo");
   const [showErrorDetail, setShowErrorDetail] = useState(false);
+  const [currentDate, setCurrentDate] = useState<string>(SYSTEM_START_DATE);
+
+  useEffect(() => {
+    const syncDate = () => {
+      try {
+        const raw = localStorage.getItem(LOCAL_STORAGE_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed.currentDate) setCurrentDate(parsed.currentDate);
+        }
+      } catch {}
+    };
+    syncDate();
+    window.addEventListener("storage", syncDate);
+    window.addEventListener("dss_state_changed", syncDate);
+    return () => {
+      window.removeEventListener("storage", syncDate);
+      window.removeEventListener("dss_state_changed", syncDate);
+    };
+  }, []);
 
   const product = PRODUCT_MAP[selectedProduct];
   const bestModelRow = BEST_MODELS.find(
@@ -112,10 +150,12 @@ export default function ForecastingManagementPage() {
             );
           })}
           <div className="card p-4">
-            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Data Period</div>
-            <div className="text-sm font-bold text-gray-900">Jan 2024 – Sep 2026</div>
-            <div className="text-xs text-gray-500 mt-1">990 calendar days</div>
-            <div className="text-xs text-gray-400 mt-1">Operational: Oct 1, 2026</div>
+            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Training Data Period</div>
+            <div className="text-sm font-bold text-gray-900">Jan 2024 – Aug 2026</div>
+            <div className="text-xs text-gray-500 mt-1">974 calendar days</div>
+            <div className="text-xs text-gray-400 mt-1">
+              Operational: {formatOperationalDate(currentDate)}
+            </div>
           </div>
         </div>
 
