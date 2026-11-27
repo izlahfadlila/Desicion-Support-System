@@ -29,7 +29,7 @@ export default function SystemConfigurationPage() {
   const [state, setState] = useState<SystemState | null>(null);
   const [showResetConfirm, setShowResetConfirm] = useState(false);
   const [showSimResult, setShowSimResult] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<"daily" | "setup" | "transactions" | "config">("daily");
+  const [activeTab, setActiveTab] = useState<"daily" | "setup" | "transactions">("daily");
   const [logFilter, setLogFilter] = useState<"all" | "eval" | "demo">("all");
 
   const refresh = useCallback(() => {
@@ -130,7 +130,6 @@ export default function SystemConfigurationPage() {
             { id: "daily", label: "Daily Simulation" },
             { id: "setup", label: "Initialization Baseline" },
             { id: "transactions", label: `Transaction Log (${allTransactions.length})` },
-            { id: "config", label: "System Status" },
           ].map((tab) => (
             <button
               key={tab.id}
@@ -347,23 +346,6 @@ export default function SystemConfigurationPage() {
                   })}
                 </tbody>
               </table>
-            </div>
-          </div>
-        )}
-
-        {/* Tab 4: System Status */}
-        {activeTab === "config" && (
-          <div className="card p-6 space-y-4">
-            <h2 className="font-semibold text-gray-900">System Architecture &amp; Storage Status</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-              <div className="p-4 bg-gray-50 rounded-lg space-y-2">
-                <div className="font-semibold text-gray-700">Storage Layer: Upstash Redis (Cloud KV)</div>
-                <div className="text-gray-500">Connected via REST API endpoint: <code>/api/state</code> with automatic LocalStorage fallback.</div>
-              </div>
-              <div className="p-4 bg-gray-50 rounded-lg space-y-2">
-                <div className="font-semibold text-gray-700">Simulation Engine: Trace-driven EOD</div>
-                <div className="text-gray-500">Deterministic trace simulation over September 2026 data. End-of-Day receipt applied.</div>
-              </div>
             </div>
           </div>
         )}

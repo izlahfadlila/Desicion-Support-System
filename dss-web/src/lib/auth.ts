@@ -46,7 +46,7 @@ export function homeForRole(role: Role): string {
   return role === "admin" ? "/forecasting-management" : "/dashboard";
 }
 
-const ADMIN_PATHS = ["/forecasting-management", "/system-configuration"];
+const ADMIN_PATHS = ["/forecasting-management", "/system-evaluation", "/system-configuration"];
 export function isAdminPath(pathname: string): boolean {
   return ADMIN_PATHS.some((p) => pathname.startsWith(p));
 }
