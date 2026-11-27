@@ -20,7 +20,6 @@ import { PRODUCTS, PRODUCT_MAP, PRODUCT_COLORS } from "@/lib/constants";
 import {
   MODEL_EVALUATION,
   BEST_MODELS,
-  FINAL_FORECASTS,
   MONTHLY_DEMAND,
   LEAD_TIME_UNCERTAINTY,
 } from "@/data/forecastData";
@@ -46,9 +45,6 @@ export default function ForecastingManagementPage() {
   const evalRows = MODEL_EVALUATION.filter(
     (r) => r.product === selectedProduct && r.horizon === "H+1"
   ).sort((a, b) => a.mae - b.mae);
-
-  // Final forecasts for selected product
-  const forecasts = FINAL_FORECASTS.filter((f) => f.product === selectedProduct);
 
   // Monthly historical chart data
   const histData = MONTHLY_DEMAND.map((m) => ({
@@ -182,7 +178,7 @@ export default function ForecastingManagementPage() {
                       <th className="text-left pb-2 font-medium text-gray-500">Model</th>
                       <th className="text-right pb-2 font-medium text-gray-500">MAE ↓</th>
                       <th className="text-right pb-2 font-medium text-gray-500">RMSE ↓</th>
-                      <th className="text-left pb-2 font-medium text-gray-500 pl-4">Rank</th>
+                      <th className="text-left pb-2 font-medium text-gray-500 pl-4">Status</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -208,10 +204,8 @@ export default function ForecastingManagementPage() {
                           <td className="py-3 text-right font-mono">{row.mae.toFixed(3)}</td>
                           <td className="py-3 text-right font-mono">{row.rmse.toFixed(3)}</td>
                           <td className="py-3 pl-4">
-                            {idx === 0 ? (
-                              <span className="inline-flex items-center gap-1 text-xs text-green-700">
-                                Best
-                              </span>
+                            {isBest ? (
+                              <span className="text-xs text-green-700 font-semibold">✓ Selected</span>
                             ) : (
                               <span className="text-xs text-gray-400">#{idx + 1}</span>
                             )}
@@ -243,23 +237,6 @@ export default function ForecastingManagementPage() {
                   />
                 </BarChart>
               </ResponsiveContainer>
-            </div>
-
-            {/* Forecast Results */}
-            <div>
-              <div className="text-sm font-semibold text-gray-700 mb-3">Final Forecast (Origin: Sep 30, 2026)</div>
-              <div className="grid grid-cols-3 gap-3">
-                {forecasts.map((f) => (
-                  <div key={f.horizon} className="bg-gray-50 rounded-xl p-4">
-                    <div className="text-xs text-gray-500 mb-1">{f.horizon} Forecast</div>
-                    <div className="text-2xl font-bold" style={{ color: PRODUCT_COLORS[selectedProduct] }}>
-                      {f.forecastDemandRounded}
-                    </div>
-                    <div className="text-xs text-gray-400">units on {f.forecastDate}</div>
-                    <div className="text-xs text-gray-300 mt-0.5">Model: {f.model}</div>
-                  </div>
-                ))}
-              </div>
             </div>
 
             {/* Lead-Time Uncertainty / Safety Stock */}

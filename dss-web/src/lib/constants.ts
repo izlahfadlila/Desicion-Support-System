@@ -47,5 +47,5 @@ export const PRODUCT_COLORS: Record<ProductKey, string> = {
   life_vest: "#2f4779",
 };
 
-export const MAX_LEAD_TIME = 10;
+export const MAX_LEAD_TIME = 7;
 export const LOCAL_STORAGE_KEY = "dss_inventory_state_v2";

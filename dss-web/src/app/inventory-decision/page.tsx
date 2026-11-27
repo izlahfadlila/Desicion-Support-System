@@ -149,10 +149,7 @@ function InventoryDecisionContent() {
                         : "border-gray-200 hover:border-gray-300 hover:bg-gray-50"
                     }`}
                   >
-                    <div className="flex items-center justify-between">
-                      <span className="font-medium text-sm text-gray-900">{p.shortName}</span>
-                      <span className="text-xs text-gray-400">{p.model}</span>
-                    </div>
+                    <span className="font-medium text-sm text-gray-900">{p.shortName}</span>
                     <div className="text-xs text-gray-500 mt-0.5 truncate">{p.name}</div>
                   </button>
                 ))}
@@ -192,12 +189,7 @@ function InventoryDecisionContent() {
                     onChange={(e) => setLeadTime(Math.max(1, Math.min(MAX_LEAD_TIME, Number(e.target.value))))}
                     className="input-field"
                   />
-                  <div className="text-xs text-gray-400 mt-1">Default: {getDefaultLeadTime(selectedProduct)} days for {product?.shortName} · Max: {MAX_LEAD_TIME} days</div>
-                  {leadTime > 7 && (
-                    <div className="text-xs text-blue-700 mt-1">
-                      Forecast error data covers up to 7 days; safety stock for {leadTime} days is extrapolated.
-                    </div>
-                  )}
+                  <div className="text-xs text-gray-400 mt-1">Default: {getDefaultLeadTime(selectedProduct)} days for {product?.shortName} · Max: 7 days</div>
                 </div>
                 <div>
                   <label className="label">Target Service Level</label>
@@ -309,7 +301,6 @@ function InventoryDecisionContent() {
                   </ResponsiveContainer>
                   <div className="text-xs text-gray-400 mt-1">
                     Last 7 days (actual) and next 7 days (forecast per day)
-                    {hasInterpolated && " · H+2 and H+4–H+6 are interpolated between model outputs (H+1, H+3, H+7)"}
                   </div>
                 </>
               )}

@@ -101,9 +101,9 @@ export default function DashboardPage() {
             highlight={needsReplenishment > 0}
           />
           <SummaryCard
-            label="Pending Orders"
+            label="Processing Orders"
             value={String(pendingOrders.length)}
-            sub="Shipped"
+            sub="In Progress"
             color="indigo"
           />
           <SummaryCard
@@ -234,7 +234,7 @@ export default function DashboardPage() {
                               {isToday && <span className="ml-1 text-green-600">(Today!)</span>}
                             </td>
                             <td className="py-2.5">
-                              <span className="badge-pending">Shipped</span>
+                              <span className="badge-pending">In Progress</span>
                             </td>
                           </tr>
                         );
@@ -285,9 +285,9 @@ function SummaryCard({
 }) {
   return (
     <div className={`card p-4 ${highlight ? "border-amber-300 bg-amber-50" : ""}`}>
-      <div>
-        <div className="text-2xl font-bold text-gray-900">{value}</div>
-        <div className="text-sm font-medium text-gray-700 mt-0.5">{label}</div>
+      <div className="text-center">
+        <div className="text-sm font-medium text-gray-700">{label}</div>
+        <div className="text-2xl font-bold text-gray-900 mt-1">{value}</div>
         <div className="text-xs text-gray-500 mt-0.5">{sub}</div>
       </div>
     </div>
