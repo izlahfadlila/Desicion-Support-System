@@ -1,6 +1,6 @@
 import type { Product, ProductKey } from "./types";
 
-export const SYSTEM_START_DATE = "2026-10-01";
+export const SYSTEM_START_DATE = "2026-09-26";
 export const DATA_END_DATE = "2026-09-30";
 
 export const PRODUCTS: Product[] = [

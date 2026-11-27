@@ -8,9 +8,11 @@ import {
   BarChart3,
   Settings,
   Menu,
+  CheckCircle2,
 } from "lucide-react";
 import type { Role } from "@/lib/types";
 import { getSession, logout, homeForRole, isAdminPath } from "@/lib/auth";
+import { syncFromCloud } from "@/lib/store";
 
 const USER_NAV = [
   { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
@@ -19,6 +21,7 @@ const USER_NAV = [
 
 const ADMIN_NAV = [
   { label: "Forecasting Management", href: "/forecasting-management", icon: BarChart3 },
+  { label: "System Evaluation", href: "/system-evaluation", icon: CheckCircle2 },
   { label: "System Configuration", href: "/system-configuration", icon: Settings },
 ];
 
@@ -53,6 +56,9 @@ export default function AppLayout({ children }: AppLayoutProps) {
   }, [pathname, router]);
 
   useEffect(() => {
+    // Sync shared state from Upstash Redis on mount
+    syncFromCloud();
+
     // Sidebar closed by default on small screens
     if (window.innerWidth < 1024) setSidebarOpen(false);
 

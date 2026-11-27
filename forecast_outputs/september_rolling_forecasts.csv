@@ -1,0 +1,631 @@
+Product,Origin Date,Forecast Date,Horizon,Selected Model,Forecast Demand
+Nike Men's Dri-FIT Victory Golf Polo,2026-08-31,2026-09-01,H+1,Random Forest,3.1145
+Nike Men's Dri-FIT Victory Golf Polo,2026-08-31,2026-09-02,H+2,Random Forest,4.1668
+Nike Men's Dri-FIT Victory Golf Polo,2026-08-31,2026-09-03,H+3,Random Forest,2.9464
+Nike Men's Dri-FIT Victory Golf Polo,2026-08-31,2026-09-04,H+4,XGBoost,7.696
+Nike Men's Dri-FIT Victory Golf Polo,2026-08-31,2026-09-05,H+5,XGBoost,11.293
+Nike Men's Dri-FIT Victory Golf Polo,2026-08-31,2026-09-06,H+6,XGBoost,14.1575
+Nike Men's Dri-FIT Victory Golf Polo,2026-08-31,2026-09-07,H+7,XGBoost,11.7641
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-01,2026-09-02,H+1,Random Forest,4.2675
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-01,2026-09-03,H+2,Random Forest,4.8959
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-01,2026-09-04,H+3,Random Forest,4.6312
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-01,2026-09-05,H+4,XGBoost,10.8717
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-01,2026-09-06,H+5,XGBoost,11.4598
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-01,2026-09-07,H+6,XGBoost,8.4477
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-01,2026-09-08,H+7,XGBoost,15.2548
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-02,2026-09-03,H+1,Random Forest,5.234
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-02,2026-09-04,H+2,Random Forest,6.4018
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-02,2026-09-05,H+3,Random Forest,7.6454
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-02,2026-09-06,H+4,XGBoost,10.0522
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-02,2026-09-07,H+5,XGBoost,11.3914
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-02,2026-09-08,H+6,XGBoost,14.6999
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-02,2026-09-09,H+7,XGBoost,17.841
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-03,2026-09-04,H+1,Random Forest,6.0736
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-03,2026-09-05,H+2,Random Forest,13.5639
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-03,2026-09-06,H+3,Random Forest,17.7572
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-03,2026-09-07,H+4,XGBoost,10.6352
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-03,2026-09-08,H+5,XGBoost,12.2348
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-03,2026-09-09,H+6,XGBoost,20.4463
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-03,2026-09-10,H+7,XGBoost,20.3072
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-04,2026-09-05,H+1,Random Forest,15.9462
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-04,2026-09-06,H+2,Random Forest,7.535
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-04,2026-09-07,H+3,Random Forest,8.3552
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-04,2026-09-08,H+4,XGBoost,14.3095
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-04,2026-09-09,H+5,XGBoost,22.3998
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-04,2026-09-10,H+6,XGBoost,14.8333
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-04,2026-09-11,H+7,XGBoost,12.2387
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-05,2026-09-06,H+1,Random Forest,12.0089
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-05,2026-09-07,H+2,Random Forest,14.8816
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-05,2026-09-08,H+3,Random Forest,14.087
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-05,2026-09-09,H+4,XGBoost,16.2406
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-05,2026-09-10,H+5,XGBoost,14.4919
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-05,2026-09-11,H+6,XGBoost,15.712
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-05,2026-09-12,H+7,XGBoost,14.3893
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-06,2026-09-07,H+1,Random Forest,10.7232
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-06,2026-09-08,H+2,Random Forest,21.4703
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-06,2026-09-09,H+3,Random Forest,19.9195
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-06,2026-09-10,H+4,XGBoost,14.7682
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-06,2026-09-11,H+5,XGBoost,12.3759
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-06,2026-09-12,H+6,XGBoost,16.8774
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-06,2026-09-13,H+7,XGBoost,19.9918
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-07,2026-09-08,H+1,Random Forest,15.8413
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-07,2026-09-09,H+2,Random Forest,21.752
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-07,2026-09-10,H+3,Random Forest,14.5585
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-07,2026-09-11,H+4,XGBoost,12.654
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-07,2026-09-12,H+5,XGBoost,12.9892
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-07,2026-09-13,H+6,XGBoost,19.2786
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-07,2026-09-14,H+7,XGBoost,22.494
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-08,2026-09-09,H+1,Random Forest,19.5718
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-08,2026-09-10,H+2,Random Forest,15.2452
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-08,2026-09-11,H+3,Random Forest,10.2019
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-08,2026-09-12,H+4,XGBoost,18.7014
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-08,2026-09-13,H+5,XGBoost,18.4092
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-08,2026-09-14,H+6,XGBoost,16.4601
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-08,2026-09-15,H+7,XGBoost,14.5494
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-09,2026-09-10,H+1,Random Forest,12.5812
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-09,2026-09-11,H+2,Random Forest,9.6214
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-09,2026-09-12,H+3,Random Forest,22.0497
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-09,2026-09-13,H+4,XGBoost,25.5103
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-09,2026-09-14,H+5,XGBoost,17.8049
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-09,2026-09-15,H+6,XGBoost,14.3111
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-09,2026-09-16,H+7,XGBoost,15.2318
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-10,2026-09-11,H+1,Random Forest,10.9569
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-10,2026-09-12,H+2,Random Forest,22.5231
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-10,2026-09-13,H+3,Random Forest,25.7401
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-10,2026-09-14,H+4,XGBoost,20.799
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-10,2026-09-15,H+5,XGBoost,15.7778
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-10,2026-09-16,H+6,XGBoost,17.5586
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-10,2026-09-17,H+7,XGBoost,23.7631
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-11,2026-09-12,H+1,Random Forest,15.5533
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-11,2026-09-13,H+2,Random Forest,25.5757
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-11,2026-09-14,H+3,Random Forest,22.4934
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-11,2026-09-15,H+4,XGBoost,15.0915
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-11,2026-09-16,H+5,XGBoost,12.7749
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-11,2026-09-17,H+6,XGBoost,15.3431
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-11,2026-09-18,H+7,XGBoost,17.3018
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-12,2026-09-13,H+1,Random Forest,18.0125
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-12,2026-09-14,H+2,Random Forest,12.1737
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-12,2026-09-15,H+3,Random Forest,13.1632
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-12,2026-09-16,H+4,XGBoost,13.6526
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-12,2026-09-17,H+5,XGBoost,12.3679
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-12,2026-09-18,H+6,XGBoost,12.2052
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-12,2026-09-19,H+7,XGBoost,10.0504
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-13,2026-09-14,H+1,Random Forest,13.3016
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-13,2026-09-15,H+2,Random Forest,5.049
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-13,2026-09-16,H+3,Random Forest,11.3125
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-13,2026-09-17,H+4,XGBoost,19.6394
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-13,2026-09-18,H+5,XGBoost,14.4659
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-13,2026-09-19,H+6,XGBoost,8.159
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-13,2026-09-20,H+7,XGBoost,5.067
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-14,2026-09-15,H+1,Random Forest,8.8825
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-14,2026-09-16,H+2,Random Forest,4.65
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-14,2026-09-17,H+3,Random Forest,8.926
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-14,2026-09-18,H+4,XGBoost,8.3787
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-14,2026-09-19,H+5,XGBoost,12.4643
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-14,2026-09-20,H+6,XGBoost,5.9068
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-14,2026-09-21,H+7,XGBoost,4.6635
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-15,2026-09-16,H+1,Random Forest,13.9696
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-15,2026-09-17,H+2,Random Forest,24.0706
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-15,2026-09-18,H+3,Random Forest,23.0768
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-15,2026-09-19,H+4,XGBoost,10.8805
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-15,2026-09-20,H+5,XGBoost,8.9071
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-15,2026-09-21,H+6,XGBoost,6.6385
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-15,2026-09-22,H+7,XGBoost,5.5552
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-16,2026-09-17,H+1,Random Forest,13.3328
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-16,2026-09-18,H+2,Random Forest,20.5526
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-16,2026-09-19,H+3,Random Forest,15.0304
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-16,2026-09-20,H+4,XGBoost,8.8176
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-16,2026-09-21,H+5,XGBoost,7.0406
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-16,2026-09-22,H+6,XGBoost,5.1463
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-16,2026-09-23,H+7,XGBoost,5.1603
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-17,2026-09-18,H+1,Random Forest,15.2276
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-17,2026-09-19,H+2,Random Forest,19.8052
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-17,2026-09-20,H+3,Random Forest,15.6408
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-17,2026-09-21,H+4,XGBoost,12.2006
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-17,2026-09-22,H+5,XGBoost,6.3208
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-17,2026-09-23,H+6,XGBoost,5.6187
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-17,2026-09-24,H+7,XGBoost,6.0834
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-18,2026-09-19,H+1,Random Forest,11.957
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-18,2026-09-20,H+2,Random Forest,5.0883
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-18,2026-09-21,H+3,Random Forest,5.9029
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-18,2026-09-22,H+4,XGBoost,4.4827
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-18,2026-09-23,H+5,XGBoost,6.1643
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-18,2026-09-24,H+6,XGBoost,5.7246
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-18,2026-09-25,H+7,XGBoost,4.6094
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-19,2026-09-20,H+1,Random Forest,9.7512
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-19,2026-09-21,H+2,Random Forest,4.7625
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-19,2026-09-22,H+3,Random Forest,5.8478
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-19,2026-09-23,H+4,XGBoost,5.8295
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-19,2026-09-24,H+5,XGBoost,4.7666
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-19,2026-09-25,H+6,XGBoost,4.4707
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-19,2026-09-26,H+7,XGBoost,5.5662
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-20,2026-09-21,H+1,Random Forest,6.1637
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-20,2026-09-22,H+2,Random Forest,3.6466
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-20,2026-09-23,H+3,Random Forest,5.693
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-20,2026-09-24,H+4,XGBoost,4.7214
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-20,2026-09-25,H+5,XGBoost,4.2952
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-20,2026-09-26,H+6,XGBoost,4.761
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-20,2026-09-27,H+7,XGBoost,4.6277
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-21,2026-09-22,H+1,Random Forest,3.3819
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-21,2026-09-23,H+2,Random Forest,5.2954
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-21,2026-09-24,H+3,Random Forest,4.9814
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-21,2026-09-25,H+4,XGBoost,5.3664
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-21,2026-09-26,H+5,XGBoost,4.789
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-21,2026-09-27,H+6,XGBoost,4.5353
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-21,2026-09-28,H+7,XGBoost,4.6759
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-22,2026-09-23,H+1,Random Forest,4.1446
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-22,2026-09-24,H+2,Random Forest,3.7379
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-22,2026-09-25,H+3,Random Forest,4.3849
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-22,2026-09-26,H+4,XGBoost,4.6634
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-22,2026-09-27,H+5,XGBoost,3.8305
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-22,2026-09-28,H+6,XGBoost,4.1067
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-22,2026-09-29,H+7,XGBoost,4.0455
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-23,2026-09-24,H+1,Random Forest,5.2852
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-23,2026-09-25,H+2,Random Forest,4.1119
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-23,2026-09-26,H+3,Random Forest,3.4075
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-23,2026-09-27,H+4,XGBoost,4.3943
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-23,2026-09-28,H+5,XGBoost,4.0908
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-23,2026-09-29,H+6,XGBoost,3.9932
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-23,2026-09-30,H+7,XGBoost,4.7761
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-24,2026-09-25,H+1,Random Forest,3.3493
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-24,2026-09-26,H+2,Random Forest,3.4114
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-24,2026-09-27,H+3,Random Forest,3.7535
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-24,2026-09-28,H+4,XGBoost,3.8971
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-24,2026-09-29,H+5,XGBoost,3.7268
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-24,2026-09-30,H+6,XGBoost,4.7867
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-24,2026-10-01,H+7,XGBoost,4.4955
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-25,2026-09-26,H+1,Random Forest,3.3865
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-25,2026-09-27,H+2,Random Forest,4.0199
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-25,2026-09-28,H+3,Random Forest,3.747
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-25,2026-09-29,H+4,XGBoost,3.8595
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-25,2026-09-30,H+5,XGBoost,4.6673
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-25,2026-10-01,H+6,XGBoost,5.106
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-25,2026-10-02,H+7,XGBoost,5.9141
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-26,2026-09-27,H+1,Random Forest,6.3805
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-26,2026-09-28,H+2,Random Forest,4.3239
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-26,2026-09-29,H+3,Random Forest,5.5078
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-26,2026-09-30,H+4,XGBoost,8.5322
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-26,2026-10-01,H+5,XGBoost,10.3364
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-26,2026-10-02,H+6,XGBoost,7.5558
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-26,2026-10-03,H+7,XGBoost,11.1389
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-27,2026-09-28,H+1,Random Forest,4.6164
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-27,2026-09-29,H+2,Random Forest,4.9461
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-27,2026-09-30,H+3,Random Forest,3.8199
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-27,2026-10-01,H+4,XGBoost,9.3018
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-27,2026-10-02,H+5,XGBoost,9.3575
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-27,2026-10-03,H+6,XGBoost,8.8492
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-27,2026-10-04,H+7,XGBoost,12.6698
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-28,2026-09-29,H+1,Random Forest,5.7243
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-28,2026-09-30,H+2,Random Forest,6.9449
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-28,2026-10-01,H+3,Random Forest,6.6799
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-28,2026-10-02,H+4,XGBoost,7.5188
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-28,2026-10-03,H+5,XGBoost,9.9103
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-28,2026-10-04,H+6,XGBoost,14.3172
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-28,2026-10-05,H+7,XGBoost,15.0199
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-29,2026-09-30,H+1,Random Forest,3.8458
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-29,2026-10-01,H+2,Random Forest,3.7086
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-29,2026-10-02,H+3,Random Forest,3.6772
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-29,2026-10-03,H+4,XGBoost,7.9554
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-29,2026-10-04,H+5,XGBoost,11.614
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-29,2026-10-05,H+6,XGBoost,12.5164
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-29,2026-10-06,H+7,XGBoost,12.8732
+O'Brien Men's Neoprene Life Vest,2026-08-31,2026-09-01,H+1,XGBoost,5.4737
+O'Brien Men's Neoprene Life Vest,2026-08-31,2026-09-02,H+2,Random Forest,5.8689
+O'Brien Men's Neoprene Life Vest,2026-08-31,2026-09-03,H+3,XGBoost,10.6284
+O'Brien Men's Neoprene Life Vest,2026-08-31,2026-09-04,H+4,Random Forest,11.4204
+O'Brien Men's Neoprene Life Vest,2026-08-31,2026-09-05,H+5,XGBoost,14.0662
+O'Brien Men's Neoprene Life Vest,2026-08-31,2026-09-06,H+6,XGBoost,12.7151
+O'Brien Men's Neoprene Life Vest,2026-08-31,2026-09-07,H+7,XGBoost,16.9436
+O'Brien Men's Neoprene Life Vest,2026-09-01,2026-09-02,H+1,XGBoost,9.999
+O'Brien Men's Neoprene Life Vest,2026-09-01,2026-09-03,H+2,Random Forest,8.647
+O'Brien Men's Neoprene Life Vest,2026-09-01,2026-09-04,H+3,XGBoost,9.6144
+O'Brien Men's Neoprene Life Vest,2026-09-01,2026-09-05,H+4,Random Forest,11.1588
+O'Brien Men's Neoprene Life Vest,2026-09-01,2026-09-06,H+5,XGBoost,14.3928
+O'Brien Men's Neoprene Life Vest,2026-09-01,2026-09-07,H+6,XGBoost,15.848
+O'Brien Men's Neoprene Life Vest,2026-09-01,2026-09-08,H+7,XGBoost,12.2052
+O'Brien Men's Neoprene Life Vest,2026-09-02,2026-09-03,H+1,XGBoost,5.0077
+O'Brien Men's Neoprene Life Vest,2026-09-02,2026-09-04,H+2,Random Forest,6.9785
+O'Brien Men's Neoprene Life Vest,2026-09-02,2026-09-05,H+3,XGBoost,11.3229
+O'Brien Men's Neoprene Life Vest,2026-09-02,2026-09-06,H+4,Random Forest,11.953
+O'Brien Men's Neoprene Life Vest,2026-09-02,2026-09-07,H+5,XGBoost,13.181
+O'Brien Men's Neoprene Life Vest,2026-09-02,2026-09-08,H+6,XGBoost,14.9975
+O'Brien Men's Neoprene Life Vest,2026-09-02,2026-09-09,H+7,XGBoost,15.224
+O'Brien Men's Neoprene Life Vest,2026-09-03,2026-09-04,H+1,XGBoost,11.3051
+O'Brien Men's Neoprene Life Vest,2026-09-03,2026-09-05,H+2,Random Forest,14.1566
+O'Brien Men's Neoprene Life Vest,2026-09-03,2026-09-06,H+3,XGBoost,9.2986
+O'Brien Men's Neoprene Life Vest,2026-09-03,2026-09-07,H+4,Random Forest,14.1068
+O'Brien Men's Neoprene Life Vest,2026-09-03,2026-09-08,H+5,XGBoost,18.2077
+O'Brien Men's Neoprene Life Vest,2026-09-03,2026-09-09,H+6,XGBoost,15.2314
+O'Brien Men's Neoprene Life Vest,2026-09-03,2026-09-10,H+7,XGBoost,11.8295
+O'Brien Men's Neoprene Life Vest,2026-09-04,2026-09-05,H+1,XGBoost,11.9451
+O'Brien Men's Neoprene Life Vest,2026-09-04,2026-09-06,H+2,Random Forest,17.1265
+O'Brien Men's Neoprene Life Vest,2026-09-04,2026-09-07,H+3,XGBoost,12.4175
+O'Brien Men's Neoprene Life Vest,2026-09-04,2026-09-08,H+4,Random Forest,10.1547
+O'Brien Men's Neoprene Life Vest,2026-09-04,2026-09-09,H+5,XGBoost,12.2354
+O'Brien Men's Neoprene Life Vest,2026-09-04,2026-09-10,H+6,XGBoost,20.137
+O'Brien Men's Neoprene Life Vest,2026-09-04,2026-09-11,H+7,XGBoost,17.06
+O'Brien Men's Neoprene Life Vest,2026-09-05,2026-09-06,H+1,XGBoost,11.0879
+O'Brien Men's Neoprene Life Vest,2026-09-05,2026-09-07,H+2,Random Forest,15.7384
+O'Brien Men's Neoprene Life Vest,2026-09-05,2026-09-08,H+3,XGBoost,11.0481
+O'Brien Men's Neoprene Life Vest,2026-09-05,2026-09-09,H+4,Random Forest,9.3889
+O'Brien Men's Neoprene Life Vest,2026-09-05,2026-09-10,H+5,XGBoost,16.349
+O'Brien Men's Neoprene Life Vest,2026-09-05,2026-09-11,H+6,XGBoost,16.8568
+O'Brien Men's Neoprene Life Vest,2026-09-05,2026-09-12,H+7,XGBoost,15.1646
+O'Brien Men's Neoprene Life Vest,2026-09-06,2026-09-07,H+1,XGBoost,12.9592
+O'Brien Men's Neoprene Life Vest,2026-09-06,2026-09-08,H+2,Random Forest,11.7972
+O'Brien Men's Neoprene Life Vest,2026-09-06,2026-09-09,H+3,XGBoost,13.5282
+O'Brien Men's Neoprene Life Vest,2026-09-06,2026-09-10,H+4,Random Forest,19.6019
+O'Brien Men's Neoprene Life Vest,2026-09-06,2026-09-11,H+5,XGBoost,21.096
+O'Brien Men's Neoprene Life Vest,2026-09-06,2026-09-12,H+6,XGBoost,10.7362
+O'Brien Men's Neoprene Life Vest,2026-09-06,2026-09-13,H+7,XGBoost,11.5289
+O'Brien Men's Neoprene Life Vest,2026-09-07,2026-09-08,H+1,XGBoost,12.8232
+O'Brien Men's Neoprene Life Vest,2026-09-07,2026-09-09,H+2,Random Forest,18.8039
+O'Brien Men's Neoprene Life Vest,2026-09-07,2026-09-10,H+3,XGBoost,17.9518
+O'Brien Men's Neoprene Life Vest,2026-09-07,2026-09-11,H+4,Random Forest,10.2974
+O'Brien Men's Neoprene Life Vest,2026-09-07,2026-09-12,H+5,XGBoost,16.0858
+O'Brien Men's Neoprene Life Vest,2026-09-07,2026-09-13,H+6,XGBoost,19.216
+O'Brien Men's Neoprene Life Vest,2026-09-07,2026-09-14,H+7,XGBoost,17.1728
+O'Brien Men's Neoprene Life Vest,2026-09-08,2026-09-09,H+1,XGBoost,14.5793
+O'Brien Men's Neoprene Life Vest,2026-09-08,2026-09-10,H+2,Random Forest,14.707
+O'Brien Men's Neoprene Life Vest,2026-09-08,2026-09-11,H+3,XGBoost,12.6647
+O'Brien Men's Neoprene Life Vest,2026-09-08,2026-09-12,H+4,Random Forest,9.3284
+O'Brien Men's Neoprene Life Vest,2026-09-08,2026-09-13,H+5,XGBoost,17.1825
+O'Brien Men's Neoprene Life Vest,2026-09-08,2026-09-14,H+6,XGBoost,14.6762
+O'Brien Men's Neoprene Life Vest,2026-09-08,2026-09-15,H+7,XGBoost,13.8693
+O'Brien Men's Neoprene Life Vest,2026-09-09,2026-09-10,H+1,XGBoost,11.6801
+O'Brien Men's Neoprene Life Vest,2026-09-09,2026-09-11,H+2,Random Forest,8.0615
+O'Brien Men's Neoprene Life Vest,2026-09-09,2026-09-12,H+3,XGBoost,9.4266
+O'Brien Men's Neoprene Life Vest,2026-09-09,2026-09-13,H+4,Random Forest,13.6936
+O'Brien Men's Neoprene Life Vest,2026-09-09,2026-09-14,H+5,XGBoost,12.0959
+O'Brien Men's Neoprene Life Vest,2026-09-09,2026-09-15,H+6,XGBoost,11.5846
+O'Brien Men's Neoprene Life Vest,2026-09-09,2026-09-16,H+7,XGBoost,9.8343
+O'Brien Men's Neoprene Life Vest,2026-09-10,2026-09-11,H+1,XGBoost,14.3285
+O'Brien Men's Neoprene Life Vest,2026-09-10,2026-09-12,H+2,Random Forest,11.7889
+O'Brien Men's Neoprene Life Vest,2026-09-10,2026-09-13,H+3,XGBoost,11.2462
+O'Brien Men's Neoprene Life Vest,2026-09-10,2026-09-14,H+4,Random Forest,16.2978
+O'Brien Men's Neoprene Life Vest,2026-09-10,2026-09-15,H+5,XGBoost,16.9514
+O'Brien Men's Neoprene Life Vest,2026-09-10,2026-09-16,H+6,XGBoost,13.1746
+O'Brien Men's Neoprene Life Vest,2026-09-10,2026-09-17,H+7,XGBoost,12.612
+O'Brien Men's Neoprene Life Vest,2026-09-11,2026-09-12,H+1,XGBoost,10.3929
+O'Brien Men's Neoprene Life Vest,2026-09-11,2026-09-13,H+2,Random Forest,14.4884
+O'Brien Men's Neoprene Life Vest,2026-09-11,2026-09-14,H+3,XGBoost,15.2456
+O'Brien Men's Neoprene Life Vest,2026-09-11,2026-09-15,H+4,Random Forest,8.2491
+O'Brien Men's Neoprene Life Vest,2026-09-11,2026-09-16,H+5,XGBoost,11.1366
+O'Brien Men's Neoprene Life Vest,2026-09-11,2026-09-17,H+6,XGBoost,17.7265
+O'Brien Men's Neoprene Life Vest,2026-09-11,2026-09-18,H+7,XGBoost,18.3077
+O'Brien Men's Neoprene Life Vest,2026-09-12,2026-09-13,H+1,XGBoost,13.194
+O'Brien Men's Neoprene Life Vest,2026-09-12,2026-09-14,H+2,Random Forest,12.4746
+O'Brien Men's Neoprene Life Vest,2026-09-12,2026-09-15,H+3,XGBoost,11.5998
+O'Brien Men's Neoprene Life Vest,2026-09-12,2026-09-16,H+4,Random Forest,14.1946
+O'Brien Men's Neoprene Life Vest,2026-09-12,2026-09-17,H+5,XGBoost,15.9841
+O'Brien Men's Neoprene Life Vest,2026-09-12,2026-09-18,H+6,XGBoost,13.354
+O'Brien Men's Neoprene Life Vest,2026-09-12,2026-09-19,H+7,XGBoost,8.2774
+O'Brien Men's Neoprene Life Vest,2026-09-13,2026-09-14,H+1,XGBoost,15.9126
+O'Brien Men's Neoprene Life Vest,2026-09-13,2026-09-15,H+2,Random Forest,9.588
+O'Brien Men's Neoprene Life Vest,2026-09-13,2026-09-16,H+3,XGBoost,14.4531
+O'Brien Men's Neoprene Life Vest,2026-09-13,2026-09-17,H+4,Random Forest,16.2057
+O'Brien Men's Neoprene Life Vest,2026-09-13,2026-09-18,H+5,XGBoost,14.9082
+O'Brien Men's Neoprene Life Vest,2026-09-13,2026-09-19,H+6,XGBoost,8.4734
+O'Brien Men's Neoprene Life Vest,2026-09-13,2026-09-20,H+7,XGBoost,7.0056
+O'Brien Men's Neoprene Life Vest,2026-09-14,2026-09-15,H+1,XGBoost,17.5063
+O'Brien Men's Neoprene Life Vest,2026-09-14,2026-09-16,H+2,Random Forest,17.1167
+O'Brien Men's Neoprene Life Vest,2026-09-14,2026-09-17,H+3,XGBoost,17.0019
+O'Brien Men's Neoprene Life Vest,2026-09-14,2026-09-18,H+4,Random Forest,15.6505
+O'Brien Men's Neoprene Life Vest,2026-09-14,2026-09-19,H+5,XGBoost,14.1456
+O'Brien Men's Neoprene Life Vest,2026-09-14,2026-09-20,H+6,XGBoost,9.2038
+O'Brien Men's Neoprene Life Vest,2026-09-14,2026-09-21,H+7,XGBoost,10.9855
+O'Brien Men's Neoprene Life Vest,2026-09-15,2026-09-16,H+1,XGBoost,14.9477
+O'Brien Men's Neoprene Life Vest,2026-09-15,2026-09-17,H+2,Random Forest,8.3787
+O'Brien Men's Neoprene Life Vest,2026-09-15,2026-09-18,H+3,XGBoost,13.4549
+O'Brien Men's Neoprene Life Vest,2026-09-15,2026-09-19,H+4,Random Forest,13.2326
+O'Brien Men's Neoprene Life Vest,2026-09-15,2026-09-20,H+5,XGBoost,9.7572
+O'Brien Men's Neoprene Life Vest,2026-09-15,2026-09-21,H+6,XGBoost,7.5876
+O'Brien Men's Neoprene Life Vest,2026-09-15,2026-09-22,H+7,XGBoost,7.1084
+O'Brien Men's Neoprene Life Vest,2026-09-16,2026-09-17,H+1,XGBoost,14.7421
+O'Brien Men's Neoprene Life Vest,2026-09-16,2026-09-18,H+2,Random Forest,20.7167
+O'Brien Men's Neoprene Life Vest,2026-09-16,2026-09-19,H+3,XGBoost,15.2789
+O'Brien Men's Neoprene Life Vest,2026-09-16,2026-09-20,H+4,Random Forest,9.5921
+O'Brien Men's Neoprene Life Vest,2026-09-16,2026-09-21,H+5,XGBoost,9.798
+O'Brien Men's Neoprene Life Vest,2026-09-16,2026-09-22,H+6,XGBoost,7.7791
+O'Brien Men's Neoprene Life Vest,2026-09-16,2026-09-23,H+7,XGBoost,7.9451
+O'Brien Men's Neoprene Life Vest,2026-09-17,2026-09-18,H+1,XGBoost,17.1579
+O'Brien Men's Neoprene Life Vest,2026-09-17,2026-09-19,H+2,Random Forest,10.1663
+O'Brien Men's Neoprene Life Vest,2026-09-17,2026-09-20,H+3,XGBoost,8.7444
+O'Brien Men's Neoprene Life Vest,2026-09-17,2026-09-21,H+4,Random Forest,10.0735
+O'Brien Men's Neoprene Life Vest,2026-09-17,2026-09-22,H+5,XGBoost,8.088
+O'Brien Men's Neoprene Life Vest,2026-09-17,2026-09-23,H+6,XGBoost,7.5641
+O'Brien Men's Neoprene Life Vest,2026-09-17,2026-09-24,H+7,XGBoost,6.3529
+O'Brien Men's Neoprene Life Vest,2026-09-18,2026-09-19,H+1,XGBoost,13.2896
+O'Brien Men's Neoprene Life Vest,2026-09-18,2026-09-20,H+2,Random Forest,7.7072
+O'Brien Men's Neoprene Life Vest,2026-09-18,2026-09-21,H+3,XGBoost,9.5639
+O'Brien Men's Neoprene Life Vest,2026-09-18,2026-09-22,H+4,Random Forest,12.2654
+O'Brien Men's Neoprene Life Vest,2026-09-18,2026-09-23,H+5,XGBoost,9.1593
+O'Brien Men's Neoprene Life Vest,2026-09-18,2026-09-24,H+6,XGBoost,6.1476
+O'Brien Men's Neoprene Life Vest,2026-09-18,2026-09-25,H+7,XGBoost,4.3926
+O'Brien Men's Neoprene Life Vest,2026-09-19,2026-09-20,H+1,XGBoost,8.6608
+O'Brien Men's Neoprene Life Vest,2026-09-19,2026-09-21,H+2,Random Forest,8.3735
+O'Brien Men's Neoprene Life Vest,2026-09-19,2026-09-22,H+3,XGBoost,5.8182
+O'Brien Men's Neoprene Life Vest,2026-09-19,2026-09-23,H+4,Random Forest,4.8019
+O'Brien Men's Neoprene Life Vest,2026-09-19,2026-09-24,H+5,XGBoost,5.2371
+O'Brien Men's Neoprene Life Vest,2026-09-19,2026-09-25,H+6,XGBoost,7.8337
+O'Brien Men's Neoprene Life Vest,2026-09-19,2026-09-26,H+7,XGBoost,5.0061
+O'Brien Men's Neoprene Life Vest,2026-09-20,2026-09-21,H+1,XGBoost,8.4271
+O'Brien Men's Neoprene Life Vest,2026-09-20,2026-09-22,H+2,Random Forest,5.7008
+O'Brien Men's Neoprene Life Vest,2026-09-20,2026-09-23,H+3,XGBoost,9.6788
+O'Brien Men's Neoprene Life Vest,2026-09-20,2026-09-24,H+4,Random Forest,5.5221
+O'Brien Men's Neoprene Life Vest,2026-09-20,2026-09-25,H+5,XGBoost,5.9666
+O'Brien Men's Neoprene Life Vest,2026-09-20,2026-09-26,H+6,XGBoost,4.0365
+O'Brien Men's Neoprene Life Vest,2026-09-20,2026-09-27,H+7,XGBoost,5.0699
+O'Brien Men's Neoprene Life Vest,2026-09-21,2026-09-22,H+1,XGBoost,9.7143
+O'Brien Men's Neoprene Life Vest,2026-09-21,2026-09-23,H+2,Random Forest,4.0824
+O'Brien Men's Neoprene Life Vest,2026-09-21,2026-09-24,H+3,XGBoost,5.421
+O'Brien Men's Neoprene Life Vest,2026-09-21,2026-09-25,H+4,Random Forest,3.6191
+O'Brien Men's Neoprene Life Vest,2026-09-21,2026-09-26,H+5,XGBoost,4.6965
+O'Brien Men's Neoprene Life Vest,2026-09-21,2026-09-27,H+6,XGBoost,4.3679
+O'Brien Men's Neoprene Life Vest,2026-09-21,2026-09-28,H+7,XGBoost,4.4676
+O'Brien Men's Neoprene Life Vest,2026-09-22,2026-09-23,H+1,XGBoost,10.3793
+O'Brien Men's Neoprene Life Vest,2026-09-22,2026-09-24,H+2,Random Forest,3.5677
+O'Brien Men's Neoprene Life Vest,2026-09-22,2026-09-25,H+3,XGBoost,4.5051
+O'Brien Men's Neoprene Life Vest,2026-09-22,2026-09-26,H+4,Random Forest,3.9886
+O'Brien Men's Neoprene Life Vest,2026-09-22,2026-09-27,H+5,XGBoost,5.0144
+O'Brien Men's Neoprene Life Vest,2026-09-22,2026-09-28,H+6,XGBoost,4.9704
+O'Brien Men's Neoprene Life Vest,2026-09-22,2026-09-29,H+7,XGBoost,4.8189
+O'Brien Men's Neoprene Life Vest,2026-09-23,2026-09-24,H+1,XGBoost,4.4553
+O'Brien Men's Neoprene Life Vest,2026-09-23,2026-09-25,H+2,Random Forest,3.5784
+O'Brien Men's Neoprene Life Vest,2026-09-23,2026-09-26,H+3,XGBoost,3.912
+O'Brien Men's Neoprene Life Vest,2026-09-23,2026-09-27,H+4,Random Forest,4.8319
+O'Brien Men's Neoprene Life Vest,2026-09-23,2026-09-28,H+5,XGBoost,4.6461
+O'Brien Men's Neoprene Life Vest,2026-09-23,2026-09-29,H+6,XGBoost,4.7501
+O'Brien Men's Neoprene Life Vest,2026-09-23,2026-09-30,H+7,XGBoost,4.3248
+O'Brien Men's Neoprene Life Vest,2026-09-24,2026-09-25,H+1,XGBoost,7.4479
+O'Brien Men's Neoprene Life Vest,2026-09-24,2026-09-26,H+2,Random Forest,4.6591
+O'Brien Men's Neoprene Life Vest,2026-09-24,2026-09-27,H+3,XGBoost,4.9634
+O'Brien Men's Neoprene Life Vest,2026-09-24,2026-09-28,H+4,Random Forest,4.3561
+O'Brien Men's Neoprene Life Vest,2026-09-24,2026-09-29,H+5,XGBoost,6.1355
+O'Brien Men's Neoprene Life Vest,2026-09-24,2026-09-30,H+6,XGBoost,5.4904
+O'Brien Men's Neoprene Life Vest,2026-09-24,2026-10-01,H+7,XGBoost,5.8246
+O'Brien Men's Neoprene Life Vest,2026-09-25,2026-09-26,H+1,XGBoost,4.7766
+O'Brien Men's Neoprene Life Vest,2026-09-25,2026-09-27,H+2,Random Forest,5.4985
+O'Brien Men's Neoprene Life Vest,2026-09-25,2026-09-28,H+3,XGBoost,4.4989
+O'Brien Men's Neoprene Life Vest,2026-09-25,2026-09-29,H+4,Random Forest,4.2842
+O'Brien Men's Neoprene Life Vest,2026-09-25,2026-09-30,H+5,XGBoost,5.5798
+O'Brien Men's Neoprene Life Vest,2026-09-25,2026-10-01,H+6,XGBoost,5.5535
+O'Brien Men's Neoprene Life Vest,2026-09-25,2026-10-02,H+7,XGBoost,6.3327
+O'Brien Men's Neoprene Life Vest,2026-09-26,2026-09-27,H+1,XGBoost,5.0456
+O'Brien Men's Neoprene Life Vest,2026-09-26,2026-09-28,H+2,Random Forest,4.519
+O'Brien Men's Neoprene Life Vest,2026-09-26,2026-09-29,H+3,XGBoost,4.4898
+O'Brien Men's Neoprene Life Vest,2026-09-26,2026-09-30,H+4,Random Forest,4.85
+O'Brien Men's Neoprene Life Vest,2026-09-26,2026-10-01,H+5,XGBoost,6.8297
+O'Brien Men's Neoprene Life Vest,2026-09-26,2026-10-02,H+6,XGBoost,7.2166
+O'Brien Men's Neoprene Life Vest,2026-09-26,2026-10-03,H+7,XGBoost,9.616
+O'Brien Men's Neoprene Life Vest,2026-09-27,2026-09-28,H+1,XGBoost,4.8812
+O'Brien Men's Neoprene Life Vest,2026-09-27,2026-09-29,H+2,Random Forest,4.0229
+O'Brien Men's Neoprene Life Vest,2026-09-27,2026-09-30,H+3,XGBoost,4.367
+O'Brien Men's Neoprene Life Vest,2026-09-27,2026-10-01,H+4,Random Forest,8.8215
+O'Brien Men's Neoprene Life Vest,2026-09-27,2026-10-02,H+5,XGBoost,8.2614
+O'Brien Men's Neoprene Life Vest,2026-09-27,2026-10-03,H+6,XGBoost,7.3591
+O'Brien Men's Neoprene Life Vest,2026-09-27,2026-10-04,H+7,XGBoost,13.7567
+O'Brien Men's Neoprene Life Vest,2026-09-28,2026-09-29,H+1,XGBoost,4.1293
+O'Brien Men's Neoprene Life Vest,2026-09-28,2026-09-30,H+2,Random Forest,4.494
+O'Brien Men's Neoprene Life Vest,2026-09-28,2026-10-01,H+3,XGBoost,6.9324
+O'Brien Men's Neoprene Life Vest,2026-09-28,2026-10-02,H+4,Random Forest,15.9115
+O'Brien Men's Neoprene Life Vest,2026-09-28,2026-10-03,H+5,XGBoost,8.9984
+O'Brien Men's Neoprene Life Vest,2026-09-28,2026-10-04,H+6,XGBoost,12.4541
+O'Brien Men's Neoprene Life Vest,2026-09-28,2026-10-05,H+7,XGBoost,14.6126
+O'Brien Men's Neoprene Life Vest,2026-09-29,2026-09-30,H+1,XGBoost,6.8198
+O'Brien Men's Neoprene Life Vest,2026-09-29,2026-10-01,H+2,Random Forest,4.215
+O'Brien Men's Neoprene Life Vest,2026-09-29,2026-10-02,H+3,XGBoost,6.9902
+O'Brien Men's Neoprene Life Vest,2026-09-29,2026-10-03,H+4,Random Forest,13.303
+O'Brien Men's Neoprene Life Vest,2026-09-29,2026-10-04,H+5,XGBoost,11.3303
+O'Brien Men's Neoprene Life Vest,2026-09-29,2026-10-05,H+6,XGBoost,15.7129
+O'Brien Men's Neoprene Life Vest,2026-09-29,2026-10-06,H+7,XGBoost,10.7694
+Nike Men's Free 5.0+ Running Shoe,2026-08-31,2026-09-01,H+1,ARIMA,1.9656
+Nike Men's Free 5.0+ Running Shoe,2026-08-31,2026-09-02,H+2,ARIMA,2.7682
+Nike Men's Free 5.0+ Running Shoe,2026-08-31,2026-09-03,H+3,ARIMA,3.7363
+Nike Men's Free 5.0+ Running Shoe,2026-08-31,2026-09-04,H+4,ARIMA,4.825
+Nike Men's Free 5.0+ Running Shoe,2026-08-31,2026-09-05,H+5,ARIMA,5.9839
+Nike Men's Free 5.0+ Running Shoe,2026-08-31,2026-09-06,H+6,ARIMA,7.1594
+Nike Men's Free 5.0+ Running Shoe,2026-08-31,2026-09-07,H+7,ARIMA,8.2973
+Nike Men's Free 5.0+ Running Shoe,2026-09-01,2026-09-02,H+1,ARIMA,2.7195
+Nike Men's Free 5.0+ Running Shoe,2026-09-01,2026-09-03,H+2,ARIMA,3.6858
+Nike Men's Free 5.0+ Running Shoe,2026-09-01,2026-09-04,H+3,ARIMA,4.775
+Nike Men's Free 5.0+ Running Shoe,2026-09-01,2026-09-05,H+4,ARIMA,5.9366
+Nike Men's Free 5.0+ Running Shoe,2026-09-01,2026-09-06,H+5,ARIMA,7.117
+Nike Men's Free 5.0+ Running Shoe,2026-09-01,2026-09-07,H+6,ARIMA,8.2615
+Nike Men's Free 5.0+ Running Shoe,2026-09-01,2026-09-08,H+7,ARIMA,9.3173
+Nike Men's Free 5.0+ Running Shoe,2026-09-02,2026-09-03,H+1,ARIMA,3.6175
+Nike Men's Free 5.0+ Running Shoe,2026-09-02,2026-09-04,H+2,ARIMA,4.7047
+Nike Men's Free 5.0+ Running Shoe,2026-09-02,2026-09-05,H+3,ARIMA,5.8674
+Nike Men's Free 5.0+ Running Shoe,2026-09-02,2026-09-06,H+4,ARIMA,7.0519
+Nike Men's Free 5.0+ Running Shoe,2026-09-02,2026-09-07,H+5,ARIMA,8.2035
+Nike Men's Free 5.0+ Running Shoe,2026-09-02,2026-09-08,H+6,ARIMA,9.2689
+Nike Men's Free 5.0+ Running Shoe,2026-09-02,2026-09-09,H+7,ARIMA,10.1992
+Nike Men's Free 5.0+ Running Shoe,2026-09-03,2026-09-04,H+1,ARIMA,4.6901
+Nike Men's Free 5.0+ Running Shoe,2026-09-03,2026-09-05,H+2,ARIMA,5.8525
+Nike Men's Free 5.0+ Running Shoe,2026-09-03,2026-09-06,H+3,ARIMA,7.0373
+Nike Men's Free 5.0+ Running Shoe,2026-09-03,2026-09-07,H+4,ARIMA,8.1898
+Nike Men's Free 5.0+ Running Shoe,2026-09-03,2026-09-08,H+5,ARIMA,9.2569
+Nike Men's Free 5.0+ Running Shoe,2026-09-03,2026-09-09,H+6,ARIMA,10.1893
+Nike Men's Free 5.0+ Running Shoe,2026-09-03,2026-09-10,H+7,ARIMA,10.9441
+Nike Men's Free 5.0+ Running Shoe,2026-09-04,2026-09-05,H+1,ARIMA,5.7379
+Nike Men's Free 5.0+ Running Shoe,2026-09-04,2026-09-06,H+2,ARIMA,6.9206
+Nike Men's Free 5.0+ Running Shoe,2026-09-04,2026-09-07,H+3,ARIMA,8.0761
+Nike Men's Free 5.0+ Running Shoe,2026-09-04,2026-09-08,H+4,ARIMA,9.1512
+Nike Men's Free 5.0+ Running Shoe,2026-09-04,2026-09-09,H+5,ARIMA,10.0963
+Nike Men's Free 5.0+ Running Shoe,2026-09-04,2026-09-10,H+6,ARIMA,10.868
+Nike Men's Free 5.0+ Running Shoe,2026-09-04,2026-09-11,H+7,ARIMA,11.4307
+Nike Men's Free 5.0+ Running Shoe,2026-09-05,2026-09-06,H+1,ARIMA,7.5961
+Nike Men's Free 5.0+ Running Shoe,2026-09-05,2026-09-07,H+2,ARIMA,8.7675
+Nike Men's Free 5.0+ Running Shoe,2026-09-05,2026-09-08,H+3,ARIMA,9.8279
+Nike Men's Free 5.0+ Running Shoe,2026-09-05,2026-09-09,H+4,ARIMA,10.7283
+Nike Men's Free 5.0+ Running Shoe,2026-09-05,2026-09-10,H+5,ARIMA,11.4273
+Nike Men's Free 5.0+ Running Shoe,2026-09-05,2026-09-11,H+6,ARIMA,11.8926
+Nike Men's Free 5.0+ Running Shoe,2026-09-05,2026-09-12,H+7,ARIMA,12.1029
+Nike Men's Free 5.0+ Running Shoe,2026-09-06,2026-09-07,H+1,ARIMA,8.6458
+Nike Men's Free 5.0+ Running Shoe,2026-09-06,2026-09-08,H+2,ARIMA,9.7022
+Nike Men's Free 5.0+ Running Shoe,2026-09-06,2026-09-09,H+3,ARIMA,10.6042
+Nike Men's Free 5.0+ Running Shoe,2026-09-06,2026-09-10,H+4,ARIMA,11.3103
+Nike Men's Free 5.0+ Running Shoe,2026-09-06,2026-09-11,H+5,ARIMA,11.7878
+Nike Men's Free 5.0+ Running Shoe,2026-09-06,2026-09-12,H+6,ARIMA,12.0151
+Nike Men's Free 5.0+ Running Shoe,2026-09-06,2026-09-13,H+7,ARIMA,11.9817
+Nike Men's Free 5.0+ Running Shoe,2026-09-07,2026-09-08,H+1,ARIMA,9.5812
+Nike Men's Free 5.0+ Running Shoe,2026-09-07,2026-09-09,H+2,ARIMA,10.4789
+Nike Men's Free 5.0+ Running Shoe,2026-09-07,2026-09-10,H+3,ARIMA,11.1862
+Nike Men's Free 5.0+ Running Shoe,2026-09-07,2026-09-11,H+4,ARIMA,11.6705
+Nike Men's Free 5.0+ Running Shoe,2026-09-07,2026-09-12,H+5,ARIMA,11.9096
+Nike Men's Free 5.0+ Running Shoe,2026-09-07,2026-09-13,H+6,ARIMA,11.8927
+Nike Men's Free 5.0+ Running Shoe,2026-09-07,2026-09-14,H+7,ARIMA,11.6209
+Nike Men's Free 5.0+ Running Shoe,2026-09-08,2026-09-09,H+1,ARIMA,10.6987
+Nike Men's Free 5.0+ Running Shoe,2026-09-08,2026-09-10,H+2,ARIMA,11.4144
+Nike Men's Free 5.0+ Running Shoe,2026-09-08,2026-09-11,H+3,ARIMA,11.8971
+Nike Men's Free 5.0+ Running Shoe,2026-09-08,2026-09-12,H+4,ARIMA,12.1247
+Nike Men's Free 5.0+ Running Shoe,2026-09-08,2026-09-13,H+5,ARIMA,12.0868
+Nike Men's Free 5.0+ Running Shoe,2026-09-08,2026-09-14,H+6,ARIMA,11.7854
+Nike Men's Free 5.0+ Running Shoe,2026-09-08,2026-09-15,H+7,ARIMA,11.2348
+Nike Men's Free 5.0+ Running Shoe,2026-09-09,2026-09-10,H+1,ARIMA,11.4206
+Nike Men's Free 5.0+ Running Shoe,2026-09-09,2026-09-11,H+2,ARIMA,11.9035
+Nike Men's Free 5.0+ Running Shoe,2026-09-09,2026-09-12,H+3,ARIMA,12.131
+Nike Men's Free 5.0+ Running Shoe,2026-09-09,2026-09-13,H+4,ARIMA,12.0928
+Nike Men's Free 5.0+ Running Shoe,2026-09-09,2026-09-14,H+5,ARIMA,11.7909
+Nike Men's Free 5.0+ Running Shoe,2026-09-09,2026-09-15,H+6,ARIMA,11.2394
+Nike Men's Free 5.0+ Running Shoe,2026-09-09,2026-09-16,H+7,ARIMA,10.4641
+Nike Men's Free 5.0+ Running Shoe,2026-09-10,2026-09-11,H+1,ARIMA,12.1658
+Nike Men's Free 5.0+ Running Shoe,2026-09-10,2026-09-12,H+2,ARIMA,12.4058
+Nike Men's Free 5.0+ Running Shoe,2026-09-10,2026-09-13,H+3,ARIMA,12.3681
+Nike Men's Free 5.0+ Running Shoe,2026-09-10,2026-09-14,H+4,ARIMA,12.0545
+Nike Men's Free 5.0+ Running Shoe,2026-09-10,2026-09-15,H+5,ARIMA,11.4798
+Nike Men's Free 5.0+ Running Shoe,2026-09-10,2026-09-16,H+6,ARIMA,10.6708
+Nike Men's Free 5.0+ Running Shoe,2026-09-10,2026-09-17,H+7,ARIMA,9.665
+Nike Men's Free 5.0+ Running Shoe,2026-09-11,2026-09-12,H+1,ARIMA,12.1956
+Nike Men's Free 5.0+ Running Shoe,2026-09-11,2026-09-13,H+2,ARIMA,12.1466
+Nike Men's Free 5.0+ Running Shoe,2026-09-11,2026-09-14,H+3,ARIMA,11.8316
+Nike Men's Free 5.0+ Running Shoe,2026-09-11,2026-09-15,H+4,ARIMA,11.2654
+Nike Men's Free 5.0+ Running Shoe,2026-09-11,2026-09-16,H+5,ARIMA,10.4743
+Nike Men's Free 5.0+ Running Shoe,2026-09-11,2026-09-17,H+6,ARIMA,9.4952
+Nike Men's Free 5.0+ Running Shoe,2026-09-11,2026-09-18,H+7,ARIMA,8.3734
+Nike Men's Free 5.0+ Running Shoe,2026-09-12,2026-09-13,H+1,ARIMA,12.1598
+Nike Men's Free 5.0+ Running Shoe,2026-09-12,2026-09-14,H+2,ARIMA,11.8461
+Nike Men's Free 5.0+ Running Shoe,2026-09-12,2026-09-15,H+3,ARIMA,11.2804
+Nike Men's Free 5.0+ Running Shoe,2026-09-12,2026-09-16,H+4,ARIMA,10.4891
+Nike Men's Free 5.0+ Running Shoe,2026-09-12,2026-09-17,H+5,ARIMA,9.509
+Nike Men's Free 5.0+ Running Shoe,2026-09-12,2026-09-18,H+6,ARIMA,8.3855
+Nike Men's Free 5.0+ Running Shoe,2026-09-12,2026-09-19,H+7,ARIMA,7.1707
+Nike Men's Free 5.0+ Running Shoe,2026-09-13,2026-09-14,H+1,ARIMA,11.9957
+Nike Men's Free 5.0+ Running Shoe,2026-09-13,2026-09-15,H+2,ARIMA,11.438
+Nike Men's Free 5.0+ Running Shoe,2026-09-13,2026-09-16,H+3,ARIMA,10.6478
+Nike Men's Free 5.0+ Running Shoe,2026-09-13,2026-09-17,H+4,ARIMA,9.6618
+Nike Men's Free 5.0+ Running Shoe,2026-09-13,2026-09-18,H+5,ARIMA,8.5257
+Nike Men's Free 5.0+ Running Shoe,2026-09-13,2026-09-19,H+6,ARIMA,7.2922
+Nike Men's Free 5.0+ Running Shoe,2026-09-13,2026-09-20,H+7,ARIMA,6.0183
+Nike Men's Free 5.0+ Running Shoe,2026-09-14,2026-09-15,H+1,ARIMA,11.4833
+Nike Men's Free 5.0+ Running Shoe,2026-09-14,2026-09-16,H+2,ARIMA,10.6952
+Nike Men's Free 5.0+ Running Shoe,2026-09-14,2026-09-17,H+3,ARIMA,9.7093
+Nike Men's Free 5.0+ Running Shoe,2026-09-14,2026-09-18,H+4,ARIMA,8.5713
+Nike Men's Free 5.0+ Running Shoe,2026-09-14,2026-09-19,H+5,ARIMA,7.3339
+Nike Men's Free 5.0+ Running Shoe,2026-09-14,2026-09-20,H+6,ARIMA,6.0543
+Nike Men's Free 5.0+ Running Shoe,2026-09-14,2026-09-21,H+7,ARIMA,4.7917
+Nike Men's Free 5.0+ Running Shoe,2026-09-15,2026-09-16,H+1,ARIMA,10.6384
+Nike Men's Free 5.0+ Running Shoe,2026-09-15,2026-09-17,H+2,ARIMA,9.6499
+Nike Men's Free 5.0+ Running Shoe,2026-09-15,2026-09-18,H+3,ARIMA,8.5118
+Nike Men's Free 5.0+ Running Shoe,2026-09-15,2026-09-19,H+4,ARIMA,7.2769
+Nike Men's Free 5.0+ Running Shoe,2026-09-15,2026-09-20,H+5,ARIMA,6.0023
+Nike Men's Free 5.0+ Running Shoe,2026-09-15,2026-09-21,H+6,ARIMA,4.7471
+Nike Men's Free 5.0+ Running Shoe,2026-09-15,2026-09-22,H+7,ARIMA,3.5692
+Nike Men's Free 5.0+ Running Shoe,2026-09-16,2026-09-17,H+1,ARIMA,9.5665
+Nike Men's Free 5.0+ Running Shoe,2026-09-16,2026-09-18,H+2,ARIMA,8.4248
+Nike Men's Free 5.0+ Running Shoe,2026-09-16,2026-09-19,H+3,ARIMA,7.1901
+Nike Men's Free 5.0+ Running Shoe,2026-09-16,2026-09-20,H+4,ARIMA,5.9197
+Nike Men's Free 5.0+ Running Shoe,2026-09-16,2026-09-21,H+5,ARIMA,4.6721
+Nike Men's Free 5.0+ Running Shoe,2026-09-16,2026-09-22,H+6,ARIMA,3.5052
+Nike Men's Free 5.0+ Running Shoe,2026-09-16,2026-09-23,H+7,ARIMA,2.4728
+Nike Men's Free 5.0+ Running Shoe,2026-09-17,2026-09-18,H+1,ARIMA,8.6872
+Nike Men's Free 5.0+ Running Shoe,2026-09-17,2026-09-19,H+2,ARIMA,7.4629
+Nike Men's Free 5.0+ Running Shoe,2026-09-17,2026-09-20,H+3,ARIMA,6.1907
+Nike Men's Free 5.0+ Running Shoe,2026-09-17,2026-09-21,H+4,ARIMA,4.9294
+Nike Men's Free 5.0+ Running Shoe,2026-09-17,2026-09-22,H+5,ARIMA,3.7374
+Nike Men's Free 5.0+ Running Shoe,2026-09-17,2026-09-23,H+6,ARIMA,2.6697
+Nike Men's Free 5.0+ Running Shoe,2026-09-17,2026-09-24,H+7,ARIMA,1.7754
+Nike Men's Free 5.0+ Running Shoe,2026-09-18,2026-09-19,H+1,ARIMA,7.4697
+Nike Men's Free 5.0+ Running Shoe,2026-09-18,2026-09-20,H+2,ARIMA,6.1978
+Nike Men's Free 5.0+ Running Shoe,2026-09-18,2026-09-21,H+3,ARIMA,4.9365
+Nike Men's Free 5.0+ Running Shoe,2026-09-18,2026-09-22,H+4,ARIMA,3.7441
+Nike Men's Free 5.0+ Running Shoe,2026-09-18,2026-09-23,H+5,ARIMA,2.6757
+Nike Men's Free 5.0+ Running Shoe,2026-09-18,2026-09-24,H+6,ARIMA,1.7805
+Nike Men's Free 5.0+ Running Shoe,2026-09-18,2026-09-25,H+7,ARIMA,1.0997
+Nike Men's Free 5.0+ Running Shoe,2026-09-19,2026-09-20,H+1,ARIMA,6.6198
+Nike Men's Free 5.0+ Running Shoe,2026-09-19,2026-09-21,H+2,ARIMA,5.3738
+Nike Men's Free 5.0+ Running Shoe,2026-09-19,2026-09-22,H+3,ARIMA,4.1775
+Nike Men's Free 5.0+ Running Shoe,2026-09-19,2026-09-23,H+4,ARIMA,3.086
+Nike Men's Free 5.0+ Running Shoe,2026-09-19,2026-09-24,H+5,ARIMA,2.1496
+Nike Men's Free 5.0+ Running Shoe,2026-09-19,2026-09-25,H+6,ARIMA,1.4114
+Nike Men's Free 5.0+ Running Shoe,2026-09-19,2026-09-26,H+7,ARIMA,0.9053
+Nike Men's Free 5.0+ Running Shoe,2026-09-20,2026-09-21,H+1,ARIMA,5.2915
+Nike Men's Free 5.0+ Running Shoe,2026-09-20,2026-09-22,H+2,ARIMA,4.0924
+Nike Men's Free 5.0+ Running Shoe,2026-09-20,2026-09-23,H+3,ARIMA,3.0018
+Nike Men's Free 5.0+ Running Shoe,2026-09-20,2026-09-24,H+4,ARIMA,2.07
+Nike Men's Free 5.0+ Running Shoe,2026-09-20,2026-09-25,H+5,ARIMA,1.34
+Nike Men's Free 5.0+ Running Shoe,2026-09-20,2026-09-26,H+6,ARIMA,0.8452
+Nike Men's Free 5.0+ Running Shoe,2026-09-20,2026-09-27,H+7,ARIMA,0.6082
+Nike Men's Free 5.0+ Running Shoe,2026-09-21,2026-09-22,H+1,ARIMA,4.041
+Nike Men's Free 5.0+ Running Shoe,2026-09-21,2026-09-23,H+2,ARIMA,2.9485
+Nike Men's Free 5.0+ Running Shoe,2026-09-21,2026-09-24,H+3,ARIMA,2.0172
+Nike Men's Free 5.0+ Running Shoe,2026-09-21,2026-09-25,H+4,ARIMA,1.29
+Nike Men's Free 5.0+ Running Shoe,2026-09-21,2026-09-26,H+5,ARIMA,0.8002
+Nike Men's Free 5.0+ Running Shoe,2026-09-21,2026-09-27,H+6,ARIMA,0.5703
+Nike Men's Free 5.0+ Running Shoe,2026-09-21,2026-09-28,H+7,ARIMA,0.6107
+Nike Men's Free 5.0+ Running Shoe,2026-09-22,2026-09-23,H+1,ARIMA,2.8602
+Nike Men's Free 5.0+ Running Shoe,2026-09-22,2026-09-24,H+2,ARIMA,1.9257
+Nike Men's Free 5.0+ Running Shoe,2026-09-22,2026-09-25,H+3,ARIMA,1.1992
+Nike Men's Free 5.0+ Running Shoe,2026-09-22,2026-09-26,H+4,ARIMA,0.7142
+Nike Men's Free 5.0+ Running Shoe,2026-09-22,2026-09-27,H+5,ARIMA,0.4929
+Nike Men's Free 5.0+ Running Shoe,2026-09-22,2026-09-28,H+6,ARIMA,0.5452
+Nike Men's Free 5.0+ Running Shoe,2026-09-22,2026-09-29,H+7,ARIMA,0.8685
+Nike Men's Free 5.0+ Running Shoe,2026-09-23,2026-09-24,H+1,ARIMA,1.8842
+Nike Men's Free 5.0+ Running Shoe,2026-09-23,2026-09-25,H+2,ARIMA,1.1561
+Nike Men's Free 5.0+ Running Shoe,2026-09-23,2026-09-26,H+3,ARIMA,0.6713
+Nike Men's Free 5.0+ Running Shoe,2026-09-23,2026-09-27,H+4,ARIMA,0.4521
+Nike Men's Free 5.0+ Running Shoe,2026-09-23,2026-09-28,H+5,ARIMA,0.5085
+Nike Men's Free 5.0+ Running Shoe,2026-09-23,2026-09-29,H+6,ARIMA,0.8375
+Nike Men's Free 5.0+ Running Shoe,2026-09-23,2026-09-30,H+7,ARIMA,1.4237
+Nike Men's Free 5.0+ Running Shoe,2026-09-24,2026-09-25,H+1,ARIMA,1.1158
+Nike Men's Free 5.0+ Running Shoe,2026-09-24,2026-09-26,H+2,ARIMA,0.6295
+Nike Men's Free 5.0+ Running Shoe,2026-09-24,2026-09-27,H+3,ARIMA,0.4106
+Nike Men's Free 5.0+ Running Shoe,2026-09-24,2026-09-28,H+4,ARIMA,0.469
+Nike Men's Free 5.0+ Running Shoe,2026-09-24,2026-09-29,H+5,ARIMA,0.8017
+Nike Men's Free 5.0+ Running Shoe,2026-09-24,2026-09-30,H+6,ARIMA,1.3932
+Nike Men's Free 5.0+ Running Shoe,2026-09-24,2026-10-01,H+7,ARIMA,2.2159
+Nike Men's Free 5.0+ Running Shoe,2026-09-25,2026-09-26,H+1,ARIMA,0.6267
+Nike Men's Free 5.0+ Running Shoe,2026-09-25,2026-09-27,H+2,ARIMA,0.4076
+Nike Men's Free 5.0+ Running Shoe,2026-09-25,2026-09-28,H+3,ARIMA,0.4659
+Nike Men's Free 5.0+ Running Shoe,2026-09-25,2026-09-29,H+4,ARIMA,0.7987
+Nike Men's Free 5.0+ Running Shoe,2026-09-25,2026-09-30,H+5,ARIMA,1.3904
+Nike Men's Free 5.0+ Running Shoe,2026-09-25,2026-10-01,H+6,ARIMA,2.2135
+Nike Men's Free 5.0+ Running Shoe,2026-09-25,2026-10-02,H+7,ARIMA,3.2297
+Nike Men's Free 5.0+ Running Shoe,2026-09-26,2026-09-27,H+1,ARIMA,0.4811
+Nike Men's Free 5.0+ Running Shoe,2026-09-26,2026-09-28,H+2,ARIMA,0.543
+Nike Men's Free 5.0+ Running Shoe,2026-09-26,2026-09-29,H+3,ARIMA,0.876
+Nike Men's Free 5.0+ Running Shoe,2026-09-26,2026-09-30,H+4,ARIMA,1.4645
+Nike Men's Free 5.0+ Running Shoe,2026-09-26,2026-10-01,H+5,ARIMA,2.2812
+Nike Men's Free 5.0+ Running Shoe,2026-09-26,2026-10-02,H+6,ARIMA,3.288
+Nike Men's Free 5.0+ Running Shoe,2026-09-26,2026-10-03,H+7,ARIMA,4.4384
+Nike Men's Free 5.0+ Running Shoe,2026-09-27,2026-09-28,H+1,ARIMA,0.643
+Nike Men's Free 5.0+ Running Shoe,2026-09-27,2026-09-29,H+2,ARIMA,0.9812
+Nike Men's Free 5.0+ Running Shoe,2026-09-27,2026-09-30,H+3,ARIMA,1.5702
+Nike Men's Free 5.0+ Running Shoe,2026-09-27,2026-10-01,H+4,ARIMA,2.3827
+Nike Men's Free 5.0+ Running Shoe,2026-09-27,2026-10-02,H+5,ARIMA,3.381
+Nike Men's Free 5.0+ Running Shoe,2026-09-27,2026-10-03,H+6,ARIMA,4.5188
+Nike Men's Free 5.0+ Running Shoe,2026-09-27,2026-10-04,H+7,ARIMA,5.7435
+Nike Men's Free 5.0+ Running Shoe,2026-09-28,2026-09-29,H+1,ARIMA,1.163
+Nike Men's Free 5.0+ Running Shoe,2026-09-28,2026-09-30,H+2,ARIMA,1.7612
+Nike Men's Free 5.0+ Running Shoe,2026-09-28,2026-10-01,H+3,ARIMA,2.5755
+Nike Men's Free 5.0+ Running Shoe,2026-09-28,2026-10-02,H+4,ARIMA,3.5679
+Nike Men's Free 5.0+ Running Shoe,2026-09-28,2026-10-03,H+5,ARIMA,4.6926
+Nike Men's Free 5.0+ Running Shoe,2026-09-28,2026-10-04,H+6,ARIMA,5.8974
+Nike Men's Free 5.0+ Running Shoe,2026-09-28,2026-10-05,H+7,ARIMA,7.1266
+Nike Men's Free 5.0+ Running Shoe,2026-09-29,2026-09-30,H+1,ARIMA,1.7169
+Nike Men's Free 5.0+ Running Shoe,2026-09-29,2026-10-01,H+2,ARIMA,2.5293
+Nike Men's Free 5.0+ Running Shoe,2026-09-29,2026-10-02,H+3,ARIMA,3.5211
+Nike Men's Free 5.0+ Running Shoe,2026-09-29,2026-10-03,H+4,ARIMA,4.6461
+Nike Men's Free 5.0+ Running Shoe,2026-09-29,2026-10-04,H+5,ARIMA,5.8525
+Nike Men's Free 5.0+ Running Shoe,2026-09-29,2026-10-05,H+6,ARIMA,7.0843
+Nike Men's Free 5.0+ Running Shoe,2026-09-29,2026-10-06,H+7,ARIMA,8.2845

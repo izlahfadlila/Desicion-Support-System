@@ -1,10 +1,22 @@
 Product,Forecast Date,Horizon,Selected Model,Forecast Demand,Forecast Demand Rounded
-Nike Men's Dri-FIT Victory Golf Polo,2026-10-01,H+1,Random Forest,5.2933857185530275,6
-Nike Men's Dri-FIT Victory Golf Polo,2026-10-03,H+3,Random Forest,3.449190596440597,4
-Nike Men's Dri-FIT Victory Golf Polo,2026-10-07,H+7,XGBoost,13.839781761169434,14
-O'Brien Men's Neoprene Life Vest,2026-10-01,H+1,XGBoost,4.782304763793945,5
-O'Brien Men's Neoprene Life Vest,2026-10-03,H+3,XGBoost,14.100272178649902,15
-O'Brien Men's Neoprene Life Vest,2026-10-07,H+7,Random Forest,17.5992962962963,18
-Nike Men's Free 5.0+ Running Shoe,2026-10-01,H+1,ARIMA,2.490310022000804,3
-Nike Men's Free 5.0+ Running Shoe,2026-10-03,H+3,ARIMA,4.605127798448928,5
-Nike Men's Free 5.0+ Running Shoe,2026-10-07,H+7,ARIMA,9.37337705649828,10
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-01,H+1,Random Forest,3.1144819624819613,4
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-02,H+2,Random Forest,4.166844957612265,5
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-03,H+3,Random Forest,2.946388164178931,3
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-04,H+4,XGBoost,7.695969581604004,8
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-05,H+5,XGBoost,11.292990684509277,12
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-06,H+6,XGBoost,14.157504081726074,15
+Nike Men's Dri-FIT Victory Golf Polo,2026-09-07,H+7,XGBoost,11.764073371887207,12
+O'Brien Men's Neoprene Life Vest,2026-09-01,H+1,XGBoost,5.473746299743652,6
+O'Brien Men's Neoprene Life Vest,2026-09-02,H+2,Random Forest,5.868882275132274,6
+O'Brien Men's Neoprene Life Vest,2026-09-03,H+3,XGBoost,10.628410339355469,11
+O'Brien Men's Neoprene Life Vest,2026-09-04,H+4,Random Forest,11.420447229184079,12
+O'Brien Men's Neoprene Life Vest,2026-09-05,H+5,XGBoost,14.066213607788086,15
+O'Brien Men's Neoprene Life Vest,2026-09-06,H+6,XGBoost,12.715131759643555,13
+O'Brien Men's Neoprene Life Vest,2026-09-07,H+7,XGBoost,16.943645477294922,17
+Nike Men's Free 5.0+ Running Shoe,2026-09-01,H+1,ARIMA,1.9656011009908472,2
+Nike Men's Free 5.0+ Running Shoe,2026-09-02,H+2,ARIMA,2.768190123053115,3
+Nike Men's Free 5.0+ Running Shoe,2026-09-03,H+3,ARIMA,3.7362638768340704,4
+Nike Men's Free 5.0+ Running Shoe,2026-09-04,H+4,ARIMA,4.824955276060061,5
+Nike Men's Free 5.0+ Running Shoe,2026-09-05,H+5,ARIMA,5.983868329812207,6
+Nike Men's Free 5.0+ Running Shoe,2026-09-06,H+6,ARIMA,7.159410943440346,8
+Nike Men's Free 5.0+ Running Shoe,2026-09-07,H+7,ARIMA,8.297273151975112,9

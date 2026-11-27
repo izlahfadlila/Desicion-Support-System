@@ -81,7 +81,7 @@ export default function DashboardPage() {
             </p>
           </div>
           <div className="flex items-center gap-2 text-xs text-gray-500 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2">
-            <span>Service Level: 95% · Operational since Oct 1, 2026</span>
+            <span>Service Level: 95% · Operational since Sep 1, 2026</span>
           </div>
         </div>
 

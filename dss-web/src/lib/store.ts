@@ -1,70 +1,72 @@
 // ============================================================
-// LocalStorage State Management
+// State Management with Hybrid Cloud (Upstash Redis) + LocalStorage
 // ============================================================
 
 import type { SystemState, ProductKey, PurchaseOrder, Transaction, ProductInventory } from "./types";
 import { LOCAL_STORAGE_KEY, SYSTEM_START_DATE } from "./constants";
+import { INITIAL_DEMO_STATE } from "../data/initialDemoState";
+import { SEPTEMBER_ACTUAL_SALES } from "../data/septemberActuals";
 
-// ---- Default Initial State (1 Oct 2026) ----
-const DEFAULT_INVENTORY: Record<ProductKey, ProductInventory> = {
-  golf_polo: { productKey: "golf_polo", currentStock: 50, backorders: 0 },
-  running_shoe: { productKey: "running_shoe", currentStock: 25, backorders: 0 },
-  life_vest: { productKey: "life_vest", currentStock: 60, backorders: 0 },
-};
-
-const DEFAULT_PURCHASE_ORDERS: PurchaseOrder[] = [
-  {
-    orderId: "PO-2026-001",
-    productKey: "life_vest",
-    quantity: 50,
-    orderDate: "2026-09-24",
-    expectedArrival: "2026-10-01",
-    status: "pending",
-  },
-  {
-    orderId: "PO-2026-002",
-    productKey: "golf_polo",
-    quantity: 40,
-    orderDate: "2026-09-27",
-    expectedArrival: "2026-10-02",
-    status: "pending",
-  },
-  // Running Shoe sengaja tanpa PO in-transit (on-order = 0) agar langsung direkomendasikan order hari ini
-];
-
-function buildInitialState(): SystemState {
-  return {
-    isInitialized: true,
-    currentDate: SYSTEM_START_DATE,
-    inventory: { ...DEFAULT_INVENTORY },
-    purchaseOrders: DEFAULT_PURCHASE_ORDERS.map((po) => ({ ...po })),
-    transactions: [],
-    initialSnapshot: {
-      inventory: { ...DEFAULT_INVENTORY },
-      purchaseOrders: DEFAULT_PURCHASE_ORDERS.map((po) => ({ ...po })),
-    },
-  };
+function cloneInitialState(): SystemState {
+  return JSON.parse(JSON.stringify(INITIAL_DEMO_STATE)) as SystemState;
 }
 
 export function loadState(): SystemState {
-  if (typeof window === "undefined") return buildInitialState();
+  if (typeof window === "undefined") return cloneInitialState();
   try {
     const raw = localStorage.getItem(LOCAL_STORAGE_KEY);
-    if (raw) return JSON.parse(raw) as SystemState;
+    if (raw) {
+      const parsed = JSON.parse(raw) as SystemState;
+      // If previous version was on Oct 1, upgrade to Sep 26 demo state
+      if (parsed.currentDate >= "2026-09-26" && parsed.currentDate <= "2026-09-30") {
+        return parsed;
+      }
+    }
   } catch {
     // ignore
   }
-  return buildInitialState();
+
+  const fresh = cloneInitialState();
+  saveState(fresh);
+  return fresh;
+}
+
+// Background async cloud sync
+export function syncFromCloud(onLoaded?: (state: SystemState) => void): void {
+  if (typeof window === "undefined") return;
+  fetch("/api/state")
+    .then((res) => res.json())
+    .then((data) => {
+      if (data?.state) {
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(data.state));
+        if (onLoaded) onLoaded(data.state);
+        window.dispatchEvent(new Event("dss_state_changed"));
+      }
+    })
+    .catch((err) => {
+      console.warn("Could not sync from cloud, using local state:", err);
+    });
 }
 
 export function saveState(state: SystemState): void {
   if (typeof window === "undefined") return;
   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(state));
+
+  // Sync to Upstash Redis in background
+  fetch("/api/state", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ state }),
+  }).catch(() => {
+    // offline fallback
+  });
 }
 
 export function resetState(): SystemState {
-  const fresh = buildInitialState();
+  const fresh = cloneInitialState();
   saveState(fresh);
+
+  fetch("/api/state", { method: "DELETE" }).catch(() => {});
   return fresh;
 }
 
@@ -88,12 +90,11 @@ export function getProductOrders(
   );
 }
 
-// ---- Simulate Next Day ----
-export function simulateNextDay(
-  state: SystemState,
-  salesInput: Record<ProductKey, number>
-): SystemState {
+// ---- Simulate Next Day (Automated fulfillment from actual dataset + EOD arrival) ----
+export function simulateNextDay(state: SystemState): SystemState {
   const nextDate = advanceDate(state.currentDate);
+  const products: ProductKey[] = ["golf_polo", "running_shoe", "life_vest"];
+
   const newState: SystemState = {
     ...state,
     currentDate: nextDate,
@@ -102,58 +103,62 @@ export function simulateNextDay(
     transactions: [...state.transactions],
   };
 
-  const products: ProductKey[] = ["golf_polo", "running_shoe", "life_vest"];
+  const actualSalesToday = SEPTEMBER_ACTUAL_SALES[state.currentDate] ?? {
+    golf_polo: 0,
+    running_shoe: 0,
+    life_vest: 0,
+  };
 
   for (const productKey of products) {
     const inv = { ...newState.inventory[productKey] };
-    const txBase = { date: nextDate, productKey };
+    const txBase = { date: state.currentDate, productKey };
 
-    // Step 1: Process goods receipts for this date
+    // 1. Demand Fulfillment during current date
+    const demand = actualSalesToday[productKey] ?? 0;
+    const fulfilled = Math.min(demand, inv.currentStock);
+    const unmet = demand - fulfilled;
+    inv.currentStock -= fulfilled;
+
+    if (fulfilled > 0) {
+      newState.transactions.push({
+        id: `TXN-${state.currentDate}-SALES-${productKey}`,
+        ...txBase,
+        type: "SALES",
+        quantity: fulfilled,
+        description: `Actual Sales: ${fulfilled} units fulfilled`,
+      });
+    }
+
+    if (unmet > 0) {
+      newState.transactions.push({
+        id: `TXN-${state.currentDate}-STOCKOUT-${productKey}`,
+        ...txBase,
+        type: "STOCKOUT",
+        quantity: unmet,
+        description: `Stockout: ${unmet} units unmet (lost sales)`,
+      });
+    }
+
+    // 2. End-of-Day (EOD) Goods Receipt -> processed evening, ready for nextDate (t+1)
     const arrivingOrders = newState.purchaseOrders.filter(
-      (po) => po.productKey === productKey &&
-               po.status === "pending" &&
-               po.expectedArrival <= nextDate
+      (po) =>
+        po.productKey === productKey &&
+        po.status === "pending" &&
+        po.expectedArrival <= state.currentDate
     );
 
     for (const po of arrivingOrders) {
       inv.currentStock += po.quantity;
-      // Mark as arrived
       newState.purchaseOrders = newState.purchaseOrders.map((p) =>
         p.orderId === po.orderId ? { ...p, status: "arrived" as const } : p
       );
       newState.transactions.push({
-        id: `TXN-${Date.now()}-${po.orderId}`,
+        id: `TXN-${state.currentDate}-RCV-${po.orderId}`,
         ...txBase,
         type: "GOODS_RECEIPT",
         quantity: po.quantity,
-        description: `Goods received from ${po.orderId}`,
+        description: `Goods received (EOD) from ${po.orderId} (+${po.quantity} ready for ${nextDate})`,
       });
-    }
-
-    // Step 2: Fulfill demand
-    const sales = salesInput[productKey] ?? 0;
-    if (sales > 0) {
-      const fulfilled = Math.min(sales, inv.currentStock);
-      const unmet = sales - fulfilled;
-      inv.currentStock -= fulfilled;
-
-      newState.transactions.push({
-        id: `TXN-${Date.now()}-sales-${productKey}`,
-        ...txBase,
-        type: "SALES",
-        quantity: fulfilled,
-        description: `Sales: ${fulfilled} units fulfilled`,
-      });
-
-      if (unmet > 0) {
-        newState.transactions.push({
-          id: `TXN-${Date.now()}-stockout-${productKey}`,
-          ...txBase,
-          type: "STOCKOUT",
-          quantity: unmet,
-          description: `Stockout: ${unmet} units unmet (lost sales)`,
-        });
-      }
     }
 
     newState.inventory[productKey] = inv;
@@ -168,88 +173,74 @@ export function addPurchaseOrder(
   state: SystemState,
   productKey: ProductKey,
   quantity: number,
-  leadTimeDays: number
+  leadTime: number
 ): SystemState {
-  const orderId = `PO-${Date.now()}`;
-  const orderDate = state.currentDate;
-  const arrival = addDays(orderDate, leadTimeDays);
+  const arrivalDate = addDays(state.currentDate, leadTime);
+  const orderId = `PO-2026-DEMO-${String(state.purchaseOrders.length + 1).padStart(3, "0")}`;
 
-  const po: PurchaseOrder = {
+  const newPO: PurchaseOrder = {
     orderId,
     productKey,
     quantity,
-    orderDate,
-    expectedArrival: arrival,
+    orderDate: state.currentDate,
+    expectedArrival: arrivalDate,
     status: "pending",
   };
 
+  const newTx: Transaction = {
+    id: `TXN-${Date.now()}-${orderId}`,
+    date: state.currentDate,
+    productKey,
+    type: "NEW_PO",
+    quantity,
+    description: `Order placed: ${quantity} units (expected: ${arrivalDate})`,
+  };
+
   const newState: SystemState = {
     ...state,
-    purchaseOrders: [...state.purchaseOrders, po],
-    transactions: [
-      ...state.transactions,
-      {
-        id: `TXN-${Date.now()}-po-${productKey}`,
-        date: orderDate,
-        productKey,
-        type: "NEW_PO",
-        quantity,
-        description: `Purchase Order ${orderId} placed — ${quantity} units, expected ${arrival}`,
-      },
-    ],
+    purchaseOrders: [...state.purchaseOrders, newPO],
+    transactions: [...state.transactions, newTx],
   };
 
   saveState(newState);
   return newState;
 }
 
-// ---- Update Initial Inventory ----
-export function updateInitialInventory(
-  state: SystemState,
-  inventory: Record<ProductKey, ProductInventory>,
-  purchaseOrders: PurchaseOrder[]
-): SystemState {
-  const newState: SystemState = {
-    ...state,
-    inventory: { ...inventory },
-    purchaseOrders: [...purchaseOrders],
-    initialSnapshot: {
-      inventory: { ...inventory },
-      purchaseOrders: [...purchaseOrders],
-    },
-  };
-  saveState(newState);
-  return newState;
-}
-
-// ---- Date helpers ----
+// ---- Date utilities ----
 export function advanceDate(dateStr: string): string {
-  const d = new Date(dateStr);
-  d.setDate(d.getDate() + 1);
+  const d = new Date(dateStr + "T00:00:00Z");
+  d.setUTCDate(d.getUTCDate() + 1);
   return d.toISOString().split("T")[0];
 }
 
 export function addDays(dateStr: string, days: number): string {
-  const d = new Date(dateStr);
-  d.setDate(d.getDate() + days);
+  const d = new Date(dateStr + "T00:00:00Z");
+  d.setUTCDate(d.getUTCDate() + days);
   return d.toISOString().split("T")[0];
 }
 
 export function formatDate(dateStr: string): string {
-  const d = new Date(dateStr + "T00:00:00");
-  return d.toLocaleDateString("en-GB", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-  });
+  if (!dateStr) return "—";
+  try {
+    const [year, month, day] = dateStr.split("-");
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    return `${parseInt(day, 10)} ${months[parseInt(month, 10) - 1]} ${year}`;
+  } catch {
+    return dateStr;
+  }
 }
 
 export function formatDateLong(dateStr: string): string {
-  const d = new Date(dateStr + "T00:00:00");
-  return d.toLocaleDateString("en-US", {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
+  if (!dateStr) return "—";
+  try {
+    const d = new Date(dateStr + "T00:00:00Z");
+    return d.toLocaleDateString("en-US", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  } catch {
+    return dateStr;
+  }
 }

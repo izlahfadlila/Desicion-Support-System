@@ -4,7 +4,7 @@
 
 import type { ProductKey, ServiceLevel, OUTLResult, SensitivityRow } from "./types";
 import { LEAD_TIME_UNCERTAINTY, MEAN_DAILY_DEMAND } from "../data/forecastData";
-import { getDailyForecastSeries } from "../data/dailyData";
+import { ROLLING_FORECASTS } from "../data/rollingForecasts";
 import { PRODUCT_MAP } from "./constants";
 
 /**
@@ -61,38 +61,46 @@ function addDaysISO(dateStr: string, days: number): string {
   return d.toISOString().split("T")[0];
 }
 
+function getOriginDate(currentDateStr: string): string {
+  const d = new Date(currentDateStr + "T00:00:00Z");
+  d.setUTCDate(d.getUTCDate() - 1);
+  return d.toISOString().split("T")[0];
+}
+
 /**
- * Get daily forecast for a specific date from the H+1..H+7 series,
- * falling back to September mean for dates outside 2026-10-01..2026-10-07.
+ * Get daily forecast for a specific horizon from the pure ML rolling forecasts
  */
 export function getDailyForecast(
   productKey: ProductKey,
-  currentDate: string = "2026-10-01"
+  currentDate: string = "2026-09-26"
 ): number {
-  const series = getDailyForecastSeries(productKey);
-  const match = series.find((p) => p.date === currentDate);
-  if (match) return match.forecast;
+  const origin = getOriginDate(currentDate);
+  const byOrigin = ROLLING_FORECASTS[productKey]?.[origin];
+  if (byOrigin && byOrigin[1] !== undefined) {
+    return byOrigin[1];
+  }
   return MEAN_DAILY_DEMAND[productKey] ?? 8;
 }
 
 /**
- * Compute Lead Time Demand by summing the daily forecast for each day
- * over the lead time window [currentDate, currentDate + leadTime - 1].
- * Uses interpolated H+1..H+7 forecasts where available and MEAN_DAILY_DEMAND beyond Oct 7.
+ * Compute Lead Time Demand by summing the daily pure ML forecast for each horizon H+1..H+L
  */
 export function getLeadTimeDemand(
   productKey: ProductKey,
   leadTime: number,
-  currentDate: string = "2026-10-01"
+  currentDate: string = "2026-09-26"
 ): number {
-  const series = getDailyForecastSeries(productKey);
-  const forecastByDate = new Map(series.map((p) => [p.date, p.forecast]));
+  const origin = getOriginDate(currentDate);
+  const byOrigin = ROLLING_FORECASTS[productKey]?.[origin];
   const fallback = MEAN_DAILY_DEMAND[productKey] ?? 8;
 
   let total = 0;
-  for (let i = 0; i < leadTime; i++) {
-    const date = addDaysISO(currentDate, i);
-    total += forecastByDate.get(date) ?? fallback;
+  for (let h = 1; h <= leadTime; h++) {
+    if (byOrigin && byOrigin[h] !== undefined) {
+      total += byOrigin[h];
+    } else {
+      total += fallback;
+    }
   }
   return total;
 }

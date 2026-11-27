@@ -6,7 +6,7 @@ export type ProductKey = "golf_polo" | "running_shoe" | "life_vest";
 export type ServiceLevel = 90 | 95 | 99;
 export type Role = "user" | "admin";
 export type OrderStatus = "pending" | "arrived";
-export type TransactionType = "SALES" | "GOODS_RECEIPT" | "NEW_PO" | "ADJUSTMENT" | "STOCKOUT";
+export type TransactionType = "SALES" | "GOODS_RECEIPT" | "NEW_PO" | "ORDER_PLACED" | "INITIAL_SETUP" | "ADJUSTMENT" | "STOCKOUT";
 
 export interface Product {
   key: ProductKey;

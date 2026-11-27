@@ -15,29 +15,29 @@ import type {
 // Used to compute Dynamic Safety Stock: SS = max(0, Qα(E_LT))
 export const LEAD_TIME_UNCERTAINTY: LeadTimeUncertaintyRow[] = [
   // Golf Polo (Random Forest, LT=5 operational)
-  { product: "golf_polo", leadTime: 1, meanError: 2.70, errorStd: 9.61, p90: 16.70, p95: 21.75, p99: 29.53 },
-  { product: "golf_polo", leadTime: 2, meanError: 5.54, errorStd: 14.40, p90: 29.24, p95: 33.43, p99: 45.40 },
-  { product: "golf_polo", leadTime: 3, meanError: 8.66, errorStd: 17.57, p90: 35.15, p95: 43.22, p99: 54.31 },
-  { product: "golf_polo", leadTime: 4, meanError: 11.69, errorStd: 19.86, p90: 40.38, p95: 48.75, p99: 52.92 },
-  { product: "golf_polo", leadTime: 5, meanError: 14.72, errorStd: 22.97, p90: 50.32, p95: 53.91, p99: 61.71 },
-  { product: "golf_polo", leadTime: 6, meanError: 17.57, errorStd: 26.48, p90: 54.11, p95: 65.75, p99: 78.43 },
-  { product: "golf_polo", leadTime: 7, meanError: 20.32, errorStd: 29.50, p90: 63.02, p95: 75.46, p99: 84.50 },
+  { product: "golf_polo", leadTime: 1, meanError: -0.37, errorStd: 8.20, p90: 11.56, p95: 14.59, p99: 24.39 },
+  { product: "golf_polo", leadTime: 2, meanError: -0.79, errorStd: 11.93, p90: 14.66, p95: 22.09, p99: 37.01 },
+  { product: "golf_polo", leadTime: 3, meanError: -0.66, errorStd: 14.64, p90: 20.09, p95: 29.14, p99: 42.53 },
+  { product: "golf_polo", leadTime: 4, meanError: -0.54, errorStd: 17.20, p90: 25.65, p95: 34.59, p99: 45.39 },
+  { product: "golf_polo", leadTime: 5, meanError: -0.36, errorStd: 20.06, p90: 29.15, p95: 38.95, p99: 53.12 },
+  { product: "golf_polo", leadTime: 6, meanError: 0.07, errorStd: 23.56, p90: 33.90, p95: 44.82, p99: 58.62 },
+  { product: "golf_polo", leadTime: 7, meanError: 0.78, errorStd: 27.08, p90: 39.90, p95: 51.51, p99: 72.47 },
   // Running Shoe (ARIMA, LT=5 operational)
-  { product: "running_shoe", leadTime: 1, meanError: 0.36, errorStd: 7.02, p90: 9.12, p95: 14.63, p99: 20.92 },
-  { product: "running_shoe", leadTime: 2, meanError: 0.72, errorStd: 9.41, p90: 13.56, p95: 18.03, p99: 25.32 },
-  { product: "running_shoe", leadTime: 3, meanError: 1.11, errorStd: 10.76, p90: 14.54, p95: 22.28, p99: 34.47 },
-  { product: "running_shoe", leadTime: 4, meanError: 1.55, errorStd: 11.46, p90: 16.47, p95: 26.38, p99: 33.98 },
-  { product: "running_shoe", leadTime: 5, meanError: 2.03, errorStd: 12.74, p90: 19.94, p95: 24.91, p99: 32.01 },
-  { product: "running_shoe", leadTime: 6, meanError: 2.52, errorStd: 14.44, p90: 22.24, p95: 26.34, p99: 37.04 },
-  { product: "running_shoe", leadTime: 7, meanError: 3.01, errorStd: 15.05, p90: 24.44, p95: 28.32, p99: 39.08 },
+  { product: "running_shoe", leadTime: 1, meanError: 0.07, errorStd: 6.60, p90: 8.63, p95: 12.17, p99: 19.78 },
+  { product: "running_shoe", leadTime: 2, meanError: 0.17, errorStd: 9.23, p90: 12.30, p95: 17.48, p99: 26.81 },
+  { product: "running_shoe", leadTime: 3, meanError: 0.27, errorStd: 10.57, p90: 12.25, p95: 21.37, p99: 34.72 },
+  { product: "running_shoe", leadTime: 4, meanError: 0.40, errorStd: 11.16, p90: 14.13, p95: 25.63, p99: 34.17 },
+  { product: "running_shoe", leadTime: 5, meanError: 0.58, errorStd: 12.48, p90: 19.41, p95: 24.65, p99: 32.01 },
+  { product: "running_shoe", leadTime: 6, meanError: 0.79, errorStd: 13.84, p90: 20.19, p95: 26.02, p99: 32.89 },
+  { product: "running_shoe", leadTime: 7, meanError: 0.99, errorStd: 14.33, p90: 21.31, p95: 27.21, p99: 38.38 },
   // Life Vest (XGBoost, LT=7 operational)
-  { product: "life_vest", leadTime: 1, meanError: 0.04, errorStd: 8.51, p90: 12.37, p95: 15.83, p99: 24.66 },
-  { product: "life_vest", leadTime: 2, meanError: 0.13, errorStd: 13.40, p90: 18.82, p95: 26.98, p99: 38.86 },
-  { product: "life_vest", leadTime: 3, meanError: 0.37, errorStd: 17.14, p90: 21.31, p95: 34.56, p99: 49.91 },
-  { product: "life_vest", leadTime: 4, meanError: 0.69, errorStd: 20.59, p90: 29.83, p95: 38.99, p99: 55.19 },
-  { product: "life_vest", leadTime: 5, meanError: 1.13, errorStd: 24.30, p90: 38.43, p95: 44.96, p99: 60.59 },
-  { product: "life_vest", leadTime: 6, meanError: 1.65, errorStd: 28.12, p90: 42.45, p95: 56.94, p99: 63.57 },
-  { product: "life_vest", leadTime: 7, meanError: 2.17, errorStd: 31.34, p90: 48.55, p95: 56.62, p99: 74.73 },
+  { product: "life_vest", leadTime: 1, meanError: 0.27, errorStd: 8.25, p90: 12.32, p95: 15.57, p99: 24.62 },
+  { product: "life_vest", leadTime: 2, meanError: 1.10, errorStd: 12.54, p90: 20.42, p95: 24.41, p99: 35.15 },
+  { product: "life_vest", leadTime: 3, meanError: 2.15, errorStd: 15.80, p90: 23.75, p95: 29.73, p99: 49.05 },
+  { product: "life_vest", leadTime: 4, meanError: 3.34, errorStd: 18.50, p90: 25.79, p95: 35.53, p99: 52.30 },
+  { product: "life_vest", leadTime: 5, meanError: 4.59, errorStd: 21.18, p90: 35.95, p95: 42.75, p99: 54.34 },
+  { product: "life_vest", leadTime: 6, meanError: 6.15, errorStd: 24.28, p90: 39.34, p95: 51.74, p99: 59.67 },
+  { product: "life_vest", leadTime: 7, meanError: 7.64, errorStd: 26.98, p90: 44.49, p95: 53.35, p99: 69.76 },
 ];
 
 // ---- Model Evaluation (from model_evaluation.csv) — Test Set ----
@@ -127,9 +127,9 @@ export const MONTHLY_DEMAND: MonthlyDemandPoint[] = [
   { yearMonth: "2026-09", golfPolo: 348, runningShoe: 243, lifeVest: 254 },
 ];
 
-// Daily mean demand (Sep 2026, used as base rate for LTD estimation after simulation advances)
+// Daily mean demand (Aug 2026, used as fallback base rate for LTD estimation)
 export const MEAN_DAILY_DEMAND: Record<string, number> = {
-  golf_polo: 11.6,
-  running_shoe: 8.1,
-  life_vest: 8.47,
+  golf_polo: 10.78,
+  running_shoe: 6.35,
+  life_vest: 10.16,
 };

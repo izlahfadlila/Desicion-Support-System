@@ -1,0 +1,2014 @@
+{
+  "isInitialized": true,
+  "currentDate": "2026-09-26",
+  "inventory": {
+    "golf_polo": {
+      "productKey": "golf_polo",
+      "currentStock": 71,
+      "backorders": 0
+    },
+    "running_shoe": {
+      "productKey": "running_shoe",
+      "currentStock": 39,
+      "backorders": 0
+    },
+    "life_vest": {
+      "productKey": "life_vest",
+      "currentStock": 95,
+      "backorders": 0
+    }
+  },
+  "purchaseOrders": [
+    {
+      "orderId": "PO-2026-AUG-001",
+      "productKey": "golf_polo",
+      "quantity": 30,
+      "orderDate": "2026-08-29",
+      "expectedArrival": "2026-09-03",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-AUG-002",
+      "productKey": "life_vest",
+      "quantity": 40,
+      "orderDate": "2026-08-28",
+      "expectedArrival": "2026-09-04",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-003",
+      "productKey": "running_shoe",
+      "quantity": 4,
+      "orderDate": "2026-09-02",
+      "expectedArrival": "2026-09-07",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-004",
+      "productKey": "running_shoe",
+      "quantity": 6,
+      "orderDate": "2026-09-03",
+      "expectedArrival": "2026-09-08",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-005",
+      "productKey": "golf_polo",
+      "quantity": 6,
+      "orderDate": "2026-09-04",
+      "expectedArrival": "2026-09-09",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-006",
+      "productKey": "running_shoe",
+      "quantity": 8,
+      "orderDate": "2026-09-04",
+      "expectedArrival": "2026-09-09",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-007",
+      "productKey": "life_vest",
+      "quantity": 24,
+      "orderDate": "2026-09-04",
+      "expectedArrival": "2026-09-11",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-008",
+      "productKey": "golf_polo",
+      "quantity": 11,
+      "orderDate": "2026-09-05",
+      "expectedArrival": "2026-09-10",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-009",
+      "productKey": "running_shoe",
+      "quantity": 5,
+      "orderDate": "2026-09-05",
+      "expectedArrival": "2026-09-10",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-010",
+      "productKey": "life_vest",
+      "quantity": 7,
+      "orderDate": "2026-09-05",
+      "expectedArrival": "2026-09-12",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-011",
+      "productKey": "golf_polo",
+      "quantity": 21,
+      "orderDate": "2026-09-06",
+      "expectedArrival": "2026-09-11",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-012",
+      "productKey": "running_shoe",
+      "quantity": 43,
+      "orderDate": "2026-09-06",
+      "expectedArrival": "2026-09-11",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-013",
+      "productKey": "life_vest",
+      "quantity": 2,
+      "orderDate": "2026-09-06",
+      "expectedArrival": "2026-09-13",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-014",
+      "productKey": "golf_polo",
+      "quantity": 17,
+      "orderDate": "2026-09-07",
+      "expectedArrival": "2026-09-12",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-015",
+      "productKey": "running_shoe",
+      "quantity": 6,
+      "orderDate": "2026-09-07",
+      "expectedArrival": "2026-09-12",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-016",
+      "productKey": "life_vest",
+      "quantity": 25,
+      "orderDate": "2026-09-07",
+      "expectedArrival": "2026-09-14",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-017",
+      "productKey": "golf_polo",
+      "quantity": 8,
+      "orderDate": "2026-09-08",
+      "expectedArrival": "2026-09-13",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-018",
+      "productKey": "running_shoe",
+      "quantity": 6,
+      "orderDate": "2026-09-08",
+      "expectedArrival": "2026-09-13",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-019",
+      "productKey": "life_vest",
+      "quantity": 16,
+      "orderDate": "2026-09-08",
+      "expectedArrival": "2026-09-15",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-020",
+      "productKey": "golf_polo",
+      "quantity": 39,
+      "orderDate": "2026-09-09",
+      "expectedArrival": "2026-09-14",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-021",
+      "productKey": "running_shoe",
+      "quantity": 9,
+      "orderDate": "2026-09-09",
+      "expectedArrival": "2026-09-14",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-022",
+      "productKey": "golf_polo",
+      "quantity": 25,
+      "orderDate": "2026-09-10",
+      "expectedArrival": "2026-09-15",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-023",
+      "productKey": "running_shoe",
+      "quantity": 7,
+      "orderDate": "2026-09-10",
+      "expectedArrival": "2026-09-15",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-024",
+      "productKey": "golf_polo",
+      "quantity": 14,
+      "orderDate": "2026-09-11",
+      "expectedArrival": "2026-09-16",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-025",
+      "productKey": "running_shoe",
+      "quantity": 10,
+      "orderDate": "2026-09-11",
+      "expectedArrival": "2026-09-16",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-026",
+      "productKey": "life_vest",
+      "quantity": 11,
+      "orderDate": "2026-09-11",
+      "expectedArrival": "2026-09-18",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-027",
+      "productKey": "golf_polo",
+      "quantity": 7,
+      "orderDate": "2026-09-12",
+      "expectedArrival": "2026-09-17",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-028",
+      "productKey": "life_vest",
+      "quantity": 4,
+      "orderDate": "2026-09-12",
+      "expectedArrival": "2026-09-19",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-029",
+      "productKey": "running_shoe",
+      "quantity": 9,
+      "orderDate": "2026-09-13",
+      "expectedArrival": "2026-09-18",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-030",
+      "productKey": "life_vest",
+      "quantity": 14,
+      "orderDate": "2026-09-13",
+      "expectedArrival": "2026-09-20",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-031",
+      "productKey": "golf_polo",
+      "quantity": 10,
+      "orderDate": "2026-09-14",
+      "expectedArrival": "2026-09-19",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-032",
+      "productKey": "running_shoe",
+      "quantity": 16,
+      "orderDate": "2026-09-14",
+      "expectedArrival": "2026-09-19",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-033",
+      "productKey": "life_vest",
+      "quantity": 18,
+      "orderDate": "2026-09-14",
+      "expectedArrival": "2026-09-21",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-034",
+      "productKey": "running_shoe",
+      "quantity": 10,
+      "orderDate": "2026-09-15",
+      "expectedArrival": "2026-09-20",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-035",
+      "productKey": "life_vest",
+      "quantity": 54,
+      "orderDate": "2026-09-15",
+      "expectedArrival": "2026-09-22",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-036",
+      "productKey": "golf_polo",
+      "quantity": 38,
+      "orderDate": "2026-09-16",
+      "expectedArrival": "2026-09-21",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-037",
+      "productKey": "running_shoe",
+      "quantity": 3,
+      "orderDate": "2026-09-16",
+      "expectedArrival": "2026-09-21",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-038",
+      "productKey": "running_shoe",
+      "quantity": 1,
+      "orderDate": "2026-09-17",
+      "expectedArrival": "2026-09-22",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-039",
+      "productKey": "life_vest",
+      "quantity": 8,
+      "orderDate": "2026-09-17",
+      "expectedArrival": "2026-09-24",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-040",
+      "productKey": "golf_polo",
+      "quantity": 36,
+      "orderDate": "2026-09-18",
+      "expectedArrival": "2026-09-23",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-041",
+      "productKey": "running_shoe",
+      "quantity": 16,
+      "orderDate": "2026-09-18",
+      "expectedArrival": "2026-09-23",
+      "status": "arrived"
+    },
+    {
+      "orderId": "PO-2026-SEP-042",
+      "productKey": "life_vest",
+      "quantity": 7,
+      "orderDate": "2026-09-19",
+      "expectedArrival": "2026-09-26",
+      "status": "pending"
+    },
+    {
+      "orderId": "PO-2026-SEP-043",
+      "productKey": "running_shoe",
+      "quantity": 1,
+      "orderDate": "2026-09-20",
+      "expectedArrival": "2026-09-25",
+      "status": "arrived"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "TXN-INIT-golf_polo",
+      "date": "2026-09-01",
+      "productKey": "golf_polo",
+      "type": "INITIAL_SETUP",
+      "quantity": 80,
+      "description": "Initial stock setup: 80 units"
+    },
+    {
+      "id": "TXN-INIT-running_shoe",
+      "date": "2026-09-01",
+      "productKey": "running_shoe",
+      "type": "INITIAL_SETUP",
+      "quantity": 45,
+      "description": "Initial stock setup: 45 units"
+    },
+    {
+      "id": "TXN-INIT-life_vest",
+      "date": "2026-09-01",
+      "productKey": "life_vest",
+      "type": "INITIAL_SETUP",
+      "quantity": 100,
+      "description": "Initial stock setup: 100 units"
+    },
+    {
+      "id": "TXN-2026-09-01-SALES-golf_polo",
+      "date": "2026-09-01",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 12,
+      "description": "Sales: 12 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-01-SALES-life_vest",
+      "date": "2026-09-01",
+      "productKey": "life_vest",
+      "type": "SALES",
+      "quantity": 1,
+      "description": "Sales: 1 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-02-PO-2026-SEP-003",
+      "date": "2026-09-02",
+      "productKey": "running_shoe",
+      "type": "ORDER_PLACED",
+      "quantity": 4,
+      "description": "Automated PO PO-2026-SEP-003 placed (4 units, arrives 2026-09-07)"
+    },
+    {
+      "id": "TXN-2026-09-02-SALES-life_vest",
+      "date": "2026-09-02",
+      "productKey": "life_vest",
+      "type": "SALES",
+      "quantity": 4,
+      "description": "Sales: 4 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-03-SALES-golf_polo",
+      "date": "2026-09-03",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 4,
+      "description": "Sales: 4 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-03-RCV-PO-2026-AUG-001",
+      "date": "2026-09-03",
+      "productKey": "golf_polo",
+      "type": "GOODS_RECEIPT",
+      "quantity": 30,
+      "description": "Goods received (EOD) from PO-2026-AUG-001 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-03-PO-2026-SEP-004",
+      "date": "2026-09-03",
+      "productKey": "running_shoe",
+      "type": "ORDER_PLACED",
+      "quantity": 6,
+      "description": "Automated PO PO-2026-SEP-004 placed (6 units, arrives 2026-09-08)"
+    },
+    {
+      "id": "TXN-2026-09-03-SALES-running_shoe",
+      "date": "2026-09-03",
+      "productKey": "running_shoe",
+      "type": "SALES",
+      "quantity": 3,
+      "description": "Sales: 3 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-03-SALES-life_vest",
+      "date": "2026-09-03",
+      "productKey": "life_vest",
+      "type": "SALES",
+      "quantity": 11,
+      "description": "Sales: 11 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-04-PO-2026-SEP-005",
+      "date": "2026-09-04",
+      "productKey": "golf_polo",
+      "type": "ORDER_PLACED",
+      "quantity": 6,
+      "description": "Automated PO PO-2026-SEP-005 placed (6 units, arrives 2026-09-09)"
+    },
+    {
+      "id": "TXN-2026-09-04-SALES-golf_polo",
+      "date": "2026-09-04",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 3,
+      "description": "Sales: 3 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-04-PO-2026-SEP-006",
+      "date": "2026-09-04",
+      "productKey": "running_shoe",
+      "type": "ORDER_PLACED",
+      "quantity": 8,
+      "description": "Automated PO PO-2026-SEP-006 placed (8 units, arrives 2026-09-09)"
+    },
+    {
+      "id": "TXN-2026-09-04-PO-2026-SEP-007",
+      "date": "2026-09-04",
+      "productKey": "life_vest",
+      "type": "ORDER_PLACED",
+      "quantity": 24,
+      "description": "Automated PO PO-2026-SEP-007 placed (24 units, arrives 2026-09-11)"
+    },
+    {
+      "id": "TXN-2026-09-04-RCV-PO-2026-AUG-002",
+      "date": "2026-09-04",
+      "productKey": "life_vest",
+      "type": "GOODS_RECEIPT",
+      "quantity": 40,
+      "description": "Goods received (EOD) from PO-2026-AUG-002 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-05-PO-2026-SEP-008",
+      "date": "2026-09-05",
+      "productKey": "golf_polo",
+      "type": "ORDER_PLACED",
+      "quantity": 11,
+      "description": "Automated PO PO-2026-SEP-008 placed (11 units, arrives 2026-09-10)"
+    },
+    {
+      "id": "TXN-2026-09-05-SALES-golf_polo",
+      "date": "2026-09-05",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 18,
+      "description": "Sales: 18 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-05-PO-2026-SEP-009",
+      "date": "2026-09-05",
+      "productKey": "running_shoe",
+      "type": "ORDER_PLACED",
+      "quantity": 5,
+      "description": "Automated PO PO-2026-SEP-009 placed (5 units, arrives 2026-09-10)"
+    },
+    {
+      "id": "TXN-2026-09-05-SALES-running_shoe",
+      "date": "2026-09-05",
+      "productKey": "running_shoe",
+      "type": "SALES",
+      "quantity": 35,
+      "description": "Sales: 35 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-05-PO-2026-SEP-010",
+      "date": "2026-09-05",
+      "productKey": "life_vest",
+      "type": "ORDER_PLACED",
+      "quantity": 7,
+      "description": "Automated PO PO-2026-SEP-010 placed (7 units, arrives 2026-09-12)"
+    },
+    {
+      "id": "TXN-2026-09-05-SALES-life_vest",
+      "date": "2026-09-05",
+      "productKey": "life_vest",
+      "type": "SALES",
+      "quantity": 8,
+      "description": "Sales: 8 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-06-PO-2026-SEP-011",
+      "date": "2026-09-06",
+      "productKey": "golf_polo",
+      "type": "ORDER_PLACED",
+      "quantity": 21,
+      "description": "Automated PO PO-2026-SEP-011 placed (21 units, arrives 2026-09-11)"
+    },
+    {
+      "id": "TXN-2026-09-06-SALES-golf_polo",
+      "date": "2026-09-06",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 9,
+      "description": "Sales: 9 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-06-PO-2026-SEP-012",
+      "date": "2026-09-06",
+      "productKey": "running_shoe",
+      "type": "ORDER_PLACED",
+      "quantity": 43,
+      "description": "Automated PO PO-2026-SEP-012 placed (43 units, arrives 2026-09-11)"
+    },
+    {
+      "id": "TXN-2026-09-06-SALES-running_shoe",
+      "date": "2026-09-06",
+      "productKey": "running_shoe",
+      "type": "SALES",
+      "quantity": 2,
+      "description": "Sales: 2 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-06-PO-2026-SEP-013",
+      "date": "2026-09-06",
+      "productKey": "life_vest",
+      "type": "ORDER_PLACED",
+      "quantity": 2,
+      "description": "Automated PO PO-2026-SEP-013 placed (2 units, arrives 2026-09-13)"
+    },
+    {
+      "id": "TXN-2026-09-06-SALES-life_vest",
+      "date": "2026-09-06",
+      "productKey": "life_vest",
+      "type": "SALES",
+      "quantity": 19,
+      "description": "Sales: 19 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-07-PO-2026-SEP-014",
+      "date": "2026-09-07",
+      "productKey": "golf_polo",
+      "type": "ORDER_PLACED",
+      "quantity": 17,
+      "description": "Automated PO PO-2026-SEP-014 placed (17 units, arrives 2026-09-12)"
+    },
+    {
+      "id": "TXN-2026-09-07-SALES-golf_polo",
+      "date": "2026-09-07",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 10,
+      "description": "Sales: 10 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-07-PO-2026-SEP-015",
+      "date": "2026-09-07",
+      "productKey": "running_shoe",
+      "type": "ORDER_PLACED",
+      "quantity": 6,
+      "description": "Automated PO PO-2026-SEP-015 placed (6 units, arrives 2026-09-12)"
+    },
+    {
+      "id": "TXN-2026-09-07-SALES-running_shoe",
+      "date": "2026-09-07",
+      "productKey": "running_shoe",
+      "type": "SALES",
+      "quantity": 3,
+      "description": "Sales: 3 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-07-RCV-PO-2026-SEP-003",
+      "date": "2026-09-07",
+      "productKey": "running_shoe",
+      "type": "GOODS_RECEIPT",
+      "quantity": 4,
+      "description": "Goods received (EOD) from PO-2026-SEP-003 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-07-PO-2026-SEP-016",
+      "date": "2026-09-07",
+      "productKey": "life_vest",
+      "type": "ORDER_PLACED",
+      "quantity": 25,
+      "description": "Automated PO PO-2026-SEP-016 placed (25 units, arrives 2026-09-14)"
+    },
+    {
+      "id": "TXN-2026-09-07-SALES-life_vest",
+      "date": "2026-09-07",
+      "productKey": "life_vest",
+      "type": "SALES",
+      "quantity": 5,
+      "description": "Sales: 5 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-08-PO-2026-SEP-017",
+      "date": "2026-09-08",
+      "productKey": "golf_polo",
+      "type": "ORDER_PLACED",
+      "quantity": 8,
+      "description": "Automated PO PO-2026-SEP-017 placed (8 units, arrives 2026-09-13)"
+    },
+    {
+      "id": "TXN-2026-09-08-SALES-golf_polo",
+      "date": "2026-09-08",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 34,
+      "description": "Sales: 34 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-08-PO-2026-SEP-018",
+      "date": "2026-09-08",
+      "productKey": "running_shoe",
+      "type": "ORDER_PLACED",
+      "quantity": 6,
+      "description": "Automated PO PO-2026-SEP-018 placed (6 units, arrives 2026-09-13)"
+    },
+    {
+      "id": "TXN-2026-09-08-SALES-running_shoe",
+      "date": "2026-09-08",
+      "productKey": "running_shoe",
+      "type": "SALES",
+      "quantity": 6,
+      "description": "Sales: 6 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-08-STOCKOUT-running_shoe",
+      "date": "2026-09-08",
+      "productKey": "running_shoe",
+      "type": "STOCKOUT",
+      "quantity": 14,
+      "description": "Stockout: 14 units unmet (lost sales)"
+    },
+    {
+      "id": "TXN-2026-09-08-RCV-PO-2026-SEP-004",
+      "date": "2026-09-08",
+      "productKey": "running_shoe",
+      "type": "GOODS_RECEIPT",
+      "quantity": 6,
+      "description": "Goods received (EOD) from PO-2026-SEP-004 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-08-PO-2026-SEP-019",
+      "date": "2026-09-08",
+      "productKey": "life_vest",
+      "type": "ORDER_PLACED",
+      "quantity": 16,
+      "description": "Automated PO PO-2026-SEP-019 placed (16 units, arrives 2026-09-15)"
+    },
+    {
+      "id": "TXN-2026-09-08-SALES-life_vest",
+      "date": "2026-09-08",
+      "productKey": "life_vest",
+      "type": "SALES",
+      "quantity": 6,
+      "description": "Sales: 6 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-09-PO-2026-SEP-020",
+      "date": "2026-09-09",
+      "productKey": "golf_polo",
+      "type": "ORDER_PLACED",
+      "quantity": 39,
+      "description": "Automated PO PO-2026-SEP-020 placed (39 units, arrives 2026-09-14)"
+    },
+    {
+      "id": "TXN-2026-09-09-SALES-golf_polo",
+      "date": "2026-09-09",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 20,
+      "description": "Sales: 20 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-09-STOCKOUT-golf_polo",
+      "date": "2026-09-09",
+      "productKey": "golf_polo",
+      "type": "STOCKOUT",
+      "quantity": 4,
+      "description": "Stockout: 4 units unmet (lost sales)"
+    },
+    {
+      "id": "TXN-2026-09-09-RCV-PO-2026-SEP-005",
+      "date": "2026-09-09",
+      "productKey": "golf_polo",
+      "type": "GOODS_RECEIPT",
+      "quantity": 6,
+      "description": "Goods received (EOD) from PO-2026-SEP-005 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-09-PO-2026-SEP-021",
+      "date": "2026-09-09",
+      "productKey": "running_shoe",
+      "type": "ORDER_PLACED",
+      "quantity": 9,
+      "description": "Automated PO PO-2026-SEP-021 placed (9 units, arrives 2026-09-14)"
+    },
+    {
+      "id": "TXN-2026-09-09-SALES-running_shoe",
+      "date": "2026-09-09",
+      "productKey": "running_shoe",
+      "type": "SALES",
+      "quantity": 6,
+      "description": "Sales: 6 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-09-STOCKOUT-running_shoe",
+      "date": "2026-09-09",
+      "productKey": "running_shoe",
+      "type": "STOCKOUT",
+      "quantity": 5,
+      "description": "Stockout: 5 units unmet (lost sales)"
+    },
+    {
+      "id": "TXN-2026-09-09-RCV-PO-2026-SEP-006",
+      "date": "2026-09-09",
+      "productKey": "running_shoe",
+      "type": "GOODS_RECEIPT",
+      "quantity": 8,
+      "description": "Goods received (EOD) from PO-2026-SEP-006 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-09-SALES-life_vest",
+      "date": "2026-09-09",
+      "productKey": "life_vest",
+      "type": "SALES",
+      "quantity": 8,
+      "description": "Sales: 8 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-10-PO-2026-SEP-022",
+      "date": "2026-09-10",
+      "productKey": "golf_polo",
+      "type": "ORDER_PLACED",
+      "quantity": 25,
+      "description": "Automated PO PO-2026-SEP-022 placed (25 units, arrives 2026-09-15)"
+    },
+    {
+      "id": "TXN-2026-09-10-SALES-golf_polo",
+      "date": "2026-09-10",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 6,
+      "description": "Sales: 6 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-10-STOCKOUT-golf_polo",
+      "date": "2026-09-10",
+      "productKey": "golf_polo",
+      "type": "STOCKOUT",
+      "quantity": 11,
+      "description": "Stockout: 11 units unmet (lost sales)"
+    },
+    {
+      "id": "TXN-2026-09-10-RCV-PO-2026-SEP-008",
+      "date": "2026-09-10",
+      "productKey": "golf_polo",
+      "type": "GOODS_RECEIPT",
+      "quantity": 11,
+      "description": "Goods received (EOD) from PO-2026-SEP-008 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-10-PO-2026-SEP-023",
+      "date": "2026-09-10",
+      "productKey": "running_shoe",
+      "type": "ORDER_PLACED",
+      "quantity": 7,
+      "description": "Automated PO PO-2026-SEP-023 placed (7 units, arrives 2026-09-15)"
+    },
+    {
+      "id": "TXN-2026-09-10-SALES-running_shoe",
+      "date": "2026-09-10",
+      "productKey": "running_shoe",
+      "type": "SALES",
+      "quantity": 8,
+      "description": "Sales: 8 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-10-STOCKOUT-running_shoe",
+      "date": "2026-09-10",
+      "productKey": "running_shoe",
+      "type": "STOCKOUT",
+      "quantity": 16,
+      "description": "Stockout: 16 units unmet (lost sales)"
+    },
+    {
+      "id": "TXN-2026-09-10-RCV-PO-2026-SEP-009",
+      "date": "2026-09-10",
+      "productKey": "running_shoe",
+      "type": "GOODS_RECEIPT",
+      "quantity": 5,
+      "description": "Goods received (EOD) from PO-2026-SEP-009 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-10-SALES-life_vest",
+      "date": "2026-09-10",
+      "productKey": "life_vest",
+      "type": "SALES",
+      "quantity": 13,
+      "description": "Sales: 13 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-11-PO-2026-SEP-024",
+      "date": "2026-09-11",
+      "productKey": "golf_polo",
+      "type": "ORDER_PLACED",
+      "quantity": 14,
+      "description": "Automated PO PO-2026-SEP-024 placed (14 units, arrives 2026-09-16)"
+    },
+    {
+      "id": "TXN-2026-09-11-SALES-golf_polo",
+      "date": "2026-09-11",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 11,
+      "description": "Sales: 11 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-11-STOCKOUT-golf_polo",
+      "date": "2026-09-11",
+      "productKey": "golf_polo",
+      "type": "STOCKOUT",
+      "quantity": 2,
+      "description": "Stockout: 2 units unmet (lost sales)"
+    },
+    {
+      "id": "TXN-2026-09-11-RCV-PO-2026-SEP-011",
+      "date": "2026-09-11",
+      "productKey": "golf_polo",
+      "type": "GOODS_RECEIPT",
+      "quantity": 21,
+      "description": "Goods received (EOD) from PO-2026-SEP-011 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-11-PO-2026-SEP-025",
+      "date": "2026-09-11",
+      "productKey": "running_shoe",
+      "type": "ORDER_PLACED",
+      "quantity": 10,
+      "description": "Automated PO PO-2026-SEP-025 placed (10 units, arrives 2026-09-16)"
+    },
+    {
+      "id": "TXN-2026-09-11-SALES-running_shoe",
+      "date": "2026-09-11",
+      "productKey": "running_shoe",
+      "type": "SALES",
+      "quantity": 2,
+      "description": "Sales: 2 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-11-RCV-PO-2026-SEP-012",
+      "date": "2026-09-11",
+      "productKey": "running_shoe",
+      "type": "GOODS_RECEIPT",
+      "quantity": 43,
+      "description": "Goods received (EOD) from PO-2026-SEP-012 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-11-PO-2026-SEP-026",
+      "date": "2026-09-11",
+      "productKey": "life_vest",
+      "type": "ORDER_PLACED",
+      "quantity": 11,
+      "description": "Automated PO PO-2026-SEP-026 placed (11 units, arrives 2026-09-18)"
+    },
+    {
+      "id": "TXN-2026-09-11-SALES-life_vest",
+      "date": "2026-09-11",
+      "productKey": "life_vest",
+      "type": "SALES",
+      "quantity": 5,
+      "description": "Sales: 5 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-11-RCV-PO-2026-SEP-007",
+      "date": "2026-09-11",
+      "productKey": "life_vest",
+      "type": "GOODS_RECEIPT",
+      "quantity": 24,
+      "description": "Goods received (EOD) from PO-2026-SEP-007 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-12-PO-2026-SEP-027",
+      "date": "2026-09-12",
+      "productKey": "golf_polo",
+      "type": "ORDER_PLACED",
+      "quantity": 7,
+      "description": "Automated PO PO-2026-SEP-027 placed (7 units, arrives 2026-09-17)"
+    },
+    {
+      "id": "TXN-2026-09-12-SALES-golf_polo",
+      "date": "2026-09-12",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 21,
+      "description": "Sales: 21 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-12-STOCKOUT-golf_polo",
+      "date": "2026-09-12",
+      "productKey": "golf_polo",
+      "type": "STOCKOUT",
+      "quantity": 5,
+      "description": "Stockout: 5 units unmet (lost sales)"
+    },
+    {
+      "id": "TXN-2026-09-12-RCV-PO-2026-SEP-014",
+      "date": "2026-09-12",
+      "productKey": "golf_polo",
+      "type": "GOODS_RECEIPT",
+      "quantity": 17,
+      "description": "Goods received (EOD) from PO-2026-SEP-014 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-12-SALES-running_shoe",
+      "date": "2026-09-12",
+      "productKey": "running_shoe",
+      "type": "SALES",
+      "quantity": 13,
+      "description": "Sales: 13 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-12-RCV-PO-2026-SEP-015",
+      "date": "2026-09-12",
+      "productKey": "running_shoe",
+      "type": "GOODS_RECEIPT",
+      "quantity": 6,
+      "description": "Goods received (EOD) from PO-2026-SEP-015 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-12-PO-2026-SEP-028",
+      "date": "2026-09-12",
+      "productKey": "life_vest",
+      "type": "ORDER_PLACED",
+      "quantity": 4,
+      "description": "Automated PO PO-2026-SEP-028 placed (4 units, arrives 2026-09-19)"
+    },
+    {
+      "id": "TXN-2026-09-12-SALES-life_vest",
+      "date": "2026-09-12",
+      "productKey": "life_vest",
+      "type": "SALES",
+      "quantity": 20,
+      "description": "Sales: 20 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-12-RCV-PO-2026-SEP-010",
+      "date": "2026-09-12",
+      "productKey": "life_vest",
+      "type": "GOODS_RECEIPT",
+      "quantity": 7,
+      "description": "Goods received (EOD) from PO-2026-SEP-010 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-13-SALES-golf_polo",
+      "date": "2026-09-13",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 17,
+      "description": "Sales: 17 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-13-STOCKOUT-golf_polo",
+      "date": "2026-09-13",
+      "productKey": "golf_polo",
+      "type": "STOCKOUT",
+      "quantity": 11,
+      "description": "Stockout: 11 units unmet (lost sales)"
+    },
+    {
+      "id": "TXN-2026-09-13-RCV-PO-2026-SEP-017",
+      "date": "2026-09-13",
+      "productKey": "golf_polo",
+      "type": "GOODS_RECEIPT",
+      "quantity": 8,
+      "description": "Goods received (EOD) from PO-2026-SEP-017 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-13-PO-2026-SEP-029",
+      "date": "2026-09-13",
+      "productKey": "running_shoe",
+      "type": "ORDER_PLACED",
+      "quantity": 9,
+      "description": "Automated PO PO-2026-SEP-029 placed (9 units, arrives 2026-09-18)"
+    },
+    {
+      "id": "TXN-2026-09-13-SALES-running_shoe",
+      "date": "2026-09-13",
+      "productKey": "running_shoe",
+      "type": "SALES",
+      "quantity": 19,
+      "description": "Sales: 19 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-13-RCV-PO-2026-SEP-018",
+      "date": "2026-09-13",
+      "productKey": "running_shoe",
+      "type": "GOODS_RECEIPT",
+      "quantity": 6,
+      "description": "Goods received (EOD) from PO-2026-SEP-018 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-13-PO-2026-SEP-030",
+      "date": "2026-09-13",
+      "productKey": "life_vest",
+      "type": "ORDER_PLACED",
+      "quantity": 14,
+      "description": "Automated PO PO-2026-SEP-030 placed (14 units, arrives 2026-09-20)"
+    },
+    {
+      "id": "TXN-2026-09-13-SALES-life_vest",
+      "date": "2026-09-13",
+      "productKey": "life_vest",
+      "type": "SALES",
+      "quantity": 21,
+      "description": "Sales: 21 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-13-RCV-PO-2026-SEP-013",
+      "date": "2026-09-13",
+      "productKey": "life_vest",
+      "type": "GOODS_RECEIPT",
+      "quantity": 2,
+      "description": "Goods received (EOD) from PO-2026-SEP-013 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-14-PO-2026-SEP-031",
+      "date": "2026-09-14",
+      "productKey": "golf_polo",
+      "type": "ORDER_PLACED",
+      "quantity": 10,
+      "description": "Automated PO PO-2026-SEP-031 placed (10 units, arrives 2026-09-19)"
+    },
+    {
+      "id": "TXN-2026-09-14-SALES-golf_polo",
+      "date": "2026-09-14",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 8,
+      "description": "Sales: 8 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-14-STOCKOUT-golf_polo",
+      "date": "2026-09-14",
+      "productKey": "golf_polo",
+      "type": "STOCKOUT",
+      "quantity": 10,
+      "description": "Stockout: 10 units unmet (lost sales)"
+    },
+    {
+      "id": "TXN-2026-09-14-RCV-PO-2026-SEP-020",
+      "date": "2026-09-14",
+      "productKey": "golf_polo",
+      "type": "GOODS_RECEIPT",
+      "quantity": 39,
+      "description": "Goods received (EOD) from PO-2026-SEP-020 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-14-PO-2026-SEP-032",
+      "date": "2026-09-14",
+      "productKey": "running_shoe",
+      "type": "ORDER_PLACED",
+      "quantity": 16,
+      "description": "Automated PO PO-2026-SEP-032 placed (16 units, arrives 2026-09-19)"
+    },
+    {
+      "id": "TXN-2026-09-14-SALES-running_shoe",
+      "date": "2026-09-14",
+      "productKey": "running_shoe",
+      "type": "SALES",
+      "quantity": 14,
+      "description": "Sales: 14 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-14-RCV-PO-2026-SEP-021",
+      "date": "2026-09-14",
+      "productKey": "running_shoe",
+      "type": "GOODS_RECEIPT",
+      "quantity": 9,
+      "description": "Goods received (EOD) from PO-2026-SEP-021 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-14-PO-2026-SEP-033",
+      "date": "2026-09-14",
+      "productKey": "life_vest",
+      "type": "ORDER_PLACED",
+      "quantity": 18,
+      "description": "Automated PO PO-2026-SEP-033 placed (18 units, arrives 2026-09-21)"
+    },
+    {
+      "id": "TXN-2026-09-14-SALES-life_vest",
+      "date": "2026-09-14",
+      "productKey": "life_vest",
+      "type": "SALES",
+      "quantity": 39,
+      "description": "Sales: 39 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-14-RCV-PO-2026-SEP-016",
+      "date": "2026-09-14",
+      "productKey": "life_vest",
+      "type": "GOODS_RECEIPT",
+      "quantity": 25,
+      "description": "Goods received (EOD) from PO-2026-SEP-016 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-15-SALES-golf_polo",
+      "date": "2026-09-15",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 13,
+      "description": "Sales: 13 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-15-RCV-PO-2026-SEP-022",
+      "date": "2026-09-15",
+      "productKey": "golf_polo",
+      "type": "GOODS_RECEIPT",
+      "quantity": 25,
+      "description": "Goods received (EOD) from PO-2026-SEP-022 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-15-PO-2026-SEP-034",
+      "date": "2026-09-15",
+      "productKey": "running_shoe",
+      "type": "ORDER_PLACED",
+      "quantity": 10,
+      "description": "Automated PO PO-2026-SEP-034 placed (10 units, arrives 2026-09-20)"
+    },
+    {
+      "id": "TXN-2026-09-15-SALES-running_shoe",
+      "date": "2026-09-15",
+      "productKey": "running_shoe",
+      "type": "SALES",
+      "quantity": 9,
+      "description": "Sales: 9 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-15-RCV-PO-2026-SEP-023",
+      "date": "2026-09-15",
+      "productKey": "running_shoe",
+      "type": "GOODS_RECEIPT",
+      "quantity": 7,
+      "description": "Goods received (EOD) from PO-2026-SEP-023 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-15-PO-2026-SEP-035",
+      "date": "2026-09-15",
+      "productKey": "life_vest",
+      "type": "ORDER_PLACED",
+      "quantity": 54,
+      "description": "Automated PO PO-2026-SEP-035 placed (54 units, arrives 2026-09-22)"
+    },
+    {
+      "id": "TXN-2026-09-15-SALES-life_vest",
+      "date": "2026-09-15",
+      "productKey": "life_vest",
+      "type": "SALES",
+      "quantity": 16,
+      "description": "Sales: 16 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-15-RCV-PO-2026-SEP-019",
+      "date": "2026-09-15",
+      "productKey": "life_vest",
+      "type": "GOODS_RECEIPT",
+      "quantity": 16,
+      "description": "Goods received (EOD) from PO-2026-SEP-019 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-16-PO-2026-SEP-036",
+      "date": "2026-09-16",
+      "productKey": "golf_polo",
+      "type": "ORDER_PLACED",
+      "quantity": 38,
+      "description": "Automated PO PO-2026-SEP-036 placed (38 units, arrives 2026-09-21)"
+    },
+    {
+      "id": "TXN-2026-09-16-SALES-golf_polo",
+      "date": "2026-09-16",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 15,
+      "description": "Sales: 15 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-16-RCV-PO-2026-SEP-024",
+      "date": "2026-09-16",
+      "productKey": "golf_polo",
+      "type": "GOODS_RECEIPT",
+      "quantity": 14,
+      "description": "Goods received (EOD) from PO-2026-SEP-024 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-16-PO-2026-SEP-037",
+      "date": "2026-09-16",
+      "productKey": "running_shoe",
+      "type": "ORDER_PLACED",
+      "quantity": 3,
+      "description": "Automated PO PO-2026-SEP-037 placed (3 units, arrives 2026-09-21)"
+    },
+    {
+      "id": "TXN-2026-09-16-SALES-running_shoe",
+      "date": "2026-09-16",
+      "productKey": "running_shoe",
+      "type": "SALES",
+      "quantity": 7,
+      "description": "Sales: 7 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-16-RCV-PO-2026-SEP-025",
+      "date": "2026-09-16",
+      "productKey": "running_shoe",
+      "type": "GOODS_RECEIPT",
+      "quantity": 10,
+      "description": "Goods received (EOD) from PO-2026-SEP-025 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-16-SALES-life_vest",
+      "date": "2026-09-16",
+      "productKey": "life_vest",
+      "type": "SALES",
+      "quantity": 7,
+      "description": "Sales: 7 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-17-SALES-golf_polo",
+      "date": "2026-09-17",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 32,
+      "description": "Sales: 32 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-17-RCV-PO-2026-SEP-027",
+      "date": "2026-09-17",
+      "productKey": "golf_polo",
+      "type": "GOODS_RECEIPT",
+      "quantity": 7,
+      "description": "Goods received (EOD) from PO-2026-SEP-027 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-17-PO-2026-SEP-038",
+      "date": "2026-09-17",
+      "productKey": "running_shoe",
+      "type": "ORDER_PLACED",
+      "quantity": 1,
+      "description": "Automated PO PO-2026-SEP-038 placed (1 units, arrives 2026-09-22)"
+    },
+    {
+      "id": "TXN-2026-09-17-SALES-running_shoe",
+      "date": "2026-09-17",
+      "productKey": "running_shoe",
+      "type": "SALES",
+      "quantity": 21,
+      "description": "Sales: 21 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-17-PO-2026-SEP-039",
+      "date": "2026-09-17",
+      "productKey": "life_vest",
+      "type": "ORDER_PLACED",
+      "quantity": 8,
+      "description": "Automated PO PO-2026-SEP-039 placed (8 units, arrives 2026-09-24)"
+    },
+    {
+      "id": "TXN-2026-09-17-SALES-life_vest",
+      "date": "2026-09-17",
+      "productKey": "life_vest",
+      "type": "SALES",
+      "quantity": 17,
+      "description": "Sales: 17 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-18-PO-2026-SEP-040",
+      "date": "2026-09-18",
+      "productKey": "golf_polo",
+      "type": "ORDER_PLACED",
+      "quantity": 36,
+      "description": "Automated PO PO-2026-SEP-040 placed (36 units, arrives 2026-09-23)"
+    },
+    {
+      "id": "TXN-2026-09-18-SALES-golf_polo",
+      "date": "2026-09-18",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 19,
+      "description": "Sales: 19 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-18-PO-2026-SEP-041",
+      "date": "2026-09-18",
+      "productKey": "running_shoe",
+      "type": "ORDER_PLACED",
+      "quantity": 16,
+      "description": "Automated PO PO-2026-SEP-041 placed (16 units, arrives 2026-09-23)"
+    },
+    {
+      "id": "TXN-2026-09-18-SALES-running_shoe",
+      "date": "2026-09-18",
+      "productKey": "running_shoe",
+      "type": "SALES",
+      "quantity": 1,
+      "description": "Sales: 1 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-18-STOCKOUT-running_shoe",
+      "date": "2026-09-18",
+      "productKey": "running_shoe",
+      "type": "STOCKOUT",
+      "quantity": 8,
+      "description": "Stockout: 8 units unmet (lost sales)"
+    },
+    {
+      "id": "TXN-2026-09-18-RCV-PO-2026-SEP-029",
+      "date": "2026-09-18",
+      "productKey": "running_shoe",
+      "type": "GOODS_RECEIPT",
+      "quantity": 9,
+      "description": "Goods received (EOD) from PO-2026-SEP-029 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-18-SALES-life_vest",
+      "date": "2026-09-18",
+      "productKey": "life_vest",
+      "type": "SALES",
+      "quantity": 14,
+      "description": "Sales: 14 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-18-STOCKOUT-life_vest",
+      "date": "2026-09-18",
+      "productKey": "life_vest",
+      "type": "STOCKOUT",
+      "quantity": 7,
+      "description": "Stockout: 7 units unmet (lost sales)"
+    },
+    {
+      "id": "TXN-2026-09-18-RCV-PO-2026-SEP-026",
+      "date": "2026-09-18",
+      "productKey": "life_vest",
+      "type": "GOODS_RECEIPT",
+      "quantity": 11,
+      "description": "Goods received (EOD) from PO-2026-SEP-026 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-19-SALES-golf_polo",
+      "date": "2026-09-19",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 6,
+      "description": "Sales: 6 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-19-RCV-PO-2026-SEP-031",
+      "date": "2026-09-19",
+      "productKey": "golf_polo",
+      "type": "GOODS_RECEIPT",
+      "quantity": 10,
+      "description": "Goods received (EOD) from PO-2026-SEP-031 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-19-SALES-running_shoe",
+      "date": "2026-09-19",
+      "productKey": "running_shoe",
+      "type": "SALES",
+      "quantity": 9,
+      "description": "Sales: 9 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-19-STOCKOUT-running_shoe",
+      "date": "2026-09-19",
+      "productKey": "running_shoe",
+      "type": "STOCKOUT",
+      "quantity": 17,
+      "description": "Stockout: 17 units unmet (lost sales)"
+    },
+    {
+      "id": "TXN-2026-09-19-RCV-PO-2026-SEP-032",
+      "date": "2026-09-19",
+      "productKey": "running_shoe",
+      "type": "GOODS_RECEIPT",
+      "quantity": 16,
+      "description": "Goods received (EOD) from PO-2026-SEP-032 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-19-PO-2026-SEP-042",
+      "date": "2026-09-19",
+      "productKey": "life_vest",
+      "type": "ORDER_PLACED",
+      "quantity": 7,
+      "description": "Automated PO PO-2026-SEP-042 placed (7 units, arrives 2026-09-26)"
+    },
+    {
+      "id": "TXN-2026-09-19-SALES-life_vest",
+      "date": "2026-09-19",
+      "productKey": "life_vest",
+      "type": "SALES",
+      "quantity": 11,
+      "description": "Sales: 11 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-19-STOCKOUT-life_vest",
+      "date": "2026-09-19",
+      "productKey": "life_vest",
+      "type": "STOCKOUT",
+      "quantity": 10,
+      "description": "Stockout: 10 units unmet (lost sales)"
+    },
+    {
+      "id": "TXN-2026-09-19-RCV-PO-2026-SEP-028",
+      "date": "2026-09-19",
+      "productKey": "life_vest",
+      "type": "GOODS_RECEIPT",
+      "quantity": 4,
+      "description": "Goods received (EOD) from PO-2026-SEP-028 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-20-SALES-golf_polo",
+      "date": "2026-09-20",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 6,
+      "description": "Sales: 6 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-20-PO-2026-SEP-043",
+      "date": "2026-09-20",
+      "productKey": "running_shoe",
+      "type": "ORDER_PLACED",
+      "quantity": 1,
+      "description": "Automated PO PO-2026-SEP-043 placed (1 units, arrives 2026-09-25)"
+    },
+    {
+      "id": "TXN-2026-09-20-SALES-running_shoe",
+      "date": "2026-09-20",
+      "productKey": "running_shoe",
+      "type": "SALES",
+      "quantity": 3,
+      "description": "Sales: 3 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-20-RCV-PO-2026-SEP-034",
+      "date": "2026-09-20",
+      "productKey": "running_shoe",
+      "type": "GOODS_RECEIPT",
+      "quantity": 10,
+      "description": "Goods received (EOD) from PO-2026-SEP-034 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-20-RCV-PO-2026-SEP-030",
+      "date": "2026-09-20",
+      "productKey": "life_vest",
+      "type": "GOODS_RECEIPT",
+      "quantity": 14,
+      "description": "Goods received (EOD) from PO-2026-SEP-030 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-21-SALES-golf_polo",
+      "date": "2026-09-21",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 2,
+      "description": "Sales: 2 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-21-RCV-PO-2026-SEP-036",
+      "date": "2026-09-21",
+      "productKey": "golf_polo",
+      "type": "GOODS_RECEIPT",
+      "quantity": 38,
+      "description": "Goods received (EOD) from PO-2026-SEP-036 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-21-SALES-running_shoe",
+      "date": "2026-09-21",
+      "productKey": "running_shoe",
+      "type": "SALES",
+      "quantity": 3,
+      "description": "Sales: 3 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-21-RCV-PO-2026-SEP-037",
+      "date": "2026-09-21",
+      "productKey": "running_shoe",
+      "type": "GOODS_RECEIPT",
+      "quantity": 3,
+      "description": "Goods received (EOD) from PO-2026-SEP-037 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-21-RCV-PO-2026-SEP-033",
+      "date": "2026-09-21",
+      "productKey": "life_vest",
+      "type": "GOODS_RECEIPT",
+      "quantity": 18,
+      "description": "Goods received (EOD) from PO-2026-SEP-033 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-22-RCV-PO-2026-SEP-038",
+      "date": "2026-09-22",
+      "productKey": "running_shoe",
+      "type": "GOODS_RECEIPT",
+      "quantity": 1,
+      "description": "Goods received (EOD) from PO-2026-SEP-038 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-22-RCV-PO-2026-SEP-035",
+      "date": "2026-09-22",
+      "productKey": "life_vest",
+      "type": "GOODS_RECEIPT",
+      "quantity": 54,
+      "description": "Goods received (EOD) from PO-2026-SEP-035 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-23-RCV-PO-2026-SEP-040",
+      "date": "2026-09-23",
+      "productKey": "golf_polo",
+      "type": "GOODS_RECEIPT",
+      "quantity": 36,
+      "description": "Goods received (EOD) from PO-2026-SEP-040 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-23-SALES-running_shoe",
+      "date": "2026-09-23",
+      "productKey": "running_shoe",
+      "type": "SALES",
+      "quantity": 1,
+      "description": "Sales: 1 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-23-RCV-PO-2026-SEP-041",
+      "date": "2026-09-23",
+      "productKey": "running_shoe",
+      "type": "GOODS_RECEIPT",
+      "quantity": 16,
+      "description": "Goods received (EOD) from PO-2026-SEP-041 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-24-SALES-golf_polo",
+      "date": "2026-09-24",
+      "productKey": "golf_polo",
+      "type": "SALES",
+      "quantity": 5,
+      "description": "Sales: 5 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-24-SALES-life_vest",
+      "date": "2026-09-24",
+      "productKey": "life_vest",
+      "type": "SALES",
+      "quantity": 2,
+      "description": "Sales: 2 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-24-RCV-PO-2026-SEP-039",
+      "date": "2026-09-24",
+      "productKey": "life_vest",
+      "type": "GOODS_RECEIPT",
+      "quantity": 8,
+      "description": "Goods received (EOD) from PO-2026-SEP-039 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-25-SALES-running_shoe",
+      "date": "2026-09-25",
+      "productKey": "running_shoe",
+      "type": "SALES",
+      "quantity": 1,
+      "description": "Sales: 1 units fulfilled"
+    },
+    {
+      "id": "TXN-2026-09-25-RCV-PO-2026-SEP-043",
+      "date": "2026-09-25",
+      "productKey": "running_shoe",
+      "type": "GOODS_RECEIPT",
+      "quantity": 1,
+      "description": "Goods received (EOD) from PO-2026-SEP-043 (ready for next day)"
+    },
+    {
+      "id": "TXN-2026-09-25-SALES-life_vest",
+      "date": "2026-09-25",
+      "productKey": "life_vest",
+      "type": "SALES",
+      "quantity": 1,
+      "description": "Sales: 1 units fulfilled"
+    }
+  ],
+  "initialSnapshot": {
+    "inventory": {
+      "golf_polo": {
+        "productKey": "golf_polo",
+        "currentStock": 71,
+        "backorders": 0
+      },
+      "running_shoe": {
+        "productKey": "running_shoe",
+        "currentStock": 39,
+        "backorders": 0
+      },
+      "life_vest": {
+        "productKey": "life_vest",
+        "currentStock": 95,
+        "backorders": 0
+      }
+    },
+    "purchaseOrders": [
+      {
+        "orderId": "PO-2026-AUG-001",
+        "productKey": "golf_polo",
+        "quantity": 30,
+        "orderDate": "2026-08-29",
+        "expectedArrival": "2026-09-03",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-AUG-002",
+        "productKey": "life_vest",
+        "quantity": 40,
+        "orderDate": "2026-08-28",
+        "expectedArrival": "2026-09-04",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-003",
+        "productKey": "running_shoe",
+        "quantity": 4,
+        "orderDate": "2026-09-02",
+        "expectedArrival": "2026-09-07",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-004",
+        "productKey": "running_shoe",
+        "quantity": 6,
+        "orderDate": "2026-09-03",
+        "expectedArrival": "2026-09-08",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-005",
+        "productKey": "golf_polo",
+        "quantity": 6,
+        "orderDate": "2026-09-04",
+        "expectedArrival": "2026-09-09",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-006",
+        "productKey": "running_shoe",
+        "quantity": 8,
+        "orderDate": "2026-09-04",
+        "expectedArrival": "2026-09-09",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-007",
+        "productKey": "life_vest",
+        "quantity": 24,
+        "orderDate": "2026-09-04",
+        "expectedArrival": "2026-09-11",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-008",
+        "productKey": "golf_polo",
+        "quantity": 11,
+        "orderDate": "2026-09-05",
+        "expectedArrival": "2026-09-10",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-009",
+        "productKey": "running_shoe",
+        "quantity": 5,
+        "orderDate": "2026-09-05",
+        "expectedArrival": "2026-09-10",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-010",
+        "productKey": "life_vest",
+        "quantity": 7,
+        "orderDate": "2026-09-05",
+        "expectedArrival": "2026-09-12",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-011",
+        "productKey": "golf_polo",
+        "quantity": 21,
+        "orderDate": "2026-09-06",
+        "expectedArrival": "2026-09-11",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-012",
+        "productKey": "running_shoe",
+        "quantity": 43,
+        "orderDate": "2026-09-06",
+        "expectedArrival": "2026-09-11",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-013",
+        "productKey": "life_vest",
+        "quantity": 2,
+        "orderDate": "2026-09-06",
+        "expectedArrival": "2026-09-13",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-014",
+        "productKey": "golf_polo",
+        "quantity": 17,
+        "orderDate": "2026-09-07",
+        "expectedArrival": "2026-09-12",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-015",
+        "productKey": "running_shoe",
+        "quantity": 6,
+        "orderDate": "2026-09-07",
+        "expectedArrival": "2026-09-12",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-016",
+        "productKey": "life_vest",
+        "quantity": 25,
+        "orderDate": "2026-09-07",
+        "expectedArrival": "2026-09-14",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-017",
+        "productKey": "golf_polo",
+        "quantity": 8,
+        "orderDate": "2026-09-08",
+        "expectedArrival": "2026-09-13",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-018",
+        "productKey": "running_shoe",
+        "quantity": 6,
+        "orderDate": "2026-09-08",
+        "expectedArrival": "2026-09-13",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-019",
+        "productKey": "life_vest",
+        "quantity": 16,
+        "orderDate": "2026-09-08",
+        "expectedArrival": "2026-09-15",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-020",
+        "productKey": "golf_polo",
+        "quantity": 39,
+        "orderDate": "2026-09-09",
+        "expectedArrival": "2026-09-14",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-021",
+        "productKey": "running_shoe",
+        "quantity": 9,
+        "orderDate": "2026-09-09",
+        "expectedArrival": "2026-09-14",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-022",
+        "productKey": "golf_polo",
+        "quantity": 25,
+        "orderDate": "2026-09-10",
+        "expectedArrival": "2026-09-15",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-023",
+        "productKey": "running_shoe",
+        "quantity": 7,
+        "orderDate": "2026-09-10",
+        "expectedArrival": "2026-09-15",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-024",
+        "productKey": "golf_polo",
+        "quantity": 14,
+        "orderDate": "2026-09-11",
+        "expectedArrival": "2026-09-16",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-025",
+        "productKey": "running_shoe",
+        "quantity": 10,
+        "orderDate": "2026-09-11",
+        "expectedArrival": "2026-09-16",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-026",
+        "productKey": "life_vest",
+        "quantity": 11,
+        "orderDate": "2026-09-11",
+        "expectedArrival": "2026-09-18",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-027",
+        "productKey": "golf_polo",
+        "quantity": 7,
+        "orderDate": "2026-09-12",
+        "expectedArrival": "2026-09-17",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-028",
+        "productKey": "life_vest",
+        "quantity": 4,
+        "orderDate": "2026-09-12",
+        "expectedArrival": "2026-09-19",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-029",
+        "productKey": "running_shoe",
+        "quantity": 9,
+        "orderDate": "2026-09-13",
+        "expectedArrival": "2026-09-18",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-030",
+        "productKey": "life_vest",
+        "quantity": 14,
+        "orderDate": "2026-09-13",
+        "expectedArrival": "2026-09-20",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-031",
+        "productKey": "golf_polo",
+        "quantity": 10,
+        "orderDate": "2026-09-14",
+        "expectedArrival": "2026-09-19",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-032",
+        "productKey": "running_shoe",
+        "quantity": 16,
+        "orderDate": "2026-09-14",
+        "expectedArrival": "2026-09-19",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-033",
+        "productKey": "life_vest",
+        "quantity": 18,
+        "orderDate": "2026-09-14",
+        "expectedArrival": "2026-09-21",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-034",
+        "productKey": "running_shoe",
+        "quantity": 10,
+        "orderDate": "2026-09-15",
+        "expectedArrival": "2026-09-20",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-035",
+        "productKey": "life_vest",
+        "quantity": 54,
+        "orderDate": "2026-09-15",
+        "expectedArrival": "2026-09-22",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-036",
+        "productKey": "golf_polo",
+        "quantity": 38,
+        "orderDate": "2026-09-16",
+        "expectedArrival": "2026-09-21",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-037",
+        "productKey": "running_shoe",
+        "quantity": 3,
+        "orderDate": "2026-09-16",
+        "expectedArrival": "2026-09-21",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-038",
+        "productKey": "running_shoe",
+        "quantity": 1,
+        "orderDate": "2026-09-17",
+        "expectedArrival": "2026-09-22",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-039",
+        "productKey": "life_vest",
+        "quantity": 8,
+        "orderDate": "2026-09-17",
+        "expectedArrival": "2026-09-24",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-040",
+        "productKey": "golf_polo",
+        "quantity": 36,
+        "orderDate": "2026-09-18",
+        "expectedArrival": "2026-09-23",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-041",
+        "productKey": "running_shoe",
+        "quantity": 16,
+        "orderDate": "2026-09-18",
+        "expectedArrival": "2026-09-23",
+        "status": "arrived"
+      },
+      {
+        "orderId": "PO-2026-SEP-042",
+        "productKey": "life_vest",
+        "quantity": 7,
+        "orderDate": "2026-09-19",
+        "expectedArrival": "2026-09-26",
+        "status": "pending"
+      },
+      {
+        "orderId": "PO-2026-SEP-043",
+        "productKey": "running_shoe",
+        "quantity": 1,
+        "orderDate": "2026-09-20",
+        "expectedArrival": "2026-09-25",
+        "status": "arrived"
+      }
+    ]
+  }
+}
